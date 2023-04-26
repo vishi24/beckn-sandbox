@@ -3,9 +3,7 @@ import { MobilityApiInterface } from 'src/mobility/mobility-api.interface';
 
 @Injectable()
 export class UmtcApiService implements MobilityApiInterface {
-    search = function () {
-        return "UMTC search";
-    };
+    search: () => string;
     select: () => string;
     init: () => string;
     confirm: () => string;

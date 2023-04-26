@@ -1,12 +1,13 @@
-import { Controller, Get } from '@nestjs/common';
+import { Body, Controller, Get, Post } from '@nestjs/common';
+import { MobilityRequestDto } from './dto/request.dto';
 import { MobilityService } from './mobility.service';
 
 @Controller()
 export class MobilityController {
     constructor(private readonly service: MobilityService) { }
 
-    @Get('/search')
-    search(): string {
-        return this.service.get("nic2004:60221").search();
+    @Post('/search')
+    search(@Body() mobilityRequest: MobilityRequestDto) {
+        return this.service.get(mobilityRequest.context.domain).search(mobilityRequest);
     }
 }
