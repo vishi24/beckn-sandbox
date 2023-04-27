@@ -10,4 +10,14 @@ export class MobilityController {
     search(@Body() mobilityRequest: MobilityRequestDto) {
         return this.service.get(mobilityRequest.context.domain).search(mobilityRequest);
     }
+
+    @Post('/track')
+    track(@Body() mobilityRequest: MobilityRequestDto) {
+        return this.service.get(mobilityRequest.context.domain).track(mobilityRequest);
+    }
+
+    @Post('/cancel')
+    cancel(@Body() mobilityRequest: MobilityRequestDto) {
+        return this.service.get(mobilityRequest.context.domain).cancel(mobilityRequest);
+    }
 }
