@@ -9,9 +9,15 @@ import * as confirmResponse from './response/response.confirm.json'
 import { ConfirmRequestDto } from './dto/confirm-request.dto';
 import { TrackRequestDto } from './dto/track-request.dto';
 import { CancelRequestDto } from './dto/cancel-request.dto';
+import { UpdateRequestDto } from './dto/update-request.dto';
+import { SupportRequestDto } from './dto/support-request.dto';
+import { RatingRequestDto } from './dto/rating-request.dto';
 import * as searchResponse from './response/response.search.json';
 import * as trackResponse from './response/response.track.json';
 import * as cancelResponse from './response/response.cancel.json';
+import * as updateResponse from './response/response.update.json';
+import * as supportResponse from './response/response.support.json';
+import * as ratingResponse from './response/response.rating.json';
 
 @Injectable()
 export class OndcApiService implements MobilityApiInterface {
@@ -34,7 +40,13 @@ export class OndcApiService implements MobilityApiInterface {
     cancel = function (cancelRequest: CancelRequestDto) {
         return cancelResponse;
     };
-    update: () => string;
-    rating: () => string;
-    support: () => string;
+    update = function (updateRequest: UpdateRequestDto) {
+        return updateResponse;
+    };
+    support = function (supportRequest: SupportRequestDto) {
+        return supportResponse;
+    };
+    rating = function (ratingRequest: RatingRequestDto) {
+        return ratingResponse;
+    };
 }

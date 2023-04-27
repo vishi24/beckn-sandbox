@@ -13,4 +13,5 @@ export class ClientContextDto {
     ttl: string;
     bpp_uri?: string;
     bpp_id?: string;
+    key?: string;
 }
