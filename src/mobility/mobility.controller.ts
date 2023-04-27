@@ -35,4 +35,19 @@ export class MobilityController {
     cancel(@Body() mobilityRequest: MobilityRequestDto) {
         return this.service.get(mobilityRequest.context.domain).cancel(mobilityRequest);
     }
+
+    @Post('/update')
+    update(@Body() mobilityRequest: MobilityRequestDto) {
+        return this.service.get(mobilityRequest.context.domain).update(mobilityRequest);
+    }
+
+    @Post('/support')
+    support(@Body() mobilityRequest: MobilityRequestDto) {
+        return this.service.get(mobilityRequest.context.domain).support(mobilityRequest);
+    }
+
+    @Post('/rating')
+    rating(@Body() mobilityRequest: MobilityRequestDto) {
+        return this.service.get(mobilityRequest.context.domain).rating(mobilityRequest);
+    }
 }

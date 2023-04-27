@@ -8,7 +8,7 @@ export interface MobilityApiInterface {
     status: () => string;
     track: (mobilityRequestDto: MobilityRequestDto) => any;
     cancel: (mobilityRequestDto: MobilityRequestDto) => any;
-    update: () => string;
-    rating: () => string;
-    support: () => string;
+    update: (mobilityRequestDto: MobilityRequestDto) => any;
+    rating: (mobilityRequestDto: MobilityRequestDto) => any;
+    support: (mobilityRequestDto: MobilityRequestDto) => any;
 }
