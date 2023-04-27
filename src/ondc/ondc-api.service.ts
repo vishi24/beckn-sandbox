@@ -2,10 +2,11 @@ import { Injectable } from '@nestjs/common';
 import { MobilityResponseDto } from 'src/mobility/dto/response.dto';
 import { MobilityApiInterface } from 'src/mobility/mobility-api.interface';
 import { SearchRequestDto } from './dto/search-request.dto';
-import * as searchResponse from './response/response.search.json';
 import { TrackRequestDto } from './dto/track-request.dto';
+import { CancelRequestDto } from './dto/cancel-request.dto';
+import * as searchResponse from './response/response.search.json';
 import * as trackResponse from './response/response.track.json';
-// import * as selectResponse from './response/response.select.json'
+import * as cancelResponse from './response/response.cancel.json';
 
 @Injectable()
 export class OndcApiService implements MobilityApiInterface {
@@ -19,7 +20,9 @@ export class OndcApiService implements MobilityApiInterface {
     track = function (trackRequest: TrackRequestDto) {
         return trackResponse;
     };
-    cancel: () => string;
+    cancel = function (cancelRequest: CancelRequestDto) {
+        return cancelResponse;
+    };
     update: () => string;
     rating: () => string;
     support: () => string;
