@@ -11,6 +11,21 @@ export class MobilityController {
         return this.service.get(mobilityRequest.context.domain).search(mobilityRequest);
     }
 
+    @Post('/select')
+    select(@Body() mobilityRequest: MobilityRequestDto) {
+        return this.service.get(mobilityRequest.context.domain).select(mobilityRequest);
+    }
+
+    @Post('/init')
+    init(@Body() mobilityRequest: MobilityRequestDto) {
+        return this.service.get(mobilityRequest.context.domain).init(mobilityRequest);
+    }
+
+    @Post('/confirm')
+    confirm(@Body() mobilityRequest: MobilityRequestDto) {
+        return this.service.get(mobilityRequest.context.domain).confirm(mobilityRequest);
+    }
+
     @Post('/track')
     track(@Body() mobilityRequest: MobilityRequestDto) {
         return this.service.get(mobilityRequest.context.domain).track(mobilityRequest);
