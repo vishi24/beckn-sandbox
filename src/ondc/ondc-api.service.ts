@@ -3,7 +3,6 @@ import { MobilityApiInterface } from 'src/mobility/mobility-api.interface';
 import { InitRequestDto } from './dto/init-request.dto';
 import { SearchRequestDto } from './dto/search-request.dto';
 import { SelectReqDto } from './dto/select-request.dto';
-import * as searchResponse from './response/response.search.json'
 import * as selectResponse from './response/response.select.json'
 import * as initResponse from './response/response.init.json'
 import * as confirmResponse from './response/response.confirm.json'
