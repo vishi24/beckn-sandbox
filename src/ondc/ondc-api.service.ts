@@ -1,5 +1,4 @@
 import { Injectable } from '@nestjs/common';
-import { MobilityResponseDto } from 'src/mobility/dto/response.dto';
 import { MobilityApiInterface } from 'src/mobility/mobility-api.interface';
 import { SearchRequestDto } from './dto/search-request.dto';
 import { TrackRequestDto } from './dto/track-request.dto';
