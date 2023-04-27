@@ -28,7 +28,7 @@ export class UpdateRequestDto extends MobilityRequestDto {
                   string
                 ],
                 audio: string,
-                // 3d_render: string
+                "3d_render": string
               },
               price: {
                 currency: string,
@@ -163,7 +163,7 @@ export class UpdateRequestDto extends MobilityRequestDto {
                   string
                 ],
                 audio: string,
-                // 3d_render: string
+                "3d_render": string
               },
               updated_at: string,
               updated_by: string
@@ -252,7 +252,7 @@ export class UpdateRequestDto extends MobilityRequestDto {
                     string
                   ],
                   audio: string,
-                //   3d_render: string
+                  "3d_render": string
                 },
                 gps: string,
                 address: {
@@ -291,7 +291,7 @@ export class UpdateRequestDto extends MobilityRequestDto {
                   }
                 },
                 polygon: string,
-                // 3dspace: string,
+                "3dspace": string,
                 time: {
                   label: string,
                   timestamp: string,
@@ -341,7 +341,7 @@ export class UpdateRequestDto extends MobilityRequestDto {
                   string
                 ],
                 audio: string,
-                // 3d_render: string
+                "3d_render": string
               },
               contact: {
                 phone: string,
@@ -385,7 +385,7 @@ export class UpdateRequestDto extends MobilityRequestDto {
                     string
                   ],
                   audio: string,
-                //   3d_render: string
+                  "3d_render": string
                 },
                 gps: string,
                 address: {
@@ -424,7 +424,7 @@ export class UpdateRequestDto extends MobilityRequestDto {
                   }
                 },
                 polygon: string,
-                // 3dspace: string,
+                "3dspace": string,
                 time: {
                   label: string,
                   timestamp: string,
@@ -474,7 +474,7 @@ export class UpdateRequestDto extends MobilityRequestDto {
                   string
                 ],
                 audio: string,
-                // 3d_render: string
+                "3d_render": string
               },
               contact: {
                 phone: string,
