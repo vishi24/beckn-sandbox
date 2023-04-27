@@ -9,4 +9,6 @@ export class ClientContextDto {
     core_version: string;
     action: string;
     bap_uri: string;
+    bpp_uri?: string;
+    bpp_id?: string;
 }
