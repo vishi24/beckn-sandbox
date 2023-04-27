@@ -9,4 +9,6 @@ export class ClientContextDto {
     core_version: string;
     action: string;
     bap_uri: string;
+    max_callbacks?: string;
+    ttl: string;
 }

@@ -15,6 +15,18 @@ export class SearchRequestDto extends MobilityRequestDto {
                         gps: string;
                     }
                 }
+            },
+            customer?: {
+                person: {
+                    tags: {
+                        "groups/1/descriptor/name": string,
+                        "groups/1/descriptor/code": string,
+                        "groups/1/display": boolean,
+                        "groups/1/list/1/descriptor/code": string,
+                        "groups/1/list/1/descriptor/name": string,
+                        "groups/1/list/1/value": string
+                    }
+                }
             }
         }
     }
