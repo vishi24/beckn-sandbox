@@ -26,6 +26,11 @@ export class MobilityController {
         return this.service.get(mobilityRequest.context.domain).confirm(mobilityRequest);
     }
 
+    @Post('/status')
+    status(@Body() mobilityRequest: MobilityRequestDto) {
+        return this.service.get(mobilityRequest.context.domain).status(mobilityRequest);
+    }
+
     @Post('/track')
     track(@Body() mobilityRequest: MobilityRequestDto) {
         return this.service.get(mobilityRequest.context.domain).track(mobilityRequest);

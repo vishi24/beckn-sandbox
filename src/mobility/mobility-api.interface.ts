@@ -5,7 +5,7 @@ export interface MobilityApiInterface {
     select: (mobilityRequestDto: MobilityRequestDto) => any;
     init: (mobilityRequestDto: MobilityRequestDto) => any;
     confirm: (mobilityRequestDto: MobilityRequestDto) => any;
-    status: () => string;
+    status: (mobilityRequestDto: MobilityRequestDto) => any;
     track: (mobilityRequestDto: MobilityRequestDto) => any;
     cancel: (mobilityRequestDto: MobilityRequestDto) => any;
     update: (mobilityRequestDto: MobilityRequestDto) => any;
