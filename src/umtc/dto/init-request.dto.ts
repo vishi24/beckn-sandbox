@@ -4,97 +4,97 @@ export class InitRequestDto extends MobilityRequestDto {
     message: {
         order: {
             provider: {
-                id: string
-            },
+                id: string;
+            };
             items: [
                 {
-                    id: string,
-                    fulfillment_id: string,
-                    payment_id: string
-                }
-            ],
+                    id: string;
+                    fulfillment_id: string;
+                    payment_id: string;
+                },
+            ];
             quote: {
-                value: string,
-                currency: string,
+                value: string;
+                currency: string;
                 breakup: [
                     {
-                        title: string,
+                        title: string;
                         price: {
-                            value: string,
-                            currency: string
-                        }
+                            value: string;
+                            currency: string;
+                        };
                     },
                     {
-                        title: string,
+                        title: string;
                         price: {
-                            value: string,
-                            currency: string
-                        }
-                    }
-                ]
-            },
+                            value: string;
+                            currency: string;
+                        };
+                    },
+                ];
+            };
             fulfillment: {
-                id: string,
+                id: string;
                 start: {
                     location: {
-                        gps: string,
+                        gps: string;
                         address: {
-                            ward: string,
-                            country: string,
-                            building: string,
-                            state: string,
-                            city: string,
-                            locality: string,
-                            door: string,
-                            area_code: string,
-                            street: string
-                        }
-                    }
-                },
+                            ward: string;
+                            country: string;
+                            building: string;
+                            state: string;
+                            city: string;
+                            locality: string;
+                            door: string;
+                            area_code: string;
+                            street: string;
+                        };
+                    };
+                };
                 end: {
                     location: {
-                        gps: string,
+                        gps: string;
                         address: {
-                            ward: string,
-                            country: string,
-                            building: string,
-                            state: string,
-                            city: string,
-                            locality: string,
-                            door: string,
-                            area_code: string,
-                            street: string
-                        }
-                    }
-                },
+                            ward: string;
+                            country: string;
+                            building: string;
+                            state: string;
+                            city: string;
+                            locality: string;
+                            door: string;
+                            area_code: string;
+                            street: string;
+                        };
+                    };
+                };
                 agent: {
-                    name: string,
-                    rateable: string,
-                    rating: string
-                },
+                    name: string;
+                    rateable: string;
+                    rating: string;
+                };
                 vehicle: {
-                    category: string
-                }
-            },
+                    category: string;
+                };
+            };
             payment: {
-                id: string,
-                type: string,
-                collected_by: string
-            },
+                id: string;
+                type: string;
+                collected_by: string;
+            };
             customer: {
                 person: {
-                    name: string,
-                    phone: string,
+                    name: string;
+                    phone: string;
                     tags: {
-                        "groups/1/descriptor/name": string,
-                        "groups/1/descriptor/code": string,
-                        "groups/1/display": string,
-                        "groups/1/list/1/descriptor/code": string,
-                        "groups/1/list/1/descriptor/name": string,
-                        "groups/1/list/1/value": string
-                    }
-                }
-            }
-        }
-    }
+                        "groups/1/descriptor/name": string;
+                        "groups/1/descriptor/code": string;
+                        "groups/1/display": string;
+                        "groups/1/list/1/descriptor/code": string;
+                        "groups/1/list/1/descriptor/name": string;
+                        "groups/1/list/1/value": string;
+                    };
+                };
+            };
+        };
+    };
 }

@@ -1,8 +1,11 @@
-import { Injectable } from '@nestjs/common';
-import { OndcApiService } from 'src/ondc/ondc-api.service';
-import { UmtcApiService } from 'src/umtc/umtc-api.service';
-import { MobilityApiInterface } from './mobility-api.interface';
-import { MobilityTypeEnum } from './mobility-type.enum';
+import { DomainNotFoundException } from "src/common/exception/domain-notfound.exception";
+import { OndcApiService } from "src/ondc/ondc-api.service";
+import { UmtcApiService } from "src/umtc/umtc-api.service";
+
+import { Injectable } from "@nestjs/common";
+
+import { MobilityApiInterface } from "./mobility-api.interface";
+import { MobilityTypeEnum } from "./mobility-type.enum";
 
 @Injectable()
 export class MobilityService {
@@ -13,7 +16,7 @@ export class MobilityService {
             case MobilityTypeEnum.UMTC:
                 return new UmtcApiService();
             default:
-                return new OndcApiService();
+                throw new DomainNotFoundException();
         }
     }
 }
