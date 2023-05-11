@@ -16,7 +16,7 @@
     "message": {
         "update_target": "order.payment",
         "order": {
-            "id": "ABC1234",
+            "id": "7751bd26-3fdc-47ca-9b64-e998dc5abe68",
             "provider": {
                 "id": "e8542642-0f4a-454c-9a9f-f46110c367a3",
                 "descriptor": {
@@ -114,8 +114,8 @@
                 "id": "fulf_5cf064d5-4c0a-42d3-b73d-5f19a6f7468e",
                 "state": {
                     "descriptor": {
-                        "code": "PAYMENT_COLLECTED",
-                        "name": "Payment received"
+                        "code": "DRIVER_EN_ROUTE",
+                        "name": "Driver is on the way"
                     }
                 },
                 "start": {
@@ -185,7 +185,7 @@
                 "params": {
                     "amount": "81",
                     "currency": "INR",
-                    "transaction_status": "PAID"
+                    "transaction_status": "NOT-PAID"
                 }
             }
         }
