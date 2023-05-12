@@ -53,7 +53,9 @@
                     "time": {
                         "timestamp": "2021-10-15T00:32:19.000Z"
                     },
-                    "instructions": "Show this ticket at the QR code scanner at the entry gate. If the QR code scanner is not present, show this at the ticket counter to get your token"
+                    "instructions": {
+                        "description": "Show this ticket at the QR code scanner at the entry gate. If the QR code scanner is not present, show this at the ticket counter to get your token"
+                    }
                 },
                 "end": {
                     "location": {
@@ -84,7 +86,8 @@
             ],
             "billing": {
                 "name": "John Doe",
-                "email": "john.doe@example.com"
+                "email": "john.doe@example.com",
+                "phone": "+918068870525"
             },
             "quote": {
                 "price": {
