@@ -52,7 +52,9 @@
                     "time": {
                         "timestamp": "2021-10-15T00:32:19.000Z"
                     },
-                    "instructions": "Show this ticket at the QR code scanner at the entry gate. If the QR code scanner is not present, show this at the ticket counter to get your token"
+                    "instructions": {
+                        "description": "Show this ticket at the QR code scanner at the entry gate. If the QR code scanner is not present, show this at the ticket counter to get your token"
+                    }
                 },
                 "end": {
                     "location": {
@@ -118,7 +120,7 @@
             "payment": {
                 "type": "ON-ORDER",
                 "uri": "https://pay.razorpay.com?amt=60.5&cur=INR&ref=24566345563",
-                "tl_method": "GET",
+                "tl_method": "http/get",
                 "status": "NOT-PAID"
             }
         }
