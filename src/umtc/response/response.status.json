@@ -25,8 +25,8 @@
                     },
                     "fulfillment_id": "3",
                     "price": {
-                        "currency": "55",
-                        "value": "INR"
+                        "currency": "INR",
+                        "value": "55"
                     }
                 }
             ],
@@ -82,8 +82,8 @@
             },
             "quote": {
                 "price": {
-                    "currency": "60.5",
-                    "value": "INR"
+                    "currency": "INR",
+                    "value": "60.5"
                 },
                 "breakup": [
                     {
