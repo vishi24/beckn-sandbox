@@ -1,4 +1,4 @@
 export enum MobilityTypeEnum {
-    ONDC = "nic2004:60221",
-    UMTC = "nic2004:60222",
+    ONDC = "mobility:ridehailing:0.8.0",
+    UMTC = "mobility:publictransport:0.8.0",
 }
