@@ -25,8 +25,8 @@
                     },
                     "fulfillment_id": "3",
                     "price": {
-                        "currency": "55",
-                        "value": "INR"
+                        "currency": "INR",
+                        "value": "55"
                     },
                     "tags": {
                         "groups/0/list/0/descriptor/name": "Validity",
