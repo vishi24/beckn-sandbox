@@ -35,8 +35,8 @@
                             },
                             "fulfillment_id": "1",
                             "price": {
-                                "currency": "35",
-                                "value": "INR"
+                                "currency": "INR",
+                                "value": "35"
                             }
                         },
                         {
@@ -47,8 +47,8 @@
                             },
                             "fulfillment_id": "2",
                             "price": {
-                                "currency": "65",
-                                "value": "INR"
+                                "currency": "INR",
+                                "value": "65"
                             }
                         },
                         {
@@ -59,8 +59,8 @@
                             },
                             "fulfillment_id": "3",
                             "price": {
-                                "currency": "55",
-                                "value": "INR"
+                                "currency": "INR",
+                                "value": "55"
                             }
                         },
                         {
@@ -71,8 +71,8 @@
                             },
                             "fulfillment_id": "1",
                             "price": {
-                                "currency": "60",
-                                "value": "INR"
+                                "currency": "INR",
+                                "value": "60"
                             }
                         },
                         {
@@ -83,8 +83,8 @@
                             },
                             "fulfillment_id": "2",
                             "price": {
-                                "currency": "90",
-                                "value": "INR"
+                                "currency": "INR",
+                                "value": "90"
                             }
                         },
                         {
@@ -95,8 +95,8 @@
                             },
                             "fulfillment_id": "3",
                             "price": {
-                                "currency": "100",
-                                "value": "INR"
+                                "currency": "INR",
+                                "value": "100"
                             }
                         },
                         {
@@ -208,7 +208,7 @@
                         "groups/0/list/0/value": "https://delhimetrorail.com/timetable.html",
                         "groups/0/list/1/descriptor/name": "GTFS Schedule",
                         "groups/0/list/1/value": "https://delhimetrorail.com/gtfs",
-                        "groups/0/list/1/display": false
+                        "groups/0/list/1/display": "false"
                     }
                 }
             ]
