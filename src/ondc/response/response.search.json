@@ -136,7 +136,7 @@
                             "tags": {
                                 "groups/1/descriptor/code": "route_info",
                                 "groups/1/descriptor/name": "Route Information",
-                                "groups/1/display": true,
+                                "groups/1/display": "true",
                                 "groups/1/list/1/descriptor/code": "encoded_polyline",
                                 "groups/1/list/1/descriptor/name": "Path",
                                 "groups/1/list/1/value": "_p~iF~ps|U_ulLnnqC_mqNvxq`@",
