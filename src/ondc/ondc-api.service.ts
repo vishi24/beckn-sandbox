@@ -58,10 +58,10 @@ export class OndcApiService implements MobilityApiInterface {
     rating = function (ratingRequest: RatingRequestDto) {
         return ratingResponse;
     };
-    cancellation_reasons = function () {
+    cancellationReasons = function () {
         return cancellationResponse
     }
-    rating_categories = function () {
+    ratingCategories = function () {
         return ratingCategoriesResponse
     }
 

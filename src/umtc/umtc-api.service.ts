@@ -56,10 +56,10 @@ export class UmtcApiService implements MobilityApiInterface {
     support = function (supportRequest: SupportRequestDto) {
         return supportResponse;
     };
-    cancellation_reasons = function () {
+    cancellationReasons = function () {
         return cancellationResponse
     }
-    rating_categories = function () {
+    ratingCategories = function () {
         return {}
     }
 }

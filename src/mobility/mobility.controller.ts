@@ -58,13 +58,13 @@ export class MobilityController {
     }
 
     @Post("/get_cancellation_reasons")
-    cancellation_reasons(@Body() mobilityRequest: MobilityRequestDto) {
-        return this.service.get(mobilityRequest.context.domain).cancellation_reasons(mobilityRequest);
+    cancellationReasons(@Body() mobilityRequest: MobilityRequestDto) {
+        return this.service.get(mobilityRequest.context.domain).cancellationReasons(mobilityRequest);
     }
 
     @Post("/get_rating_categories")
-    rating_categories(@Body() mobilityRequest: MobilityRequestDto) {
-        return this.service.get(mobilityRequest.context.domain).rating_categories(mobilityRequest);
+    ratingCategories(@Body() mobilityRequest: MobilityRequestDto) {
+        return this.service.get(mobilityRequest.context.domain).ratingCategories(mobilityRequest);
     }
 
 }

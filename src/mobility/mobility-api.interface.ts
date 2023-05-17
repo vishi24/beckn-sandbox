@@ -11,6 +11,6 @@ export interface MobilityApiInterface {
     update: (mobilityRequestDto: MobilityRequestDto) => any;
     rating: (mobilityRequestDto: MobilityRequestDto) => any;
     support: (mobilityRequestDto: MobilityRequestDto) => any;
-    cancellation_reasons: (mobilityRequestDto: MobilityRequestDto) => any;
-    rating_categories: (mobilityRequestDto: MobilityRequestDto) => any;
+    cancellationReasons: (mobilityRequestDto: MobilityRequestDto) => any;
+    ratingCategories: (mobilityRequestDto: MobilityRequestDto) => any;
 }
