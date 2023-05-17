@@ -5,7 +5,7 @@ import { MobilityService } from "./mobility.service";
 
 @Controller()
 export class MobilityController {
-    constructor(private readonly service: MobilityService) {}
+    constructor(private readonly service: MobilityService) { }
 
     @Post("/search")
     search(@Body() mobilityRequest: MobilityRequestDto) {
@@ -56,4 +56,15 @@ export class MobilityController {
     rating(@Body() mobilityRequest: MobilityRequestDto) {
         return this.service.get(mobilityRequest.context.domain).rating(mobilityRequest);
     }
+
+    @Post("/get_cancellation_reasons")
+    cancellation_reasons(@Body() mobilityRequest: MobilityRequestDto) {
+        return this.service.get(mobilityRequest.context.domain).cancellation_reasons(mobilityRequest);
+    }
+
+    @Post("/get_rating_categories")
+    rating_categories(@Body() mobilityRequest: MobilityRequestDto) {
+        return this.service.get(mobilityRequest.context.domain).rating_categories(mobilityRequest);
+    }
+
 }

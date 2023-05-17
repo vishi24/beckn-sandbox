@@ -22,6 +22,8 @@ import * as statusResonse from "./response/response.status.json";
 import * as supportResponse from "./response/response.support.json";
 import * as trackResponse from "./response/response.track.json";
 import * as updateResponse from "./response/response.update.json";
+import * as cancellationResponse from "./response/response.cancellation_reasons.json"
+import * as ratingCategoriesResponse from "./response/response.rating_categories.json"
 
 @Injectable()
 export class OndcApiService implements MobilityApiInterface {
@@ -56,4 +58,11 @@ export class OndcApiService implements MobilityApiInterface {
     rating = function (ratingRequest: RatingRequestDto) {
         return ratingResponse;
     };
+    cancellation_reasons = function () {
+        return cancellationResponse
+    }
+    rating_categories = function () {
+        return ratingCategoriesResponse
+    }
+
 }
