@@ -16,6 +16,16 @@ Follow instructions at [Install postman on Windows](https://learning.postman.com
 
 Once you are done with the installation process of postman. Please import the collection using below step.
 
+## Sandbox architrcture
+
+Below is the architecture diagram.
+
+<img alt="architecture" src="images/sandbox_arch_diagram.png" width="700"/>
+
+Below is the sequence diagram.
+
+<img alt="sequence" src="images/sandbox_seq_diagram.png" width="700"/>
+
 ## Import Collection in Postman
 
 You can import collections, API specifications, and data files directly into Postman.
