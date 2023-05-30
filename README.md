@@ -59,5 +59,6 @@ Please follow the [README.md](https://github.com/beckn/beckn-sandbox-webhook/blo
 
 Please follow the setup instructions at [setup.md](https://github.com/beckn/protocol-server/blob/v2-0.9.4-fix/setup.md) of protocol server.
 
-
 ## User Guide
+
+Please follow the user guide at [USER_GUIDE.md](https://github.com/beckn/beckn-sandbox/blob/feat/readme-file/USER_GUIDE.md).
