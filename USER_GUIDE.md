@@ -42,6 +42,12 @@ Yuo have seen url and request JSON body has some variables used (for example: `{
 
 <img src="user_guide/images/postman_collection_variable.png" width="700"/>
 
-## Make changes in response of Sandbox API
+## Make changes Sandbox API code
+
+### Make changes in request of Sandbox API
+
+To make changes in request, it requires change in request raw JSON body in postman. Along with JSON body changes, there is need to change the sandbox changes in request DTOs. Please find the list of DTO's for `Ride hailing (ONDC)` at `src/ondc/dto` and for `Public transit (UMTC)` at `src/umtc/dto`. Filename in the list as per the request action. For example, for search request, DTO file is `src/ondc/dto/search-request.dto.ts`.
+
+### Make changes in response of Sandbox API
 
 The response is mocked in codebase. The mocked JSON files are separated in codebase and list of JSON files can be viewed at `src/ondc/response` for ONDC and `src/umtc/response` for UMTC folder. For example, in search response you can make changes in file `src/ondc/response/response.search.json` and this will reflect in sandbox search api response.
