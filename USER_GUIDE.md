@@ -22,7 +22,7 @@ You can import collections, API specifications, and data files directly into Pos
 
 To import your data into Postman, select Import in the upper left. The Import modal opens.
 
-![Import data](user_guide/images/import-export-import-ui-v10-3.jpg "Import collection")
+<img src="user_guide/images/import-export-import-ui-v10-3.jpg" width="700"/>
 
 You can import your postman collection by by selecting file from local storage. Please download the collection from <https://raw.githubusercontent.com/beckn/beckn-sandbox/feat/readme-file/beckn_sandbox_collection.json>
 
@@ -32,7 +32,7 @@ Once collection is imported successfully, you can view the imported collection w
 
 In collection's `Ride hailing` folder, there are list of api request. You can click on any request and hit the `Send` button (shown in image below) to make the request and get the response.
 
-![Make request](user_guide/images/postman_making_request.png "Making request in Postman")
+<img src="user_guide/images/postman_making_request.png" width="700"/>
 
 The image shows the requet method as `POST`, url is `{{BASE_URL}}/search` which is endpoint of sandbox search api, `raw` body of type `JSON` which is request body. You can change these to make request modification.
 
@@ -40,7 +40,7 @@ The image shows the requet method as `POST`, url is `{{BASE_URL}}/search` which 
 
 Yuo have seen url and request JSON body has some variables used (for example: `{{BASE_URL}}, {{COUNTRY}}, {{BAP_ID}}, {{TRANSACTION_ID}}`). These variables are collection level variables. To view the list of variables you can click on collection name `MOBILITY Sandbox` and choose the `variables` tab. Please check the image below.
 
-![Postman collection variable](user_guide/images/postman_collection_variable.png "Making request in Postman").
+<img src="user_guide/images/postman_collection_variable.png" width="700"/>
 
 ## Make changes in response of Sandbox API
 
