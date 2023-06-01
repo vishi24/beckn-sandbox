@@ -1,7 +1,5 @@
 # Beckn Sandbox
 
-Beckn developer sandbox
-
 ## Introduction
 
 ### Overview
@@ -61,4 +59,8 @@ Please follow the setup instructions at [setup.md](https://github.com/beckn/prot
 
 ## User Guide
 
-Please follow the user guide at [USER_GUIDE.md](https://github.com/beckn/beckn-sandbox/blob/feat/readme-file/USER_GUIDE.md).
+Please follow the user guide at [USER_GUIDE.md](./USER_GUIDE.md).
+
+## Troubleshoot Guide
+
+Please follow the toubleshoot guide at [TROUBLESHOOT_GUIDE.md](./TROUBLESHOOT_GUIDE.md).
