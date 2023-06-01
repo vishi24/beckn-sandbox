@@ -65,4 +65,4 @@ Please follow the user guide at [USER_GUIDE.md](https://github.com/beckn/beckn-s
 
 ## Troubleshoot Guide
 
-Please follow the toubleshoot guide at [TROUBLESHOOT_GUIDE.md](https://github.com/beckn/beckn-sandbox/blob/feat/readme-file/TROUBLESHOOT_GUIDE.md).
+Please follow the toubleshoot guide at [TROUBLESHOOT_GUIDE.md](./TROUBLESHOOT_GUIDE.md).
