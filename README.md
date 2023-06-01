@@ -1,7 +1,5 @@
 # Beckn Sandbox
 
-Beckn developer sandbox
-
 ## Introduction
 
 ### Overview
