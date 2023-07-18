@@ -1,0 +1,126 @@
+{
+	"info": {
+		"_postman_id": "8dab1049-5f41-43bb-bbc9-3c233f552718",
+		"name": "financial-services sandbox",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "3667681"
+	},
+	"item": [
+		{
+			"name": "credit personal loan search",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"context\": {\n        \"domain\": \"financial-services:credit-personal:0.2.0\",\n        \"location\": {\n            \"country\": {\n                \"code\": \"IND\"\n            }\n        },\n        \"transaction_id\": \"a9aaecca-10b7-4d19-b640-b047a7c62196\",\n        \"action\": \"search\",\n        \"timestamp\": \"2023-05-25T05:23:03.443Z\",\n        \"core_version\": \"1.1.0\",\n        \"bap_uri\": \"https://beckn-sandbox-fs-bap-network.becknprotocol.io\",\n        \"bap_id\": \"beckn-sandbox-fs-bap.becknprotocol.io\",\n        \"ttl\": \"PT10M\",\n        \"bpp_id\": \"beckn-sandbox-fs-bpp.becknprotocol.io\",\n        \"bpp_uri\": \"https://beckn-sandbox-fs-bpp-network.becknprotocol.io\"\n    },\n    \"message\": {\n        \"intent\": {\n            \"category\": {\n                \"descriptor\": {\n                    \"name\": \"Personal loan\"\n                }\n            }\n        }\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://beckn-sandbox-fs-bap-client.becknprotocol.io/search",
+					"protocol": "https",
+					"host": [
+						"beckn-sandbox-fs-bap-client",
+						"becknprotocol",
+						"io"
+					],
+					"path": [
+						"search"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "credit personal loan select",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"context\": {\n        \"domain\": \"financial-services:credit-personal:0.2.0\",\n        \"location\": {\n            \"country\": {\n                \"code\": \"IND\"\n            }\n        },\n        \"transaction_id\": \"a9aaecca-10b7-4d19-b640-b047a7c62196\",\n        \"action\": \"select\",\n        \"timestamp\": \"2023-05-25T05:23:03.443Z\",\n        \"core_version\": \"1.1.0\",\n        \"bap_uri\": \"https://beckn-sandbox-fs-bap-network.becknprotocol.io\",\n        \"bap_id\": \"beckn-sandbox-fs-bap.becknprotocol.io\",\n        \"ttl\": \"PT10M\",\n        \"bpp_id\": \"beckn-sandbox-fs-bpp.becknprotocol.io\",\n        \"bpp_uri\": \"https://beckn-sandbox-fs-bpp-network.becknprotocol.io\"\n    },\n    \"message\": {\n        \"order\": {\n            \"provider\": {\n                \"id\": \"1\"\n            },\n            \"items\": [\n                {\n                    \"id\": \"66b7b9bad166-4a3f-ada6-ca063dc9d321\"\n                }\n            ],\n            \"fulfillments\": [\n                {\n                    \"customer\": {\n                        \"id\": \"9999999999@onemoney\"\n                    }\n                }\n            ]\n        }\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://beckn-sandbox-fs-bap-client.becknprotocol.io/select",
+					"protocol": "https",
+					"host": [
+						"beckn-sandbox-fs-bap-client",
+						"becknprotocol",
+						"io"
+					],
+					"path": [
+						"select"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "credit personal loan init",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"context\": {\n        \"domain\": \"financial-services:credit-personal:0.2.0\",\n        \"location\": {\n            \"country\": {\n                \"code\": \"IND\"\n            }\n        },\n        \"transaction_id\": \"a9aaecca-10b7-4d19-b640-b047a7c62196\",\n        \"action\": \"init\",\n        \"timestamp\": \"2023-05-25T05:23:03.443Z\",\n        \"core_version\": \"1.1.0\",\n        \"bap_uri\": \"https://beckn-sandbox-fs-bap-network.becknprotocol.io\",\n        \"bap_id\": \"beckn-sandbox-fs-bap.becknprotocol.io\",\n        \"ttl\": \"PT10M\",\n        \"bpp_id\": \"beckn-sandbox-fs-bpp.becknprotocol.io\",\n        \"bpp_uri\": \"https://beckn-sandbox-fs-bpp-network.becknprotocol.io\"\n    },\n    \"message\": {\n        \"order\": {\n            \"provider\": {\n                \"id\": \"1\"\n            },\n            \"items\": [\n                {\n                    \"id\": \"66b7b9bad166-4a3f-ada6-ca063dc9d321\"\n                }\n            ],\n            \"fulfillments\": [\n                {\n                    \"customer\": {\n                        \"id\": \"9999999999@onemoney\"\n                    }\n                }\n            ],\n            \"xinput\": {\n                \"form\": {\n                    \"data\": {\n                        \"firstName\": \"John\",\n                        \"lastName\": \"Doe\",\n                        \"dob\": \"1986-11-15\",\n                        \"maritalStatus\": \"married\",\n                        \"occupation\": \"Software Engineer\",\n                        \"idValue\": \"ABCDS1234E\",\n                        \"idType\": \"PAN\",\n                        \"incomeProofType\": \"salary_slip\",\n                        \"incomeProof\": \"data:application/pdf;base64,JVBERi0xLjQNCiWhs8XXDQoxIDAgb2Jq.....IgL01lZGlhQm94Wy\",\n                        \"income\": \"INR 6,00,000\",\n                        \"address\": \"KB102, Oak Block, Green Springs Apartments, No 7, MG Road, Bengaluru - 560068\"\n                    }\n                }\n            }\n        }\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://beckn-sandbox-fs-bap-client.becknprotocol.io/init",
+					"protocol": "https",
+					"host": [
+						"beckn-sandbox-fs-bap-client",
+						"becknprotocol",
+						"io"
+					],
+					"path": [
+						"init"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "credit personal loan confirm",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"context\": {\n        \"domain\": \"financial-services:credit-invoice-based:0.2.0\",\n        \"location\": {\n            \"country\": {\n                \"code\": \"IND\"\n            }\n        },\n        \"transaction_id\": \"a9aaecca-10b7-4d19-b640-b047a7c62196\",\n        \"action\": \"confirm\",\n        \"timestamp\": \"2023-05-25T05:23:03.443Z\",\n        \"core_version\": \"1.1.0\",\n        \"bap_uri\": \"https://beckn-sandbox-fs-bap-network.becknprotocol.io\",\n        \"bap_id\": \"beckn-sandbox-fs-bap.becknprotocol.io\",\n        \"ttl\": \"PT10M\",\n        \"bpp_id\": \"beckn-sandbox-fs-bpp.becknprotocol.io\",\n        \"bpp_uri\": \"https://beckn-sandbox-fs-bpp-network.becknprotocol.io\"\n    },\n    \"message\": {\n        \"order\": {\n            \"provider\": {\n                \"id\": \"1\"\n            },\n            \"items\": [\n                {\n                    \"id\": \"66b7b9bad166-4a3f-ada6-ca063dc9d321\"\n                }\n            ],\n            \"fulfillments\": [\n                {\n                    \"stops\": [\n                        {\n                            \"authorization\": {\n                                \"type\": \"OTP\",\n                                \"token\": \"143532\"\n                            }\n                        }\n                    ]\n                }\n            ],\n            \"payments\": [\n                {\n                    \"params\": {\n                        \"source_bank_code\": \"SBIN0001234\",\n                        \"source_bank_account_number\": \"1800002341\"\n                    }\n                }\n            ]\n        }\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://beckn-sandbox-fs-bap-client.becknprotocol.io/confirm",
+					"protocol": "https",
+					"host": [
+						"beckn-sandbox-fs-bap-client",
+						"becknprotocol",
+						"io"
+					],
+					"path": [
+						"confirm"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

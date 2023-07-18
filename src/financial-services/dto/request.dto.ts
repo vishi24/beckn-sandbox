@@ -1,5 +1,5 @@
 import { ClientContextDto } from "src/common/client-context.dto";
 
-export class MobilityRequestDto {
+export class FinancialServicesRequestDto {
     context: ClientContextDto;
 }

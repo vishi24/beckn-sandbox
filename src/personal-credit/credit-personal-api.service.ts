@@ -1,17 +1,7 @@
-import { MobilityApiInterface } from "src/mobility/mobility-api.interface";
+import { FinancialServicesApiInterface } from "src/financial-services/financial-services-api.interface";
 
 import { Injectable } from "@nestjs/common";
 
-import { CancelRequestDto } from "./dto/cancel-request.dto";
-import { ConfirmRequestDto } from "./dto/confirm.request.dto";
-import { InitRequestDto } from "./dto/init-request.dto";
-import { RatingRequestDto } from "./dto/rating-request.dto";
-import { SearchRequestDto } from "./dto/search-request.dto";
-import { SelectReqDto } from "./dto/select-request.dto";
-import { StatusRequestDto } from "./dto/status-request.dto";
-import { SupportRequestDto } from "./dto/support-request.dto";
-import { TrackRequestDto } from "./dto/track-request.dto";
-import { UpdateRequestDto } from "./dto/update-request.dto";
 import * as cancelResponse from "./response/response.cancel.json";
 import * as confirmResponse from "./response/response.confirm.json";
 import * as initResponse from "./response/response.init.json";
@@ -26,35 +16,35 @@ import * as cancellationResponse from "./response/response.cancellation_reasons.
 import * as ratingCategories from "./response/response.rating_categories.json";
 
 @Injectable()
-export class UmtcApiService implements MobilityApiInterface {
-    search = function (searchRequest: SearchRequestDto) {
+export class CreditPersonalApiService implements FinancialServicesApiInterface {
+    search = function () {
         return searchResponse;
     };
-    select = function (selectRequestDto: SelectReqDto) {
+    select = function () {
         return selectResponse;
     };
-    init = function (initRequestDto: InitRequestDto) {
+    init = function () {
         return initResponse;
     };
-    confirm = function (confirmRequestDto: ConfirmRequestDto) {
+    confirm = function () {
         return confirmResponse;
     };
-    status = function (statusRequestDto: StatusRequestDto) {
+    status = function () {
         return statusResonse;
     };
-    track = function (trackRequest: TrackRequestDto) {
+    track = function () {
         return trackResponse;
     };
-    cancel = function (cancelRequest: CancelRequestDto) {
+    cancel = function () {
         return cancelResponse;
     };
-    update = function (updateRequest: UpdateRequestDto) {
+    update = function () {
         return updateResponse;
     };
-    rating = function (ratingRequest: RatingRequestDto) {
+    rating = function () {
         return ratingResponse;
     };
-    support = function (supportRequest: SupportRequestDto) {
+    support = function () {
         return supportResponse;
     };
     cancellationReasons = function () {

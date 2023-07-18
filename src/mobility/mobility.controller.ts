@@ -3,9 +3,11 @@ import { Body, Controller, Get, Post } from "@nestjs/common";
 import { MobilityRequestDto } from "./dto/request.dto";
 import { MobilityService } from "./mobility.service";
 
-@Controller()
+@Controller("/mobility")
 export class MobilityController {
-    constructor(private readonly service: MobilityService) { }
+    constructor(private readonly service: MobilityService) {
+        /* constructor */
+    }
 
     @Post("/search")
     search(@Body() mobilityRequest: MobilityRequestDto) {
@@ -66,5 +68,4 @@ export class MobilityController {
     ratingCategories(@Body() mobilityRequest: MobilityRequestDto) {
         return this.service.get(mobilityRequest.context.domain).ratingCategories(mobilityRequest);
     }
-
 }
