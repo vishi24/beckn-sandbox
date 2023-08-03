@@ -17,8 +17,8 @@
         "version": "1.1.0",
         "bap_id": "ps-bap-network.becknprotocol.io",
         "bap_uri": "https://ps-bap-network.becknprotocol.io/",
-        "bpp_id": "http://dsep-fossgen.centralindia.cloudapp.azure.com:8001/",
-        "bpp_uri": "http://dsep-fossgen.centralindia.cloudapp.azure.com:8001/public",
+        "bpp_id": "beckn-sandbox-bpp.becknprotocol.io",
+        "bpp_uri": "https://sandbox-bpp-network.becknprotocol.io/",
         "transaction_id": "5007a4bd-f8c1-4859-877e-2bc4b7a4f554",
         "message_id": "5c59bdc4-a2c7-4742-81de-149f91c2b2df"
     },

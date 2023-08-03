@@ -19,8 +19,8 @@
         "message_id": "baba996b-45cc-4542-a69c-88f8c77b3cc1",
         "ttl": "PT10M",
         "timestamp": "2023-08-02T11:53:35.568Z",
-        "bpp_id": "bpp.dsep.samagra.io",
-        "bpp_uri": "https://bpp.dsep.samagra.io"
+        "bpp_id": "beckn-sandbox-bpp.becknprotocol.io",
+        "bpp_uri": "https://sandbox-bpp-network.becknprotocol.io/"
     },
     "message": {
         "catalog": {

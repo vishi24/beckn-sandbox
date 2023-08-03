@@ -15,8 +15,8 @@
                 "code": "IND"
             }
         },
-        "bpp_id": "bpp.dsep.samagra.io",
-        "bpp_uri": "https://bpp.dsep.samagra.io",
+        "bpp_id": "beckn-sandbox-bpp.becknprotocol.io",
+        "bpp_uri": "https://sandbox-bpp-network.becknprotocol.io/",
         "transaction_id": "a9aaecca-10b7-4d19-b640-b047a7c62196",
         "message_id": "b579b13b-c69c-498a-9ab9-6dff7746edca",
         "ttl": "PT10M",
