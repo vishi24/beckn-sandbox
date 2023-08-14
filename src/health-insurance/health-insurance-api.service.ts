@@ -14,7 +14,7 @@ import * as cancellationResponse from "./response/response.cancellation_reasons.
 import * as ratingCategories from "./response/response.rating_categories.json";
 
 @Injectable()
-export class CreditPersonalApiService implements FinancialServicesApiInterface {
+export class HealthInsuranceApiService implements FinancialServicesApiInterface {
     search = function () {
         return searchResponse;
     };
