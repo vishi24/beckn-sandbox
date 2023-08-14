@@ -34,10 +34,10 @@ git clone https://github.com/beckn/beckn-sandbox.git
 cd beckn-sandbox
 ```
 
-3. The code for the financial-services is in the `financial-services-credit` branch, checkout to that branch.
+3. The code for the financial-services, mobility and DSEP is in the `main` branch, checkout to that branch.
 
 ```
-git checkout financial-services-credit
+git checkout main
 ```
 
 4. Install the packages

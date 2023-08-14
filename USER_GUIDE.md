@@ -34,7 +34,16 @@ To import your data into Postman, select Import in the upper left. The Import mo
 
 <img src="images/import-export-import-ui-v10-3.jpg" width="700"/>
 
-You can import your postman collection by by selecting file from local storage. Please download the collection from <https://raw.githubusercontent.com/beckn/beckn-sandbox/feat/readme-file/beckn_sandbox_collection.json>
+You can import your postman collection by by selecting file from local storage. Please download the collection from
+
+For DSEP:
+<https://raw.githubusercontent.com/beckn/beckn-sandbox/main/artefacts/DSEP/dsep-services-sandbox.postman_collection.json>
+
+For Mobility:
+<https://raw.githubusercontent.com/beckn/beckn-sandbox/main/artefacts/Mobility/mobility-services-sandbox.postman_collection.json>
+
+For Financial Services:
+<https://raw.githubusercontent.com/beckn/beckn-sandbox/addpostmancollection/artefacts/Finance-Services/financial-services-sandbox.postman_collection.json>
 
 Once collection is imported successfully, you can view the imported collection with name `MOBILITY Sandbox` in left sidebar's collection list. You will find the two folders having names `Ride hailing` (ONDC) and `Public transit` (UMTC).
 
