@@ -76,7 +76,7 @@
           "type": "CHARGING",
           "state": {
             "descriptor": {
-              "code": "charging-started"
+              "code": "charging-ended"
             }
           },
           "stops": [
