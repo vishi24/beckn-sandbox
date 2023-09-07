@@ -45,6 +45,8 @@ For Mobility:
 For Financial Services:
 <https://raw.githubusercontent.com/beckn/beckn-sandbox/addpostmancollection/artefacts/Finance-Services/financial-services-sandbox.postman_collection.json>
 
+For DENT Protocol: <https://raw.githubusercontent.com/beckn/beckn-sandbox/main/artefacts/DENT/DENT-protocol-sandbox.postman_collection.json>
+
 Once collection is imported successfully, you can view the imported collection with name `MOBILITY Sandbox` in left sidebar's collection list. You will find the two folders having names `Ride hailing` (ONDC) and `Public transit` (UMTC).
 
 ## Making request to Sandbox API in Postman
