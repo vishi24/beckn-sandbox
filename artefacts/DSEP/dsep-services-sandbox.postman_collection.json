@@ -13,7 +13,7 @@
                     "name": "Search",
                     "item": [
                         {
-                            "name": "Search with title - Enineer",
+                            "name": "Search with item - Engineer",
                             "request": {
                                 "method": "POST",
                                 "header": [],
@@ -61,7 +61,7 @@
                             ]
                         },
                         {
-                            "name": "Search with title - Developer",
+                            "name": "Search with item - Developer",
                             "request": {
                                 "method": "POST",
                                 "header": [],
@@ -109,13 +109,13 @@
                             ]
                         },
                         {
-                            "name": "Search with multiple criteria",
+                            "name": "Search with description",
                             "request": {
                                 "method": "POST",
                                 "header": [],
                                 "body": {
                                     "mode": "raw",
-                                    "raw": "{\n    \"context\": {\n        \"domain\": \"dsep:jobs\",\n        \"action\": \"search\",\n        \"version\": \"{{core_version}}\",\n        \"bap_id\": \"{{bap_id}}\",\n        \"bap_uri\": \"{{bap_uri}}\",\n        \"transaction_id\": \"a9aaecca-10b7-4d19-b640-b047a7c60001\",\n        \"message_id\": \"a9aaecca-10b7-4d19-b640-b047a7c60002\",\n        \"timestamp\": \"2023-02-06T09:55:41.161Z\"\n    },\n    \"message\": {\n        \"intent\": {\n            \"item\": {\n                \"descriptor\": {\n                    \"name\": \"Developer\"\n                },\n                \"location_id\": \"1\",\n                \"fulfillment_id\": \"1\",\n                \"time\": {\n                    \"timestamp\": \"2022-10-11T09:55:41.161Z\",\n                    \"duration\": \"\"\n                }\n            },\n            \"fulfillment\": {\n                \"id\": \"1\",\n                \"type\": \"\",\n                \"start\": {\n                    \"location\": {\n                        \"id\": \"1\",\n                        \"city\": {\n                            \"name\": \"Delhi\"\n                        }\n                    }\n                }\n            }\n        }\n    }\n}",
+                                    "raw": "{\n    \"context\": {\n        \"domain\": \"dsep:jobs\",\n        \"action\": \"search\",\n        \"version\": \"{{core_version}}\",\n        \"bap_id\": \"{{bap_id}}\",\n        \"bap_uri\": \"{{bap_uri}}\",\n        \"transaction_id\": \"a9aaecca-10b7-4d19-b640-b047a7c60001\",\n        \"message_id\": \"a9aaecca-10b7-4d19-b640-b047a7c60002\",\n        \"timestamp\": \"2023-02-06T09:55:41.161Z\"\n    },\n    \"message\": {\n        \"intent\": {\n            \"item\": \n                {\n                    \"descriptor\": {\n                        \"name\": \"Developer\"\n                    },\n                    \"tags\": [\n                        {\n                            \"code\": \"skills\",\n                            \"name\": \"\",\n                            \"list\": [\n                                {\n                                    \"code\": \"flutter\"\n                                },\n                                {\n                                    \"code\": \"kotlin\"\n                                },\n                                {\n                                    \"code\": \"architecture\"\n                                }\n                            ]\n                        }\n                    ]\n                }\n            \n        }\n    }\n}",
                                     "options": {
                                         "raw": {
                                             "language": "json"
@@ -157,13 +157,109 @@
                             ]
                         },
                         {
-                            "name": "Search with skills",
+                            "name": "Search with provider",
                             "request": {
                                 "method": "POST",
                                 "header": [],
                                 "body": {
                                     "mode": "raw",
-                                    "raw": "{\n    \"context\": {\n        \"domain\": \"dsep:jobs\",\n        \"action\": \"search\",\n        \"version\": \"{{core_version}}\",\n        \"bap_id\": \"{{bap_id}}\",\n        \"bap_uri\": \"{{bap_uri}}\",\n        \"transaction_id\": \"a9aaecca-10b7-4d19-b640-b047a7c60001\",\n        \"message_id\": \"a9aaecca-10b7-4d19-b640-b047a7c60002\",\n        \"timestamp\": \"2023-02-06T09:55:41.161Z\"\n    },\n    \"message\": {\n        \"intent\": {\n            \"item\": \n                {\n                    \"descriptor\": {\n                        \"name\": \"Developer\"\n                    },\n                    \"tags\": [\n                        {\n                            \"code\": \"skills\",\n                            \"name\": \"\",\n                            \"list\": [\n                                {\n                                    \"code\": \"flutter\"\n                                },\n                                {\n                                    \"code\": \"kotlin\"\n                                },\n                                {\n                                    \"code\": \"architecture\"\n                                }\n                            ]\n                        }\n                    ]\n                }\n            \n        }\n    }\n}",
+                                    "raw": "{\n    \"context\": {\n        \"domain\": \"dsep:jobs\",\n        \"action\": \"search\",\n        \"version\": \"{{core_version}}\",\n        \"bap_id\": \"{{bap_id}}\",\n        \"bap_uri\": \"{{bap_uri}}\",\n        \"location\": {\n            \"country\": {\n                \"name\": \"India\",\n                \"code\": \"IND\"\n            },\n            \"city\": {\n                \"name\": \"Bangalore\",\n                \"code\": \"std:080\"\n            }\n        },\n        \"transaction_id\": \"a9aaecca-10b7-4d19-b640-b047a7c60008\",\n        \"message_id\": \"a9aaecca-10b7-4d19-b640-b047a7c60009\",\n        \"timestamp\": \"2023-02-06T09:55:41.161Z\"\n    },\n    \"message\": {\n        \"intent\": {\n            \"provider\": {\n                \"id\": \"naukri.com\"\n            }\n        }\n    }\n}",
+                                    "options": {
+                                        "raw": {
+                                            "language": "json"
+                                        }
+                                    }
+                                },
+                                "url": {
+                                    "raw": "{{base_url}}/search",
+                                    "host": ["{{base_url}}"],
+                                    "path": ["search"]
+                                }
+                            },
+                            "response": [
+                                {
+                                    "name": "Search",
+                                    "originalRequest": {
+                                        "method": "POST",
+                                        "header": [],
+                                        "body": {
+                                            "mode": "raw",
+                                            "raw": "{\n    \"context\": {\n        \"domain\": \"nic2004:74910\",\n        \"country\": \"IND\",\n        \"city\": \"std:080\",\n        \"action\": \"search\",\n        \"core_version\": \"0.5.0\",\n        \"bap_id\": \"nic2004:74910.BPP\",\n        \"bap_uri\": \"https://18bhai62x2.execute-api.ap-south-1.amazonaws.com/dev/\",\n        \"transaction_id\": \"12391830183\",\n        \"message_id\": \"search-message-id-\",\n        \"timestamp\": \"2022-10-11T09:55:41.161Z\"\n    },\n    \"message\": {\n        \"intent\": {\n            \"item\": [\n                {\n                    \"descriptor\": {\n                        \"name\": \"Developer\"\n                    },\n                    \"location_id\": \"1\",\n                    \"fulfillment_id\": \"1\",\n                    \"time\":{\n                        \"timestamp\":\"2022-10-11T09:55:41.161Z\",\n                        \"duration\":\"\"\n                    }\n                }\n            ],\n            \"fulfillment\": [\n                {\n                    \"id\": \"1\",\n                    \"type\":\"\",\n                    \"start\":{\n                        \"location\":{\n                            \"id\":\"1\",\n                            \"city\":{\n                                \"name\":\"Delhi\"\n                            }\n                        }\n                    }\n                },\n                {\n                    \"id\": \"2\",\n                    \"type\":\"ONPREMISE\",\n                    \"start\":{\n                        \"location\":{\n                            \"id\":\"2\",\n                            \"city\":{\n                                \"name\":\"Pune\"\n                            }\n                        }\n                    }\n                }\n            ]\n        }\n    }\n}",
+                                            "options": {
+                                                "raw": {
+                                                    "language": "json"
+                                                }
+                                            }
+                                        },
+                                        "url": {
+                                            "raw": "{{BPP}}/search",
+                                            "host": ["{{BPP}}"],
+                                            "path": ["search"]
+                                        }
+                                    },
+                                    "_postman_previewlanguage": "json",
+                                    "header": [],
+                                    "cookie": [],
+                                    "body": "{\n    \"jobid\": \"12391830183\",\n    \"result\": {\n        \"context\": {\n            \"action\": \"search\",\n            \"bap_id\": \"nic2004:74910.BPP\",\n            \"bap_uri\": \"https://18bhai62x2.execute-api.ap-south-1.amazonaws.com/dev/\",\n            \"bpp_id\": \"Aff-Dsep-\",\n            \"bpp_uri\": \"http://DSEP-nlb-d3ed9a3f85596080.elb.ap-south-1.amazonaws.com\",\n            \"city\": \"std:080\",\n            \"core_version\": \"0.5.0\",\n            \"country\": \"IND\",\n            \"domain\": \"nic2004:74910\",\n            \"message_id\": \"search-message-id-\",\n            \"timestamp\": \"2022-10-11T09:55:41.161Z\",\n            \"transaction_id\": \"12391830183\"\n        },\n        \"message\": {\n            \"catalog\": {\n                \"descriptor\": {\n                    \"name\": \"Affindi BPP\"\n                },\n                \"fulfillments\": [\n                    {\n                        \"id\": \"f0efc22ce62c45e19b97899a0a5a5700\",\n                        \"start\": {\n                            \"location\": {\n                                \"city\": {\n                                    \"name\": \"Bangalore\"\n                                },\n                                \"id\": \"469beb8022194a4e83deb47ac99a295b\"\n                            },\n                            \"time\": {\n                                \"timestamp\": \"2022-11-01T00:00:00\"\n                            }\n                        },\n                        \"type\": \"Hybrid\"\n                    },\n                    {\n                        \"id\": \"b9cccd295153429eaa969e7025179d5d\",\n                        \"start\": {\n                            \"location\": {\n                                \"city\": {\n                                    \"name\": \"Delhi\"\n                                },\n                                \"id\": \"3344e2bdfc1d4e819d8365bc18686f22\"\n                            },\n                            \"time\": {\n                                \"timestamp\": \"2022-11-01T00:00:00\"\n                            }\n                        },\n                        \"type\": \"Hybrid\"\n                    }\n                ],\n                \"offers\": [\n                    {\n                        \"id\": \"d4416150d80849328dd67f940ce84fb8\",\n                        \"item_ids\": [\n                            \"b3fe5ad4-ddbc-46ae-a1d6-dd3f1852ba0d\",\n                            \"15b58550-81c8-43c4-a8b8-1ff3f150d211\"\n                        ]\n                    },\n                    {\n                        \"id\": \"d4416150d80849328dd67f940ce84fb8\",\n                        \"item_ids\": [\n                            \"b3fe5ad4-ddbc-46ae-a1d6-dd3f1852ba0d\",\n                            \"15b58550-81c8-43c4-a8b8-1ff3f150d211\"\n                        ]\n                    }\n                ],\n                \"providers\": [\n                    {\n                        \"id\": \"b5083120260f41a495c5f17f43f7f254\",\n                        \"items\": [\n                            {\n                                \"descriptor\": {\n                                    \"name\": \"React Developer\"\n                                },\n                                \"id\": \"b3fe5ad4-ddbc-46ae-a1d6-dd3f1852ba0d\",\n                                \"location_id\": \"469beb8022194a4e83deb47ac99a295b\"\n                            },\n                            {\n                                \"descriptor\": {\n                                    \"name\": \"React Developer\"\n                                },\n                                \"id\": \"15b58550-81c8-43c4-a8b8-1ff3f150d211\",\n                                \"location_id\": \"3344e2bdfc1d4e819d8365bc18686f22\"\n                            }\n                        ],\n                        \"locations\": [\n                            {\n                                \"city\": {\n                                    \"name\": \"Bangalore\"\n                                }\n                            },\n                            {\n                                \"city\": {\n                                    \"name\": \"Delhi\"\n                                }\n                            }\n                        ]\n                    },\n                    {\n                        \"id\": \"b5083120260f41a495c5f17f43f7f254\",\n                        \"items\": [\n                            {\n                                \"descriptor\": {\n                                    \"name\": \"React Developer\"\n                                },\n                                \"id\": \"b3fe5ad4-ddbc-46ae-a1d6-dd3f1852ba0d\",\n                                \"location_id\": \"469beb8022194a4e83deb47ac99a295b\"\n                            },\n                            {\n                                \"descriptor\": {\n                                    \"name\": \"React Developer\"\n                                },\n                                \"id\": \"15b58550-81c8-43c4-a8b8-1ff3f150d211\",\n                                \"location_id\": \"3344e2bdfc1d4e819d8365bc18686f22\"\n                            }\n                        ],\n                        \"locations\": [\n                            {\n                                \"city\": {\n                                    \"name\": \"Bangalore\"\n                                }\n                            },\n                            {\n                                \"city\": {\n                                    \"name\": \"Delhi\"\n                                }\n                            }\n                        ]\n                    }\n                ]\n            }\n        }\n    }\n}"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Search with location",
+                            "request": {
+                                "method": "POST",
+                                "header": [],
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{\n    \"context\": {\n        \"domain\": \"dsep:jobs\",\n        \"action\": \"search\",\n        \"version\": \"{{core_version}}\",\n        \"bap_id\": \"{{bap_id}}\",\n        \"bap_uri\": \"{{bap_uri}}\",\n        \"location\": {\n            \"country\": {\n                \"name\": \"India\",\n                \"code\": \"IND\"\n            },\n            \"city\": {\n                \"name\": \"Bangalore\",\n                \"code\": \"std:080\"\n            }\n        },\n        \"transaction_id\": \"a9aaecca-10b7-4d19-b640-b047a7c60008\",\n        \"message_id\": \"a9aaecca-10b7-4d19-b640-b047a7c60009\",\n        \"timestamp\": \"2023-02-06T09:55:41.161Z\"\n    },\n    \"message\": {\n        \"intent\": {\n            \"location\": {\n                \"id\": \"1\",\n                \"city\": {\n                    \"name\": \"Delhi\"\n                }\n            }\n        }\n    }\n}",
+                                    "options": {
+                                        "raw": {
+                                            "language": "json"
+                                        }
+                                    }
+                                },
+                                "url": {
+                                    "raw": "{{base_url}}/search",
+                                    "host": ["{{base_url}}"],
+                                    "path": ["search"]
+                                }
+                            },
+                            "response": [
+                                {
+                                    "name": "Search",
+                                    "originalRequest": {
+                                        "method": "POST",
+                                        "header": [],
+                                        "body": {
+                                            "mode": "raw",
+                                            "raw": "{\n    \"context\": {\n        \"domain\": \"nic2004:74910\",\n        \"country\": \"IND\",\n        \"city\": \"std:080\",\n        \"action\": \"search\",\n        \"core_version\": \"0.5.0\",\n        \"bap_id\": \"nic2004:74910.BPP\",\n        \"bap_uri\": \"https://18bhai62x2.execute-api.ap-south-1.amazonaws.com/dev/\",\n        \"transaction_id\": \"12391830183\",\n        \"message_id\": \"search-message-id-\",\n        \"timestamp\": \"2022-10-11T09:55:41.161Z\"\n    },\n    \"message\": {\n        \"intent\": {\n            \"item\": [\n                {\n                    \"descriptor\": {\n                        \"name\": \"Developer\"\n                    },\n                    \"location_id\": \"1\",\n                    \"fulfillment_id\": \"1\",\n                    \"time\":{\n                        \"timestamp\":\"2022-10-11T09:55:41.161Z\",\n                        \"duration\":\"\"\n                    }\n                }\n            ],\n            \"fulfillment\": [\n                {\n                    \"id\": \"1\",\n                    \"type\":\"\",\n                    \"start\":{\n                        \"location\":{\n                            \"id\":\"1\",\n                            \"city\":{\n                                \"name\":\"Delhi\"\n                            }\n                        }\n                    }\n                },\n                {\n                    \"id\": \"2\",\n                    \"type\":\"ONPREMISE\",\n                    \"start\":{\n                        \"location\":{\n                            \"id\":\"2\",\n                            \"city\":{\n                                \"name\":\"Pune\"\n                            }\n                        }\n                    }\n                }\n            ]\n        }\n    }\n}",
+                                            "options": {
+                                                "raw": {
+                                                    "language": "json"
+                                                }
+                                            }
+                                        },
+                                        "url": {
+                                            "raw": "{{BPP}}/search",
+                                            "host": ["{{BPP}}"],
+                                            "path": ["search"]
+                                        }
+                                    },
+                                    "_postman_previewlanguage": "json",
+                                    "header": [],
+                                    "cookie": [],
+                                    "body": "{\n    \"jobid\": \"12391830183\",\n    \"result\": {\n        \"context\": {\n            \"action\": \"search\",\n            \"bap_id\": \"nic2004:74910.BPP\",\n            \"bap_uri\": \"https://18bhai62x2.execute-api.ap-south-1.amazonaws.com/dev/\",\n            \"bpp_id\": \"Aff-Dsep-\",\n            \"bpp_uri\": \"http://DSEP-nlb-d3ed9a3f85596080.elb.ap-south-1.amazonaws.com\",\n            \"city\": \"std:080\",\n            \"core_version\": \"0.5.0\",\n            \"country\": \"IND\",\n            \"domain\": \"nic2004:74910\",\n            \"message_id\": \"search-message-id-\",\n            \"timestamp\": \"2022-10-11T09:55:41.161Z\",\n            \"transaction_id\": \"12391830183\"\n        },\n        \"message\": {\n            \"catalog\": {\n                \"descriptor\": {\n                    \"name\": \"Affindi BPP\"\n                },\n                \"fulfillments\": [\n                    {\n                        \"id\": \"f0efc22ce62c45e19b97899a0a5a5700\",\n                        \"start\": {\n                            \"location\": {\n                                \"city\": {\n                                    \"name\": \"Bangalore\"\n                                },\n                                \"id\": \"469beb8022194a4e83deb47ac99a295b\"\n                            },\n                            \"time\": {\n                                \"timestamp\": \"2022-11-01T00:00:00\"\n                            }\n                        },\n                        \"type\": \"Hybrid\"\n                    },\n                    {\n                        \"id\": \"b9cccd295153429eaa969e7025179d5d\",\n                        \"start\": {\n                            \"location\": {\n                                \"city\": {\n                                    \"name\": \"Delhi\"\n                                },\n                                \"id\": \"3344e2bdfc1d4e819d8365bc18686f22\"\n                            },\n                            \"time\": {\n                                \"timestamp\": \"2022-11-01T00:00:00\"\n                            }\n                        },\n                        \"type\": \"Hybrid\"\n                    }\n                ],\n                \"offers\": [\n                    {\n                        \"id\": \"d4416150d80849328dd67f940ce84fb8\",\n                        \"item_ids\": [\n                            \"b3fe5ad4-ddbc-46ae-a1d6-dd3f1852ba0d\",\n                            \"15b58550-81c8-43c4-a8b8-1ff3f150d211\"\n                        ]\n                    },\n                    {\n                        \"id\": \"d4416150d80849328dd67f940ce84fb8\",\n                        \"item_ids\": [\n                            \"b3fe5ad4-ddbc-46ae-a1d6-dd3f1852ba0d\",\n                            \"15b58550-81c8-43c4-a8b8-1ff3f150d211\"\n                        ]\n                    }\n                ],\n                \"providers\": [\n                    {\n                        \"id\": \"b5083120260f41a495c5f17f43f7f254\",\n                        \"items\": [\n                            {\n                                \"descriptor\": {\n                                    \"name\": \"React Developer\"\n                                },\n                                \"id\": \"b3fe5ad4-ddbc-46ae-a1d6-dd3f1852ba0d\",\n                                \"location_id\": \"469beb8022194a4e83deb47ac99a295b\"\n                            },\n                            {\n                                \"descriptor\": {\n                                    \"name\": \"React Developer\"\n                                },\n                                \"id\": \"15b58550-81c8-43c4-a8b8-1ff3f150d211\",\n                                \"location_id\": \"3344e2bdfc1d4e819d8365bc18686f22\"\n                            }\n                        ],\n                        \"locations\": [\n                            {\n                                \"city\": {\n                                    \"name\": \"Bangalore\"\n                                }\n                            },\n                            {\n                                \"city\": {\n                                    \"name\": \"Delhi\"\n                                }\n                            }\n                        ]\n                    },\n                    {\n                        \"id\": \"b5083120260f41a495c5f17f43f7f254\",\n                        \"items\": [\n                            {\n                                \"descriptor\": {\n                                    \"name\": \"React Developer\"\n                                },\n                                \"id\": \"b3fe5ad4-ddbc-46ae-a1d6-dd3f1852ba0d\",\n                                \"location_id\": \"469beb8022194a4e83deb47ac99a295b\"\n                            },\n                            {\n                                \"descriptor\": {\n                                    \"name\": \"React Developer\"\n                                },\n                                \"id\": \"15b58550-81c8-43c4-a8b8-1ff3f150d211\",\n                                \"location_id\": \"3344e2bdfc1d4e819d8365bc18686f22\"\n                            }\n                        ],\n                        \"locations\": [\n                            {\n                                \"city\": {\n                                    \"name\": \"Bangalore\"\n                                }\n                            },\n                            {\n                                \"city\": {\n                                    \"name\": \"Delhi\"\n                                }\n                            }\n                        ]\n                    }\n                ]\n            }\n        }\n    }\n}"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Search with multiple criteria",
+                            "request": {
+                                "method": "POST",
+                                "header": [],
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{\n    \"context\": {\n        \"domain\": \"dsep:jobs\",\n        \"action\": \"search\",\n        \"version\": \"{{core_version}}\",\n        \"bap_id\": \"{{bap_id}}\",\n        \"bap_uri\": \"{{bap_uri}}\",\n        \"transaction_id\": \"a9aaecca-10b7-4d19-b640-b047a7c60001\",\n        \"message_id\": \"a9aaecca-10b7-4d19-b640-b047a7c60002\",\n        \"timestamp\": \"2023-02-06T09:55:41.161Z\"\n    },\n    \"message\": {\n        \"intent\": {\n            \"item\": {\n                \"descriptor\": {\n                    \"name\": \"Developer\"\n                },\n                \"location_id\": \"1\",\n                \"fulfillment_id\": \"1\",\n                \"time\": {\n                    \"timestamp\": \"2022-10-11T09:55:41.161Z\",\n                    \"duration\": \"\"\n                }\n            },\n            \"location\": {\n                \"id\": \"1\",\n                \"city\": {\n                    \"name\": \"Delhi\"\n                }\n            }\n        }\n    }\n}",
                                     "options": {
                                         "raw": {
                                             "language": "json"
@@ -660,34 +756,16 @@
             "name": "Mentoring & Coaching",
             "item": [
                 {
-                    "name": "Search with title",
-                    "request": {
-                        "method": "POST",
-                        "header": [],
-                        "body": {
-                            "mode": "raw",
-                            "raw": "{\n    \"context\": {\n        \"domain\": \"dsep:mentoring\",\n        \"action\": \"search\",\n        \"version\": \"{{core_version}}\",\n        \"bap_id\": \"{{bap_id}}\",\n        \"bap_uri\": \"{{bap_uri}}\",\n        \"location\": {\n            \"country\": {\n                \"name\": \"India\",\n                \"code\": \"IND\"\n            },\n            \"city\": {\n                \"name\": \"Bangalore\",\n                \"code\": \"std:080\"\n            }\n        },\n        \"timestamp\": \"2022-12-15T15:38:16.226Z\",\n        \"message_id\": \"64109204-bdff-4af6-a76b-5a33f8aa8675\",\n        \"transaction_id\": \"bdb5ba09-2241-4f00-b434-73466cd06228\"\n    },\n    \"message\": {\n        \"intent\": {\n            \"item\": {\n                \"descriptor\": {\n                    \"name\": \"man\"\n                }\n            }\n        }\n    }\n}",
-                            "options": {
-                                "raw": {
-                                    "language": "json"
-                                }
-                            }
-                        },
-                        "url": {
-                            "raw": "{{base_url}}/search",
-                            "host": ["{{base_url}}"],
-                            "path": ["search"]
-                        }
-                    },
-                    "response": [
+                    "name": "Search",
+                    "item": [
                         {
-                            "name": "Search",
-                            "originalRequest": {
+                            "name": "Search with item",
+                            "request": {
                                 "method": "POST",
                                 "header": [],
                                 "body": {
                                     "mode": "raw",
-                                    "raw": "{\n    \"context\": {\n        \"domain\": \"nic2004:74910\",\n        \"country\": \"IND\",\n        \"city\": \"std:080\",\n        \"action\": \"search\",\n        \"core_version\": \"0.5.0\",\n        \"bap_id\": \"nic2004:74910.BPP\",\n        \"bap_uri\": \"https://18bhai62x2.execute-api.ap-south-1.amazonaws.com/dev/\",\n        \"transaction_id\": \"12391830183\",\n        \"message_id\": \"search-message-id-\",\n        \"timestamp\": \"2022-10-11T09:55:41.161Z\"\n    },\n    \"message\": {\n        \"intent\": {\n            \"item\": [\n                {\n                    \"descriptor\": {\n                        \"name\": \"Developer\"\n                    },\n                    \"location_id\": \"1\",\n                    \"fulfillment_id\": \"1\",\n                    \"time\":{\n                        \"timestamp\":\"2022-10-11T09:55:41.161Z\",\n                        \"duration\":\"\"\n                    }\n                }\n            ],\n            \"fulfillment\": [\n                {\n                    \"id\": \"1\",\n                    \"type\":\"\",\n                    \"start\":{\n                        \"location\":{\n                            \"id\":\"1\",\n                            \"city\":{\n                                \"name\":\"Delhi\"\n                            }\n                        }\n                    }\n                },\n                {\n                    \"id\": \"2\",\n                    \"type\":\"ONPREMISE\",\n                    \"start\":{\n                        \"location\":{\n                            \"id\":\"2\",\n                            \"city\":{\n                                \"name\":\"Pune\"\n                            }\n                        }\n                    }\n                }\n            ]\n        }\n    }\n}",
+                                    "raw": "{\n    \"context\": {\n        \"domain\": \"dsep:mentoring\",\n        \"action\": \"search\",\n        \"version\": \"{{core_version}}\",\n        \"bap_id\": \"{{bap_id}}\",\n        \"bap_uri\": \"{{bap_uri}}\",\n        \"location\": {\n            \"country\": {\n                \"name\": \"India\",\n                \"code\": \"IND\"\n            },\n            \"city\": {\n                \"name\": \"Bangalore\",\n                \"code\": \"std:080\"\n            }\n        },\n        \"timestamp\": \"2022-12-15T15:38:16.226Z\",\n        \"message_id\": \"64109204-bdff-4af6-a76b-5a33f8aa8675\",\n        \"transaction_id\": \"bdb5ba09-2241-4f00-b434-73466cd06228\"\n    },\n    \"message\": {\n        \"intent\": {\n            \"item\": {\n                \"descriptor\": {\n                    \"name\": \"man\"\n                }\n            }\n        }\n    }\n}",
                                     "options": {
                                         "raw": {
                                             "language": "json"
@@ -695,15 +773,230 @@
                                     }
                                 },
                                 "url": {
-                                    "raw": "{{BPP}}/search",
-                                    "host": ["{{BPP}}"],
+                                    "raw": "{{base_url}}/search",
+                                    "host": ["{{base_url}}"],
                                     "path": ["search"]
                                 }
                             },
-                            "_postman_previewlanguage": "json",
-                            "header": [],
-                            "cookie": [],
-                            "body": "{\n    \"jobid\": \"12391830183\",\n    \"result\": {\n        \"context\": {\n            \"action\": \"search\",\n            \"bap_id\": \"nic2004:74910.BPP\",\n            \"bap_uri\": \"https://18bhai62x2.execute-api.ap-south-1.amazonaws.com/dev/\",\n            \"bpp_id\": \"Aff-Dsep-\",\n            \"bpp_uri\": \"http://DSEP-nlb-d3ed9a3f85596080.elb.ap-south-1.amazonaws.com\",\n            \"city\": \"std:080\",\n            \"core_version\": \"0.5.0\",\n            \"country\": \"IND\",\n            \"domain\": \"nic2004:74910\",\n            \"message_id\": \"search-message-id-\",\n            \"timestamp\": \"2022-10-11T09:55:41.161Z\",\n            \"transaction_id\": \"12391830183\"\n        },\n        \"message\": {\n            \"catalog\": {\n                \"descriptor\": {\n                    \"name\": \"Affindi BPP\"\n                },\n                \"fulfillments\": [\n                    {\n                        \"id\": \"f0efc22ce62c45e19b97899a0a5a5700\",\n                        \"start\": {\n                            \"location\": {\n                                \"city\": {\n                                    \"name\": \"Bangalore\"\n                                },\n                                \"id\": \"469beb8022194a4e83deb47ac99a295b\"\n                            },\n                            \"time\": {\n                                \"timestamp\": \"2022-11-01T00:00:00\"\n                            }\n                        },\n                        \"type\": \"Hybrid\"\n                    },\n                    {\n                        \"id\": \"b9cccd295153429eaa969e7025179d5d\",\n                        \"start\": {\n                            \"location\": {\n                                \"city\": {\n                                    \"name\": \"Delhi\"\n                                },\n                                \"id\": \"3344e2bdfc1d4e819d8365bc18686f22\"\n                            },\n                            \"time\": {\n                                \"timestamp\": \"2022-11-01T00:00:00\"\n                            }\n                        },\n                        \"type\": \"Hybrid\"\n                    }\n                ],\n                \"offers\": [\n                    {\n                        \"id\": \"d4416150d80849328dd67f940ce84fb8\",\n                        \"item_ids\": [\n                            \"b3fe5ad4-ddbc-46ae-a1d6-dd3f1852ba0d\",\n                            \"15b58550-81c8-43c4-a8b8-1ff3f150d211\"\n                        ]\n                    },\n                    {\n                        \"id\": \"d4416150d80849328dd67f940ce84fb8\",\n                        \"item_ids\": [\n                            \"b3fe5ad4-ddbc-46ae-a1d6-dd3f1852ba0d\",\n                            \"15b58550-81c8-43c4-a8b8-1ff3f150d211\"\n                        ]\n                    }\n                ],\n                \"providers\": [\n                    {\n                        \"id\": \"b5083120260f41a495c5f17f43f7f254\",\n                        \"items\": [\n                            {\n                                \"descriptor\": {\n                                    \"name\": \"React Developer\"\n                                },\n                                \"id\": \"b3fe5ad4-ddbc-46ae-a1d6-dd3f1852ba0d\",\n                                \"location_id\": \"469beb8022194a4e83deb47ac99a295b\"\n                            },\n                            {\n                                \"descriptor\": {\n                                    \"name\": \"React Developer\"\n                                },\n                                \"id\": \"15b58550-81c8-43c4-a8b8-1ff3f150d211\",\n                                \"location_id\": \"3344e2bdfc1d4e819d8365bc18686f22\"\n                            }\n                        ],\n                        \"locations\": [\n                            {\n                                \"city\": {\n                                    \"name\": \"Bangalore\"\n                                }\n                            },\n                            {\n                                \"city\": {\n                                    \"name\": \"Delhi\"\n                                }\n                            }\n                        ]\n                    },\n                    {\n                        \"id\": \"b5083120260f41a495c5f17f43f7f254\",\n                        \"items\": [\n                            {\n                                \"descriptor\": {\n                                    \"name\": \"React Developer\"\n                                },\n                                \"id\": \"b3fe5ad4-ddbc-46ae-a1d6-dd3f1852ba0d\",\n                                \"location_id\": \"469beb8022194a4e83deb47ac99a295b\"\n                            },\n                            {\n                                \"descriptor\": {\n                                    \"name\": \"React Developer\"\n                                },\n                                \"id\": \"15b58550-81c8-43c4-a8b8-1ff3f150d211\",\n                                \"location_id\": \"3344e2bdfc1d4e819d8365bc18686f22\"\n                            }\n                        ],\n                        \"locations\": [\n                            {\n                                \"city\": {\n                                    \"name\": \"Bangalore\"\n                                }\n                            },\n                            {\n                                \"city\": {\n                                    \"name\": \"Delhi\"\n                                }\n                            }\n                        ]\n                    }\n                ]\n            }\n        }\n    }\n}"
+                            "response": [
+                                {
+                                    "name": "Search",
+                                    "originalRequest": {
+                                        "method": "POST",
+                                        "header": [],
+                                        "body": {
+                                            "mode": "raw",
+                                            "raw": "{\n    \"context\": {\n        \"domain\": \"nic2004:74910\",\n        \"country\": \"IND\",\n        \"city\": \"std:080\",\n        \"action\": \"search\",\n        \"core_version\": \"0.5.0\",\n        \"bap_id\": \"nic2004:74910.BPP\",\n        \"bap_uri\": \"https://18bhai62x2.execute-api.ap-south-1.amazonaws.com/dev/\",\n        \"transaction_id\": \"12391830183\",\n        \"message_id\": \"search-message-id-\",\n        \"timestamp\": \"2022-10-11T09:55:41.161Z\"\n    },\n    \"message\": {\n        \"intent\": {\n            \"item\": [\n                {\n                    \"descriptor\": {\n                        \"name\": \"Developer\"\n                    },\n                    \"location_id\": \"1\",\n                    \"fulfillment_id\": \"1\",\n                    \"time\":{\n                        \"timestamp\":\"2022-10-11T09:55:41.161Z\",\n                        \"duration\":\"\"\n                    }\n                }\n            ],\n            \"fulfillment\": [\n                {\n                    \"id\": \"1\",\n                    \"type\":\"\",\n                    \"start\":{\n                        \"location\":{\n                            \"id\":\"1\",\n                            \"city\":{\n                                \"name\":\"Delhi\"\n                            }\n                        }\n                    }\n                },\n                {\n                    \"id\": \"2\",\n                    \"type\":\"ONPREMISE\",\n                    \"start\":{\n                        \"location\":{\n                            \"id\":\"2\",\n                            \"city\":{\n                                \"name\":\"Pune\"\n                            }\n                        }\n                    }\n                }\n            ]\n        }\n    }\n}",
+                                            "options": {
+                                                "raw": {
+                                                    "language": "json"
+                                                }
+                                            }
+                                        },
+                                        "url": {
+                                            "raw": "{{BPP}}/search",
+                                            "host": ["{{BPP}}"],
+                                            "path": ["search"]
+                                        }
+                                    },
+                                    "_postman_previewlanguage": "json",
+                                    "header": [],
+                                    "cookie": [],
+                                    "body": "{\n    \"jobid\": \"12391830183\",\n    \"result\": {\n        \"context\": {\n            \"action\": \"search\",\n            \"bap_id\": \"nic2004:74910.BPP\",\n            \"bap_uri\": \"https://18bhai62x2.execute-api.ap-south-1.amazonaws.com/dev/\",\n            \"bpp_id\": \"Aff-Dsep-\",\n            \"bpp_uri\": \"http://DSEP-nlb-d3ed9a3f85596080.elb.ap-south-1.amazonaws.com\",\n            \"city\": \"std:080\",\n            \"core_version\": \"0.5.0\",\n            \"country\": \"IND\",\n            \"domain\": \"nic2004:74910\",\n            \"message_id\": \"search-message-id-\",\n            \"timestamp\": \"2022-10-11T09:55:41.161Z\",\n            \"transaction_id\": \"12391830183\"\n        },\n        \"message\": {\n            \"catalog\": {\n                \"descriptor\": {\n                    \"name\": \"Affindi BPP\"\n                },\n                \"fulfillments\": [\n                    {\n                        \"id\": \"f0efc22ce62c45e19b97899a0a5a5700\",\n                        \"start\": {\n                            \"location\": {\n                                \"city\": {\n                                    \"name\": \"Bangalore\"\n                                },\n                                \"id\": \"469beb8022194a4e83deb47ac99a295b\"\n                            },\n                            \"time\": {\n                                \"timestamp\": \"2022-11-01T00:00:00\"\n                            }\n                        },\n                        \"type\": \"Hybrid\"\n                    },\n                    {\n                        \"id\": \"b9cccd295153429eaa969e7025179d5d\",\n                        \"start\": {\n                            \"location\": {\n                                \"city\": {\n                                    \"name\": \"Delhi\"\n                                },\n                                \"id\": \"3344e2bdfc1d4e819d8365bc18686f22\"\n                            },\n                            \"time\": {\n                                \"timestamp\": \"2022-11-01T00:00:00\"\n                            }\n                        },\n                        \"type\": \"Hybrid\"\n                    }\n                ],\n                \"offers\": [\n                    {\n                        \"id\": \"d4416150d80849328dd67f940ce84fb8\",\n                        \"item_ids\": [\n                            \"b3fe5ad4-ddbc-46ae-a1d6-dd3f1852ba0d\",\n                            \"15b58550-81c8-43c4-a8b8-1ff3f150d211\"\n                        ]\n                    },\n                    {\n                        \"id\": \"d4416150d80849328dd67f940ce84fb8\",\n                        \"item_ids\": [\n                            \"b3fe5ad4-ddbc-46ae-a1d6-dd3f1852ba0d\",\n                            \"15b58550-81c8-43c4-a8b8-1ff3f150d211\"\n                        ]\n                    }\n                ],\n                \"providers\": [\n                    {\n                        \"id\": \"b5083120260f41a495c5f17f43f7f254\",\n                        \"items\": [\n                            {\n                                \"descriptor\": {\n                                    \"name\": \"React Developer\"\n                                },\n                                \"id\": \"b3fe5ad4-ddbc-46ae-a1d6-dd3f1852ba0d\",\n                                \"location_id\": \"469beb8022194a4e83deb47ac99a295b\"\n                            },\n                            {\n                                \"descriptor\": {\n                                    \"name\": \"React Developer\"\n                                },\n                                \"id\": \"15b58550-81c8-43c4-a8b8-1ff3f150d211\",\n                                \"location_id\": \"3344e2bdfc1d4e819d8365bc18686f22\"\n                            }\n                        ],\n                        \"locations\": [\n                            {\n                                \"city\": {\n                                    \"name\": \"Bangalore\"\n                                }\n                            },\n                            {\n                                \"city\": {\n                                    \"name\": \"Delhi\"\n                                }\n                            }\n                        ]\n                    },\n                    {\n                        \"id\": \"b5083120260f41a495c5f17f43f7f254\",\n                        \"items\": [\n                            {\n                                \"descriptor\": {\n                                    \"name\": \"React Developer\"\n                                },\n                                \"id\": \"b3fe5ad4-ddbc-46ae-a1d6-dd3f1852ba0d\",\n                                \"location_id\": \"469beb8022194a4e83deb47ac99a295b\"\n                            },\n                            {\n                                \"descriptor\": {\n                                    \"name\": \"React Developer\"\n                                },\n                                \"id\": \"15b58550-81c8-43c4-a8b8-1ff3f150d211\",\n                                \"location_id\": \"3344e2bdfc1d4e819d8365bc18686f22\"\n                            }\n                        ],\n                        \"locations\": [\n                            {\n                                \"city\": {\n                                    \"name\": \"Bangalore\"\n                                }\n                            },\n                            {\n                                \"city\": {\n                                    \"name\": \"Delhi\"\n                                }\n                            }\n                        ]\n                    }\n                ]\n            }\n        }\n    }\n}"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Search with provider",
+                            "request": {
+                                "method": "POST",
+                                "header": [],
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{\n    \"context\": {\n        \"domain\": \"dsep:mentoring\",\n        \"action\": \"search\",\n        \"version\": \"{{core_version}}\",\n        \"bap_id\": \"{{bap_id}}\",\n        \"bap_uri\": \"{{bap_uri}}\",\n        \"location\": {\n            \"country\": {\n                \"name\": \"India\",\n                \"code\": \"IND\"\n            },\n            \"city\": {\n                \"name\": \"Bangalore\",\n                \"code\": \"std:080\"\n            }\n        },\n        \"timestamp\": \"2022-12-15T15:38:16.226Z\",\n        \"message_id\": \"64109204-bdff-4af6-a76b-5a33f8aa8675\",\n        \"transaction_id\": \"bdb5ba09-2241-4f00-b434-73466cd06228\"\n    },\n    \"message\": {\n        \"intent\": {\n            \"provider\": {\n                \"id\": \"coursera\"\n            }\n        }\n    }\n}",
+                                    "options": {
+                                        "raw": {
+                                            "language": "json"
+                                        }
+                                    }
+                                },
+                                "url": {
+                                    "raw": "{{base_url}}/search",
+                                    "host": ["{{base_url}}"],
+                                    "path": ["search"]
+                                }
+                            },
+                            "response": [
+                                {
+                                    "name": "Search",
+                                    "originalRequest": {
+                                        "method": "POST",
+                                        "header": [],
+                                        "body": {
+                                            "mode": "raw",
+                                            "raw": "{\n    \"context\": {\n        \"domain\": \"nic2004:74910\",\n        \"country\": \"IND\",\n        \"city\": \"std:080\",\n        \"action\": \"search\",\n        \"core_version\": \"0.5.0\",\n        \"bap_id\": \"nic2004:74910.BPP\",\n        \"bap_uri\": \"https://18bhai62x2.execute-api.ap-south-1.amazonaws.com/dev/\",\n        \"transaction_id\": \"12391830183\",\n        \"message_id\": \"search-message-id-\",\n        \"timestamp\": \"2022-10-11T09:55:41.161Z\"\n    },\n    \"message\": {\n        \"intent\": {\n            \"item\": [\n                {\n                    \"descriptor\": {\n                        \"name\": \"Developer\"\n                    },\n                    \"location_id\": \"1\",\n                    \"fulfillment_id\": \"1\",\n                    \"time\":{\n                        \"timestamp\":\"2022-10-11T09:55:41.161Z\",\n                        \"duration\":\"\"\n                    }\n                }\n            ],\n            \"fulfillment\": [\n                {\n                    \"id\": \"1\",\n                    \"type\":\"\",\n                    \"start\":{\n                        \"location\":{\n                            \"id\":\"1\",\n                            \"city\":{\n                                \"name\":\"Delhi\"\n                            }\n                        }\n                    }\n                },\n                {\n                    \"id\": \"2\",\n                    \"type\":\"ONPREMISE\",\n                    \"start\":{\n                        \"location\":{\n                            \"id\":\"2\",\n                            \"city\":{\n                                \"name\":\"Pune\"\n                            }\n                        }\n                    }\n                }\n            ]\n        }\n    }\n}",
+                                            "options": {
+                                                "raw": {
+                                                    "language": "json"
+                                                }
+                                            }
+                                        },
+                                        "url": {
+                                            "raw": "{{BPP}}/search",
+                                            "host": ["{{BPP}}"],
+                                            "path": ["search"]
+                                        }
+                                    },
+                                    "_postman_previewlanguage": "json",
+                                    "header": [],
+                                    "cookie": [],
+                                    "body": "{\n    \"jobid\": \"12391830183\",\n    \"result\": {\n        \"context\": {\n            \"action\": \"search\",\n            \"bap_id\": \"nic2004:74910.BPP\",\n            \"bap_uri\": \"https://18bhai62x2.execute-api.ap-south-1.amazonaws.com/dev/\",\n            \"bpp_id\": \"Aff-Dsep-\",\n            \"bpp_uri\": \"http://DSEP-nlb-d3ed9a3f85596080.elb.ap-south-1.amazonaws.com\",\n            \"city\": \"std:080\",\n            \"core_version\": \"0.5.0\",\n            \"country\": \"IND\",\n            \"domain\": \"nic2004:74910\",\n            \"message_id\": \"search-message-id-\",\n            \"timestamp\": \"2022-10-11T09:55:41.161Z\",\n            \"transaction_id\": \"12391830183\"\n        },\n        \"message\": {\n            \"catalog\": {\n                \"descriptor\": {\n                    \"name\": \"Affindi BPP\"\n                },\n                \"fulfillments\": [\n                    {\n                        \"id\": \"f0efc22ce62c45e19b97899a0a5a5700\",\n                        \"start\": {\n                            \"location\": {\n                                \"city\": {\n                                    \"name\": \"Bangalore\"\n                                },\n                                \"id\": \"469beb8022194a4e83deb47ac99a295b\"\n                            },\n                            \"time\": {\n                                \"timestamp\": \"2022-11-01T00:00:00\"\n                            }\n                        },\n                        \"type\": \"Hybrid\"\n                    },\n                    {\n                        \"id\": \"b9cccd295153429eaa969e7025179d5d\",\n                        \"start\": {\n                            \"location\": {\n                                \"city\": {\n                                    \"name\": \"Delhi\"\n                                },\n                                \"id\": \"3344e2bdfc1d4e819d8365bc18686f22\"\n                            },\n                            \"time\": {\n                                \"timestamp\": \"2022-11-01T00:00:00\"\n                            }\n                        },\n                        \"type\": \"Hybrid\"\n                    }\n                ],\n                \"offers\": [\n                    {\n                        \"id\": \"d4416150d80849328dd67f940ce84fb8\",\n                        \"item_ids\": [\n                            \"b3fe5ad4-ddbc-46ae-a1d6-dd3f1852ba0d\",\n                            \"15b58550-81c8-43c4-a8b8-1ff3f150d211\"\n                        ]\n                    },\n                    {\n                        \"id\": \"d4416150d80849328dd67f940ce84fb8\",\n                        \"item_ids\": [\n                            \"b3fe5ad4-ddbc-46ae-a1d6-dd3f1852ba0d\",\n                            \"15b58550-81c8-43c4-a8b8-1ff3f150d211\"\n                        ]\n                    }\n                ],\n                \"providers\": [\n                    {\n                        \"id\": \"b5083120260f41a495c5f17f43f7f254\",\n                        \"items\": [\n                            {\n                                \"descriptor\": {\n                                    \"name\": \"React Developer\"\n                                },\n                                \"id\": \"b3fe5ad4-ddbc-46ae-a1d6-dd3f1852ba0d\",\n                                \"location_id\": \"469beb8022194a4e83deb47ac99a295b\"\n                            },\n                            {\n                                \"descriptor\": {\n                                    \"name\": \"React Developer\"\n                                },\n                                \"id\": \"15b58550-81c8-43c4-a8b8-1ff3f150d211\",\n                                \"location_id\": \"3344e2bdfc1d4e819d8365bc18686f22\"\n                            }\n                        ],\n                        \"locations\": [\n                            {\n                                \"city\": {\n                                    \"name\": \"Bangalore\"\n                                }\n                            },\n                            {\n                                \"city\": {\n                                    \"name\": \"Delhi\"\n                                }\n                            }\n                        ]\n                    },\n                    {\n                        \"id\": \"b5083120260f41a495c5f17f43f7f254\",\n                        \"items\": [\n                            {\n                                \"descriptor\": {\n                                    \"name\": \"React Developer\"\n                                },\n                                \"id\": \"b3fe5ad4-ddbc-46ae-a1d6-dd3f1852ba0d\",\n                                \"location_id\": \"469beb8022194a4e83deb47ac99a295b\"\n                            },\n                            {\n                                \"descriptor\": {\n                                    \"name\": \"React Developer\"\n                                },\n                                \"id\": \"15b58550-81c8-43c4-a8b8-1ff3f150d211\",\n                                \"location_id\": \"3344e2bdfc1d4e819d8365bc18686f22\"\n                            }\n                        ],\n                        \"locations\": [\n                            {\n                                \"city\": {\n                                    \"name\": \"Bangalore\"\n                                }\n                            },\n                            {\n                                \"city\": {\n                                    \"name\": \"Delhi\"\n                                }\n                            }\n                        ]\n                    }\n                ]\n            }\n        }\n    }\n}"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Search With location",
+                            "request": {
+                                "method": "POST",
+                                "header": [],
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{\n    \"context\": {\n        \"domain\": \"dsep:mentoring\",\n        \"action\": \"search\",\n        \"version\": \"{{core_version}}\",\n        \"bap_id\": \"{{bap_id}}\",\n        \"bap_uri\": \"{{bap_uri}}\",\n        \"location\": {\n            \"country\": {\n                \"name\": \"India\",\n                \"code\": \"IND\"\n            },\n            \"city\": {\n                \"name\": \"Bangalore\",\n                \"code\": \"std:080\"\n            }\n        },\n        \"timestamp\": \"2022-12-15T15:38:16.226Z\",\n        \"message_id\": \"64109204-bdff-4af6-a76b-5a33f8aa8675\",\n        \"transaction_id\": \"bdb5ba09-2241-4f00-b434-73466cd06228\"\n    },\n    \"message\": {\n        \"intent\": {\n            \"location\": {\n                \"id\": \"1\",\n                \"city\": {\n                    \"name\": \"Delhi\"\n                }\n            }\n        }\n    }\n}",
+                                    "options": {
+                                        "raw": {
+                                            "language": "json"
+                                        }
+                                    }
+                                },
+                                "url": {
+                                    "raw": "{{base_url}}/search",
+                                    "host": ["{{base_url}}"],
+                                    "path": ["search"]
+                                }
+                            },
+                            "response": [
+                                {
+                                    "name": "Search",
+                                    "originalRequest": {
+                                        "method": "POST",
+                                        "header": [],
+                                        "body": {
+                                            "mode": "raw",
+                                            "raw": "{\n    \"context\": {\n        \"domain\": \"nic2004:74910\",\n        \"country\": \"IND\",\n        \"city\": \"std:080\",\n        \"action\": \"search\",\n        \"core_version\": \"0.5.0\",\n        \"bap_id\": \"nic2004:74910.BPP\",\n        \"bap_uri\": \"https://18bhai62x2.execute-api.ap-south-1.amazonaws.com/dev/\",\n        \"transaction_id\": \"12391830183\",\n        \"message_id\": \"search-message-id-\",\n        \"timestamp\": \"2022-10-11T09:55:41.161Z\"\n    },\n    \"message\": {\n        \"intent\": {\n            \"item\": [\n                {\n                    \"descriptor\": {\n                        \"name\": \"Developer\"\n                    },\n                    \"location_id\": \"1\",\n                    \"fulfillment_id\": \"1\",\n                    \"time\":{\n                        \"timestamp\":\"2022-10-11T09:55:41.161Z\",\n                        \"duration\":\"\"\n                    }\n                }\n            ],\n            \"fulfillment\": [\n                {\n                    \"id\": \"1\",\n                    \"type\":\"\",\n                    \"start\":{\n                        \"location\":{\n                            \"id\":\"1\",\n                            \"city\":{\n                                \"name\":\"Delhi\"\n                            }\n                        }\n                    }\n                },\n                {\n                    \"id\": \"2\",\n                    \"type\":\"ONPREMISE\",\n                    \"start\":{\n                        \"location\":{\n                            \"id\":\"2\",\n                            \"city\":{\n                                \"name\":\"Pune\"\n                            }\n                        }\n                    }\n                }\n            ]\n        }\n    }\n}",
+                                            "options": {
+                                                "raw": {
+                                                    "language": "json"
+                                                }
+                                            }
+                                        },
+                                        "url": {
+                                            "raw": "{{BPP}}/search",
+                                            "host": ["{{BPP}}"],
+                                            "path": ["search"]
+                                        }
+                                    },
+                                    "_postman_previewlanguage": "json",
+                                    "header": [],
+                                    "cookie": [],
+                                    "body": "{\n    \"jobid\": \"12391830183\",\n    \"result\": {\n        \"context\": {\n            \"action\": \"search\",\n            \"bap_id\": \"nic2004:74910.BPP\",\n            \"bap_uri\": \"https://18bhai62x2.execute-api.ap-south-1.amazonaws.com/dev/\",\n            \"bpp_id\": \"Aff-Dsep-\",\n            \"bpp_uri\": \"http://DSEP-nlb-d3ed9a3f85596080.elb.ap-south-1.amazonaws.com\",\n            \"city\": \"std:080\",\n            \"core_version\": \"0.5.0\",\n            \"country\": \"IND\",\n            \"domain\": \"nic2004:74910\",\n            \"message_id\": \"search-message-id-\",\n            \"timestamp\": \"2022-10-11T09:55:41.161Z\",\n            \"transaction_id\": \"12391830183\"\n        },\n        \"message\": {\n            \"catalog\": {\n                \"descriptor\": {\n                    \"name\": \"Affindi BPP\"\n                },\n                \"fulfillments\": [\n                    {\n                        \"id\": \"f0efc22ce62c45e19b97899a0a5a5700\",\n                        \"start\": {\n                            \"location\": {\n                                \"city\": {\n                                    \"name\": \"Bangalore\"\n                                },\n                                \"id\": \"469beb8022194a4e83deb47ac99a295b\"\n                            },\n                            \"time\": {\n                                \"timestamp\": \"2022-11-01T00:00:00\"\n                            }\n                        },\n                        \"type\": \"Hybrid\"\n                    },\n                    {\n                        \"id\": \"b9cccd295153429eaa969e7025179d5d\",\n                        \"start\": {\n                            \"location\": {\n                                \"city\": {\n                                    \"name\": \"Delhi\"\n                                },\n                                \"id\": \"3344e2bdfc1d4e819d8365bc18686f22\"\n                            },\n                            \"time\": {\n                                \"timestamp\": \"2022-11-01T00:00:00\"\n                            }\n                        },\n                        \"type\": \"Hybrid\"\n                    }\n                ],\n                \"offers\": [\n                    {\n                        \"id\": \"d4416150d80849328dd67f940ce84fb8\",\n                        \"item_ids\": [\n                            \"b3fe5ad4-ddbc-46ae-a1d6-dd3f1852ba0d\",\n                            \"15b58550-81c8-43c4-a8b8-1ff3f150d211\"\n                        ]\n                    },\n                    {\n                        \"id\": \"d4416150d80849328dd67f940ce84fb8\",\n                        \"item_ids\": [\n                            \"b3fe5ad4-ddbc-46ae-a1d6-dd3f1852ba0d\",\n                            \"15b58550-81c8-43c4-a8b8-1ff3f150d211\"\n                        ]\n                    }\n                ],\n                \"providers\": [\n                    {\n                        \"id\": \"b5083120260f41a495c5f17f43f7f254\",\n                        \"items\": [\n                            {\n                                \"descriptor\": {\n                                    \"name\": \"React Developer\"\n                                },\n                                \"id\": \"b3fe5ad4-ddbc-46ae-a1d6-dd3f1852ba0d\",\n                                \"location_id\": \"469beb8022194a4e83deb47ac99a295b\"\n                            },\n                            {\n                                \"descriptor\": {\n                                    \"name\": \"React Developer\"\n                                },\n                                \"id\": \"15b58550-81c8-43c4-a8b8-1ff3f150d211\",\n                                \"location_id\": \"3344e2bdfc1d4e819d8365bc18686f22\"\n                            }\n                        ],\n                        \"locations\": [\n                            {\n                                \"city\": {\n                                    \"name\": \"Bangalore\"\n                                }\n                            },\n                            {\n                                \"city\": {\n                                    \"name\": \"Delhi\"\n                                }\n                            }\n                        ]\n                    },\n                    {\n                        \"id\": \"b5083120260f41a495c5f17f43f7f254\",\n                        \"items\": [\n                            {\n                                \"descriptor\": {\n                                    \"name\": \"React Developer\"\n                                },\n                                \"id\": \"b3fe5ad4-ddbc-46ae-a1d6-dd3f1852ba0d\",\n                                \"location_id\": \"469beb8022194a4e83deb47ac99a295b\"\n                            },\n                            {\n                                \"descriptor\": {\n                                    \"name\": \"React Developer\"\n                                },\n                                \"id\": \"15b58550-81c8-43c4-a8b8-1ff3f150d211\",\n                                \"location_id\": \"3344e2bdfc1d4e819d8365bc18686f22\"\n                            }\n                        ],\n                        \"locations\": [\n                            {\n                                \"city\": {\n                                    \"name\": \"Bangalore\"\n                                }\n                            },\n                            {\n                                \"city\": {\n                                    \"name\": \"Delhi\"\n                                }\n                            }\n                        ]\n                    }\n                ]\n            }\n        }\n    }\n}"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Search With Category",
+                            "request": {
+                                "method": "POST",
+                                "header": [],
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{\n    \"context\": {\n        \"domain\": \"dsep:mentoring\",\n        \"action\": \"search\",\n        \"version\": \"{{core_version}}\",\n        \"bap_id\": \"{{bap_id}}\",\n        \"bap_uri\": \"{{bap_uri}}\",\n        \"location\": {\n            \"country\": {\n                \"name\": \"India\",\n                \"code\": \"IND\"\n            },\n            \"city\": {\n                \"name\": \"Bangalore\",\n                \"code\": \"std:080\"\n            }\n        },\n        \"timestamp\": \"2022-12-15T15:38:16.226Z\",\n        \"message_id\": \"64109204-bdff-4af6-a76b-5a33f8aa8675\",\n        \"transaction_id\": \"bdb5ba09-2241-4f00-b434-73466cd06228\"\n    },\n    \"message\": {\n        \"intent\": {\n            \"category\": {\n                \"descriptor\": {\n                    \"code\": \"coaching\"\n                }\n            }\n        }\n    }\n}",
+                                    "options": {
+                                        "raw": {
+                                            "language": "json"
+                                        }
+                                    }
+                                },
+                                "url": {
+                                    "raw": "{{base_url}}/search",
+                                    "host": ["{{base_url}}"],
+                                    "path": ["search"]
+                                }
+                            },
+                            "response": [
+                                {
+                                    "name": "Search",
+                                    "originalRequest": {
+                                        "method": "POST",
+                                        "header": [],
+                                        "body": {
+                                            "mode": "raw",
+                                            "raw": "{\n    \"context\": {\n        \"domain\": \"nic2004:74910\",\n        \"country\": \"IND\",\n        \"city\": \"std:080\",\n        \"action\": \"search\",\n        \"core_version\": \"0.5.0\",\n        \"bap_id\": \"nic2004:74910.BPP\",\n        \"bap_uri\": \"https://18bhai62x2.execute-api.ap-south-1.amazonaws.com/dev/\",\n        \"transaction_id\": \"12391830183\",\n        \"message_id\": \"search-message-id-\",\n        \"timestamp\": \"2022-10-11T09:55:41.161Z\"\n    },\n    \"message\": {\n        \"intent\": {\n            \"item\": [\n                {\n                    \"descriptor\": {\n                        \"name\": \"Developer\"\n                    },\n                    \"location_id\": \"1\",\n                    \"fulfillment_id\": \"1\",\n                    \"time\":{\n                        \"timestamp\":\"2022-10-11T09:55:41.161Z\",\n                        \"duration\":\"\"\n                    }\n                }\n            ],\n            \"fulfillment\": [\n                {\n                    \"id\": \"1\",\n                    \"type\":\"\",\n                    \"start\":{\n                        \"location\":{\n                            \"id\":\"1\",\n                            \"city\":{\n                                \"name\":\"Delhi\"\n                            }\n                        }\n                    }\n                },\n                {\n                    \"id\": \"2\",\n                    \"type\":\"ONPREMISE\",\n                    \"start\":{\n                        \"location\":{\n                            \"id\":\"2\",\n                            \"city\":{\n                                \"name\":\"Pune\"\n                            }\n                        }\n                    }\n                }\n            ]\n        }\n    }\n}",
+                                            "options": {
+                                                "raw": {
+                                                    "language": "json"
+                                                }
+                                            }
+                                        },
+                                        "url": {
+                                            "raw": "{{BPP}}/search",
+                                            "host": ["{{BPP}}"],
+                                            "path": ["search"]
+                                        }
+                                    },
+                                    "_postman_previewlanguage": "json",
+                                    "header": [],
+                                    "cookie": [],
+                                    "body": "{\n    \"jobid\": \"12391830183\",\n    \"result\": {\n        \"context\": {\n            \"action\": \"search\",\n            \"bap_id\": \"nic2004:74910.BPP\",\n            \"bap_uri\": \"https://18bhai62x2.execute-api.ap-south-1.amazonaws.com/dev/\",\n            \"bpp_id\": \"Aff-Dsep-\",\n            \"bpp_uri\": \"http://DSEP-nlb-d3ed9a3f85596080.elb.ap-south-1.amazonaws.com\",\n            \"city\": \"std:080\",\n            \"core_version\": \"0.5.0\",\n            \"country\": \"IND\",\n            \"domain\": \"nic2004:74910\",\n            \"message_id\": \"search-message-id-\",\n            \"timestamp\": \"2022-10-11T09:55:41.161Z\",\n            \"transaction_id\": \"12391830183\"\n        },\n        \"message\": {\n            \"catalog\": {\n                \"descriptor\": {\n                    \"name\": \"Affindi BPP\"\n                },\n                \"fulfillments\": [\n                    {\n                        \"id\": \"f0efc22ce62c45e19b97899a0a5a5700\",\n                        \"start\": {\n                            \"location\": {\n                                \"city\": {\n                                    \"name\": \"Bangalore\"\n                                },\n                                \"id\": \"469beb8022194a4e83deb47ac99a295b\"\n                            },\n                            \"time\": {\n                                \"timestamp\": \"2022-11-01T00:00:00\"\n                            }\n                        },\n                        \"type\": \"Hybrid\"\n                    },\n                    {\n                        \"id\": \"b9cccd295153429eaa969e7025179d5d\",\n                        \"start\": {\n                            \"location\": {\n                                \"city\": {\n                                    \"name\": \"Delhi\"\n                                },\n                                \"id\": \"3344e2bdfc1d4e819d8365bc18686f22\"\n                            },\n                            \"time\": {\n                                \"timestamp\": \"2022-11-01T00:00:00\"\n                            }\n                        },\n                        \"type\": \"Hybrid\"\n                    }\n                ],\n                \"offers\": [\n                    {\n                        \"id\": \"d4416150d80849328dd67f940ce84fb8\",\n                        \"item_ids\": [\n                            \"b3fe5ad4-ddbc-46ae-a1d6-dd3f1852ba0d\",\n                            \"15b58550-81c8-43c4-a8b8-1ff3f150d211\"\n                        ]\n                    },\n                    {\n                        \"id\": \"d4416150d80849328dd67f940ce84fb8\",\n                        \"item_ids\": [\n                            \"b3fe5ad4-ddbc-46ae-a1d6-dd3f1852ba0d\",\n                            \"15b58550-81c8-43c4-a8b8-1ff3f150d211\"\n                        ]\n                    }\n                ],\n                \"providers\": [\n                    {\n                        \"id\": \"b5083120260f41a495c5f17f43f7f254\",\n                        \"items\": [\n                            {\n                                \"descriptor\": {\n                                    \"name\": \"React Developer\"\n                                },\n                                \"id\": \"b3fe5ad4-ddbc-46ae-a1d6-dd3f1852ba0d\",\n                                \"location_id\": \"469beb8022194a4e83deb47ac99a295b\"\n                            },\n                            {\n                                \"descriptor\": {\n                                    \"name\": \"React Developer\"\n                                },\n                                \"id\": \"15b58550-81c8-43c4-a8b8-1ff3f150d211\",\n                                \"location_id\": \"3344e2bdfc1d4e819d8365bc18686f22\"\n                            }\n                        ],\n                        \"locations\": [\n                            {\n                                \"city\": {\n                                    \"name\": \"Bangalore\"\n                                }\n                            },\n                            {\n                                \"city\": {\n                                    \"name\": \"Delhi\"\n                                }\n                            }\n                        ]\n                    },\n                    {\n                        \"id\": \"b5083120260f41a495c5f17f43f7f254\",\n                        \"items\": [\n                            {\n                                \"descriptor\": {\n                                    \"name\": \"React Developer\"\n                                },\n                                \"id\": \"b3fe5ad4-ddbc-46ae-a1d6-dd3f1852ba0d\",\n                                \"location_id\": \"469beb8022194a4e83deb47ac99a295b\"\n                            },\n                            {\n                                \"descriptor\": {\n                                    \"name\": \"React Developer\"\n                                },\n                                \"id\": \"15b58550-81c8-43c4-a8b8-1ff3f150d211\",\n                                \"location_id\": \"3344e2bdfc1d4e819d8365bc18686f22\"\n                            }\n                        ],\n                        \"locations\": [\n                            {\n                                \"city\": {\n                                    \"name\": \"Bangalore\"\n                                }\n                            },\n                            {\n                                \"city\": {\n                                    \"name\": \"Delhi\"\n                                }\n                            }\n                        ]\n                    }\n                ]\n            }\n        }\n    }\n}"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Search With Combination",
+                            "request": {
+                                "method": "POST",
+                                "header": [],
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{\n    \"context\": {\n        \"domain\": \"dsep:mentoring\",\n        \"action\": \"search\",\n        \"version\": \"{{core_version}}\",\n        \"bap_id\": \"{{bap_id}}\",\n        \"bap_uri\": \"{{bap_uri}}\",\n        \"location\": {\n            \"country\": {\n                \"name\": \"India\",\n                \"code\": \"IND\"\n            },\n            \"city\": {\n                \"name\": \"Bangalore\",\n                \"code\": \"std:080\"\n            }\n        },\n        \"timestamp\": \"2022-12-15T15:38:16.226Z\",\n        \"message_id\": \"64109204-bdff-4af6-a76b-5a33f8aa8675\",\n        \"transaction_id\": \"bdb5ba09-2241-4f00-b434-73466cd06228\"\n    },\n    \"message\": {\n        \"intent\": {\n            \"item\": {\n                \"descriptor\": {\n                    \"name\": \"man\"\n                }\n            },\n            \"category\": {\n                \"descriptor\": {\n                    \"name\": \"coaching\"\n                }\n            }\n        },\n        \"location\": {\n            \"id\": \"1\",\n            \"city\": {\n                \"name\": \"Delhi\"\n            }\n        }\n    }\n}",
+                                    "options": {
+                                        "raw": {
+                                            "language": "json"
+                                        }
+                                    }
+                                },
+                                "url": {
+                                    "raw": "{{base_url}}/search",
+                                    "host": ["{{base_url}}"],
+                                    "path": ["search"]
+                                }
+                            },
+                            "response": [
+                                {
+                                    "name": "Search",
+                                    "originalRequest": {
+                                        "method": "POST",
+                                        "header": [],
+                                        "body": {
+                                            "mode": "raw",
+                                            "raw": "{\n    \"context\": {\n        \"domain\": \"nic2004:74910\",\n        \"country\": \"IND\",\n        \"city\": \"std:080\",\n        \"action\": \"search\",\n        \"core_version\": \"0.5.0\",\n        \"bap_id\": \"nic2004:74910.BPP\",\n        \"bap_uri\": \"https://18bhai62x2.execute-api.ap-south-1.amazonaws.com/dev/\",\n        \"transaction_id\": \"12391830183\",\n        \"message_id\": \"search-message-id-\",\n        \"timestamp\": \"2022-10-11T09:55:41.161Z\"\n    },\n    \"message\": {\n        \"intent\": {\n            \"item\": [\n                {\n                    \"descriptor\": {\n                        \"name\": \"Developer\"\n                    },\n                    \"location_id\": \"1\",\n                    \"fulfillment_id\": \"1\",\n                    \"time\":{\n                        \"timestamp\":\"2022-10-11T09:55:41.161Z\",\n                        \"duration\":\"\"\n                    }\n                }\n            ],\n            \"fulfillment\": [\n                {\n                    \"id\": \"1\",\n                    \"type\":\"\",\n                    \"start\":{\n                        \"location\":{\n                            \"id\":\"1\",\n                            \"city\":{\n                                \"name\":\"Delhi\"\n                            }\n                        }\n                    }\n                },\n                {\n                    \"id\": \"2\",\n                    \"type\":\"ONPREMISE\",\n                    \"start\":{\n                        \"location\":{\n                            \"id\":\"2\",\n                            \"city\":{\n                                \"name\":\"Pune\"\n                            }\n                        }\n                    }\n                }\n            ]\n        }\n    }\n}",
+                                            "options": {
+                                                "raw": {
+                                                    "language": "json"
+                                                }
+                                            }
+                                        },
+                                        "url": {
+                                            "raw": "{{BPP}}/search",
+                                            "host": ["{{BPP}}"],
+                                            "path": ["search"]
+                                        }
+                                    },
+                                    "_postman_previewlanguage": "json",
+                                    "header": [],
+                                    "cookie": [],
+                                    "body": "{\n    \"jobid\": \"12391830183\",\n    \"result\": {\n        \"context\": {\n            \"action\": \"search\",\n            \"bap_id\": \"nic2004:74910.BPP\",\n            \"bap_uri\": \"https://18bhai62x2.execute-api.ap-south-1.amazonaws.com/dev/\",\n            \"bpp_id\": \"Aff-Dsep-\",\n            \"bpp_uri\": \"http://DSEP-nlb-d3ed9a3f85596080.elb.ap-south-1.amazonaws.com\",\n            \"city\": \"std:080\",\n            \"core_version\": \"0.5.0\",\n            \"country\": \"IND\",\n            \"domain\": \"nic2004:74910\",\n            \"message_id\": \"search-message-id-\",\n            \"timestamp\": \"2022-10-11T09:55:41.161Z\",\n            \"transaction_id\": \"12391830183\"\n        },\n        \"message\": {\n            \"catalog\": {\n                \"descriptor\": {\n                    \"name\": \"Affindi BPP\"\n                },\n                \"fulfillments\": [\n                    {\n                        \"id\": \"f0efc22ce62c45e19b97899a0a5a5700\",\n                        \"start\": {\n                            \"location\": {\n                                \"city\": {\n                                    \"name\": \"Bangalore\"\n                                },\n                                \"id\": \"469beb8022194a4e83deb47ac99a295b\"\n                            },\n                            \"time\": {\n                                \"timestamp\": \"2022-11-01T00:00:00\"\n                            }\n                        },\n                        \"type\": \"Hybrid\"\n                    },\n                    {\n                        \"id\": \"b9cccd295153429eaa969e7025179d5d\",\n                        \"start\": {\n                            \"location\": {\n                                \"city\": {\n                                    \"name\": \"Delhi\"\n                                },\n                                \"id\": \"3344e2bdfc1d4e819d8365bc18686f22\"\n                            },\n                            \"time\": {\n                                \"timestamp\": \"2022-11-01T00:00:00\"\n                            }\n                        },\n                        \"type\": \"Hybrid\"\n                    }\n                ],\n                \"offers\": [\n                    {\n                        \"id\": \"d4416150d80849328dd67f940ce84fb8\",\n                        \"item_ids\": [\n                            \"b3fe5ad4-ddbc-46ae-a1d6-dd3f1852ba0d\",\n                            \"15b58550-81c8-43c4-a8b8-1ff3f150d211\"\n                        ]\n                    },\n                    {\n                        \"id\": \"d4416150d80849328dd67f940ce84fb8\",\n                        \"item_ids\": [\n                            \"b3fe5ad4-ddbc-46ae-a1d6-dd3f1852ba0d\",\n                            \"15b58550-81c8-43c4-a8b8-1ff3f150d211\"\n                        ]\n                    }\n                ],\n                \"providers\": [\n                    {\n                        \"id\": \"b5083120260f41a495c5f17f43f7f254\",\n                        \"items\": [\n                            {\n                                \"descriptor\": {\n                                    \"name\": \"React Developer\"\n                                },\n                                \"id\": \"b3fe5ad4-ddbc-46ae-a1d6-dd3f1852ba0d\",\n                                \"location_id\": \"469beb8022194a4e83deb47ac99a295b\"\n                            },\n                            {\n                                \"descriptor\": {\n                                    \"name\": \"React Developer\"\n                                },\n                                \"id\": \"15b58550-81c8-43c4-a8b8-1ff3f150d211\",\n                                \"location_id\": \"3344e2bdfc1d4e819d8365bc18686f22\"\n                            }\n                        ],\n                        \"locations\": [\n                            {\n                                \"city\": {\n                                    \"name\": \"Bangalore\"\n                                }\n                            },\n                            {\n                                \"city\": {\n                                    \"name\": \"Delhi\"\n                                }\n                            }\n                        ]\n                    },\n                    {\n                        \"id\": \"b5083120260f41a495c5f17f43f7f254\",\n                        \"items\": [\n                            {\n                                \"descriptor\": {\n                                    \"name\": \"React Developer\"\n                                },\n                                \"id\": \"b3fe5ad4-ddbc-46ae-a1d6-dd3f1852ba0d\",\n                                \"location_id\": \"469beb8022194a4e83deb47ac99a295b\"\n                            },\n                            {\n                                \"descriptor\": {\n                                    \"name\": \"React Developer\"\n                                },\n                                \"id\": \"15b58550-81c8-43c4-a8b8-1ff3f150d211\",\n                                \"location_id\": \"3344e2bdfc1d4e819d8365bc18686f22\"\n                            }\n                        ],\n                        \"locations\": [\n                            {\n                                \"city\": {\n                                    \"name\": \"Bangalore\"\n                                }\n                            },\n                            {\n                                \"city\": {\n                                    \"name\": \"Delhi\"\n                                }\n                            }\n                        ]\n                    }\n                ]\n            }\n        }\n    }\n}"
+                                }
+                            ]
                         }
                     ]
                 },
@@ -922,7 +1215,7 @@
                         "header": [],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\n    \"context\": {\n        \"domain\": \"dsep:jobs\",\n        \"action\": \"status\",\n        \"version\": \"{{core_version}}\",\n        \"bap_id\": \"{{bap_id}}\",\n        \"bap_uri\": \"{{bap_uri}}\",\n        \"bpp_id\": \"{{bpp_id}}\",\n        \"bpp_uri\": \"{{bpp_uri}}\",\n        \"location\": {\n            \"country\": {\n                \"name\": \"India\",\n                \"code\": \"IND\"\n            }\n        },\n\n        \"transaction_id\": \"a9aaecca-10b7-4d19-b640-b047a7c60008\",\n        \"message_id\": \"a9aaecca-10b7-4d19-b640-b047a7c60009\",\n        \"timestamp\": \"2023-02-06T09:55:41.161Z\"\n    },\n    \"message\": {\n        \"order_id\": \"1690976236928\"\n    }\n}\n",
+                            "raw": "{\n    \"context\": {\n        \"domain\": \"dsep:mentoring\",\n        \"action\": \"status\",\n        \"version\": \"{{core_version}}\",\n        \"bap_id\": \"{{bap_id}}\",\n        \"bap_uri\": \"{{bap_uri}}\",\n        \"bpp_id\": \"{{bpp_id}}\",\n        \"bpp_uri\": \"{{bpp_uri}}\",\n        \"location\": {\n            \"country\": {\n                \"name\": \"India\",\n                \"code\": \"IND\"\n            }\n        },\n\n        \"transaction_id\": \"a9aaecca-10b7-4d19-b640-b047a7c60008\",\n        \"message_id\": \"a9aaecca-10b7-4d19-b640-b047a7c60009\",\n        \"timestamp\": \"2023-02-06T09:55:41.161Z\"\n    },\n    \"message\": {\n        \"order_id\": \"1690976236928\"\n    }\n}\n",
                             "options": {
                                 "raw": {
                                     "language": "json"
@@ -1161,37 +1454,19 @@
             "name": "Scholarships & Grants",
             "item": [
                 {
-                    "name": "Search by Scholarship Name",
-                    "request": {
-                        "auth": {
-                            "type": "noauth"
-                        },
-                        "method": "POST",
-                        "header": [],
-                        "body": {
-                            "mode": "raw",
-                            "raw": "{\r\n    \"context\": {\r\n        \"domain\": \"dsep:scholarships\",\r\n        \"location\": {\r\n            \"city\": {\r\n                \"name\": \"Bangalore\",\r\n                \"code\": \"std:080\"\r\n            },\r\n            \"country\": {\r\n                \"name\": \"India\",\r\n                \"code\": \"IND\"\r\n            }\r\n        },\r\n        \"action\": \"search\",\r\n        \"version\": \"{{core_version}}\",\r\n        \"bap_id\": \"{{bap_id}}\",\r\n        \"bap_uri\": \"{{bap_uri}}\",\r\n        \"transaction_id\": \"a9aaecca-10b7-4d19-b640-b047a7c60008\",\r\n        \"message_id\": \"a9aaecca-10b7-4d19-b640-b047a7c60009\",\r\n        \"timestamp\": \"2023-02-06T09:55:41.161Z\",\r\n        \"ttl\": \"PT10M\"\r\n    },\r\n    \"message\": {\r\n        \"intent\": {\r\n            \"item\": {\r\n                \"descriptor\": {\r\n                    \"name\": \"scholarship for undergraduate\"\r\n                }\r\n            }\r\n        }\r\n    }\r\n}",
-                            "options": {
-                                "raw": {
-                                    "language": "json"
-                                }
-                            }
-                        },
-                        "url": {
-                            "raw": "{{base_url}}/search",
-                            "host": ["{{base_url}}"],
-                            "path": ["search"]
-                        }
-                    },
-                    "response": [
+                    "name": "Search",
+                    "item": [
                         {
-                            "name": "Search by Intent - Scholarship Name",
-                            "originalRequest": {
+                            "name": "Search with item name",
+                            "request": {
+                                "auth": {
+                                    "type": "noauth"
+                                },
                                 "method": "POST",
                                 "header": [],
                                 "body": {
                                     "mode": "raw",
-                                    "raw": "{\r\n  \"context\": {\r\n    \"domain\": \"dsep:scholarships\",\r\n    \"country\": \"IND\",\r\n    \"city\": \"std:080\",\r\n    \"action\": \"search\",\r\n    \"core_version\": \"0.9.3\",\r\n    \"bap_id\": \"http://localhost:9001/\",\r\n    \"bap_uri\": \"http://localhost:9001/dsep/v0/\",\r\n    \"message_id\": \"5ac3dd78-829e-4c7d-9139-a15adbb582cc\",\r\n    \"timestamp\": \"2021-03-23T10:00:40.065Z\"\r\n  },\r\n  \"message\": {\r\n    \"intent\": {\r\n      \"item\": {\r\n        \"descriptor\": {\r\n          \"name\": \"XYZ Undergraduation scholarship for Economically Backward Female Students\"\r\n        }\r\n      }\r\n    }\r\n  }\r\n}",
+                                    "raw": "{\r\n    \"context\": {\r\n        \"domain\": \"dsep:scholarships\",\r\n        \"location\": {\r\n            \"city\": {\r\n                \"name\": \"Bangalore\",\r\n                \"code\": \"std:080\"\r\n            },\r\n            \"country\": {\r\n                \"name\": \"India\",\r\n                \"code\": \"IND\"\r\n            }\r\n        },\r\n        \"action\": \"search\",\r\n        \"version\": \"{{core_version}}\",\r\n        \"bap_id\": \"{{bap_id}}\",\r\n        \"bap_uri\": \"{{bap_uri}}\",\r\n        \"transaction_id\": \"a9aaecca-10b7-4d19-b640-b047a7c60008\",\r\n        \"message_id\": \"a9aaecca-10b7-4d19-b640-b047a7c60009\",\r\n        \"timestamp\": \"2023-02-06T09:55:41.161Z\",\r\n        \"ttl\": \"PT10M\"\r\n    },\r\n    \"message\": {\r\n        \"intent\": {\r\n            \"item\": {\r\n                \"descriptor\": {\r\n                    \"name\": \"scholarship for undergraduate\"\r\n                }\r\n            }\r\n        }\r\n    }\r\n}",
                                     "options": {
                                         "raw": {
                                             "language": "json"
@@ -1199,109 +1474,109 @@
                                     }
                                 },
                                 "url": {
-                                    "raw": "{{bpp-url}}/public/search",
-                                    "host": ["{{bpp-url}}"],
-                                    "path": ["public", "search"]
+                                    "raw": "{{base_url}}/search",
+                                    "host": ["{{base_url}}"],
+                                    "path": ["search"]
                                 }
                             },
-                            "status": "OK",
-                            "code": 200,
-                            "_postman_previewlanguage": "json",
-                            "header": [
+                            "response": [
                                 {
-                                    "key": "Vary",
-                                    "value": "Origin"
-                                },
-                                {
-                                    "key": "Vary",
-                                    "value": "Access-Control-Request-Method"
-                                },
-                                {
-                                    "key": "Vary",
-                                    "value": "Access-Control-Request-Headers"
-                                },
-                                {
-                                    "key": "X-Content-Type-Options",
-                                    "value": "nosniff"
-                                },
-                                {
-                                    "key": "X-XSS-Protection",
-                                    "value": "1; mode=block"
-                                },
-                                {
-                                    "key": "Cache-Control",
-                                    "value": "no-cache, no-store, max-age=0, must-revalidate"
-                                },
-                                {
-                                    "key": "Pragma",
-                                    "value": "no-cache"
-                                },
-                                {
-                                    "key": "Expires",
-                                    "value": "0"
-                                },
-                                {
-                                    "key": "X-Frame-Options",
-                                    "value": "DENY"
-                                },
-                                {
-                                    "key": "Content-Type",
-                                    "value": "application/json"
-                                },
-                                {
-                                    "key": "Content-Length",
-                                    "value": "391"
-                                },
-                                {
-                                    "key": "Date",
-                                    "value": "Wed, 02 Nov 2022 05:57:16 GMT"
-                                },
-                                {
-                                    "key": "Keep-Alive",
-                                    "value": "timeout=60"
-                                },
-                                {
-                                    "key": "Connection",
-                                    "value": "keep-alive"
+                                    "name": "Search by Intent - Scholarship Name",
+                                    "originalRequest": {
+                                        "method": "POST",
+                                        "header": [],
+                                        "body": {
+                                            "mode": "raw",
+                                            "raw": "{\r\n  \"context\": {\r\n    \"domain\": \"dsep:scholarships\",\r\n    \"country\": \"IND\",\r\n    \"city\": \"std:080\",\r\n    \"action\": \"search\",\r\n    \"core_version\": \"0.9.3\",\r\n    \"bap_id\": \"http://localhost:9001/\",\r\n    \"bap_uri\": \"http://localhost:9001/dsep/v0/\",\r\n    \"message_id\": \"5ac3dd78-829e-4c7d-9139-a15adbb582cc\",\r\n    \"timestamp\": \"2021-03-23T10:00:40.065Z\"\r\n  },\r\n  \"message\": {\r\n    \"intent\": {\r\n      \"item\": {\r\n        \"descriptor\": {\r\n          \"name\": \"XYZ Undergraduation scholarship for Economically Backward Female Students\"\r\n        }\r\n      }\r\n    }\r\n  }\r\n}",
+                                            "options": {
+                                                "raw": {
+                                                    "language": "json"
+                                                }
+                                            }
+                                        },
+                                        "url": {
+                                            "raw": "{{bpp-url}}/public/search",
+                                            "host": ["{{bpp-url}}"],
+                                            "path": ["public", "search"]
+                                        }
+                                    },
+                                    "status": "OK",
+                                    "code": 200,
+                                    "_postman_previewlanguage": "json",
+                                    "header": [
+                                        {
+                                            "key": "Vary",
+                                            "value": "Origin"
+                                        },
+                                        {
+                                            "key": "Vary",
+                                            "value": "Access-Control-Request-Method"
+                                        },
+                                        {
+                                            "key": "Vary",
+                                            "value": "Access-Control-Request-Headers"
+                                        },
+                                        {
+                                            "key": "X-Content-Type-Options",
+                                            "value": "nosniff"
+                                        },
+                                        {
+                                            "key": "X-XSS-Protection",
+                                            "value": "1; mode=block"
+                                        },
+                                        {
+                                            "key": "Cache-Control",
+                                            "value": "no-cache, no-store, max-age=0, must-revalidate"
+                                        },
+                                        {
+                                            "key": "Pragma",
+                                            "value": "no-cache"
+                                        },
+                                        {
+                                            "key": "Expires",
+                                            "value": "0"
+                                        },
+                                        {
+                                            "key": "X-Frame-Options",
+                                            "value": "DENY"
+                                        },
+                                        {
+                                            "key": "Content-Type",
+                                            "value": "application/json"
+                                        },
+                                        {
+                                            "key": "Content-Length",
+                                            "value": "391"
+                                        },
+                                        {
+                                            "key": "Date",
+                                            "value": "Wed, 02 Nov 2022 05:57:16 GMT"
+                                        },
+                                        {
+                                            "key": "Keep-Alive",
+                                            "value": "timeout=60"
+                                        },
+                                        {
+                                            "key": "Connection",
+                                            "value": "keep-alive"
+                                        }
+                                    ],
+                                    "cookie": [],
+                                    "body": "{\n    \"context\": {\n        \"domain\": \"dsep:scholarships\",\n        \"country\": \"IND\",\n        \"city\": \"*\",\n        \"action\": \"on_search\",\n        \"core_version\": \"1.0.0-draft\",\n        \"bap_id\": \"http://localhost:9001/\",\n        \"bap_uri\": \"http://localhost:9001/dsep/v0/\",\n        \"bpp_id\": \"protean-dsep-bpp\",\n        \"bpp_uri\": \"http://localhost:8001/public\",\n        \"transaction_id\": \"d854e8bf-d75f-45dd-a8d1-2e91267c2ea0\",\n        \"message_id\": \"5ac3dd78-829e-4c7d-9139-a15adbb582cc\",\n        \"timestamp\": \"2021-03-23T10:00:40.065Z\"\n    },\n    \"message\": {\n        \"ack\": {\n            \"status\": \"ACK\"\n        }\n    }\n}"
                                 }
-                            ],
-                            "cookie": [],
-                            "body": "{\n    \"context\": {\n        \"domain\": \"dsep:scholarships\",\n        \"country\": \"IND\",\n        \"city\": \"*\",\n        \"action\": \"on_search\",\n        \"core_version\": \"1.0.0-draft\",\n        \"bap_id\": \"http://localhost:9001/\",\n        \"bap_uri\": \"http://localhost:9001/dsep/v0/\",\n        \"bpp_id\": \"protean-dsep-bpp\",\n        \"bpp_uri\": \"http://localhost:8001/public\",\n        \"transaction_id\": \"d854e8bf-d75f-45dd-a8d1-2e91267c2ea0\",\n        \"message_id\": \"5ac3dd78-829e-4c7d-9139-a15adbb582cc\",\n        \"timestamp\": \"2021-03-23T10:00:40.065Z\"\n    },\n    \"message\": {\n        \"ack\": {\n            \"status\": \"ACK\"\n        }\n    }\n}"
-                        }
-                    ]
-                },
-                {
-                    "name": "Search with gender",
-                    "request": {
-                        "auth": {
-                            "type": "noauth"
+                            ]
                         },
-                        "method": "POST",
-                        "header": [],
-                        "body": {
-                            "mode": "raw",
-                            "raw": "{\r\n    \"context\": {\r\n        \"domain\": \"dsep:scholarships\",\r\n        \"location\": {\r\n            \"city\": {\r\n                \"name\": \"Bangalore\",\r\n                \"code\": \"std:080\"\r\n            },\r\n            \"country\": {\r\n                \"name\": \"India\",\r\n                \"code\": \"IND\"\r\n            }\r\n        },\r\n        \"action\": \"search\",\r\n        \"version\": \"{{core_version}}\",\r\n        \"bap_id\": \"{{bap_id}}\",\r\n        \"bap_uri\": \"{{bap_uri}}\",\r\n        \"transaction_id\": \"a9aaecca-10b7-4d19-b640-022723112309\",\r\n        \"message_id\": \"a9aaecca-10b7-4d19-b640-b047a7c60009\",\r\n        \"timestamp\": \"2023-02-06T09:55:41.161Z\",\r\n        \"ttl\": \"PT10M\"\r\n    },\r\n    \"message\": {\r\n        \"intent\": {\r\n            \"fulfillment\": {\r\n                \"customer\": {\r\n                    \"person\": {\r\n                        \"gender\": \"Female\"\r\n                    }\r\n                }\r\n            }\r\n        }\r\n    }\r\n}",
-                            "options": {
-                                "raw": {
-                                    "language": "json"
-                                }
-                            }
-                        },
-                        "url": {
-                            "raw": "{{base_url}}/search",
-                            "host": ["{{base_url}}"],
-                            "path": ["search"]
-                        }
-                    },
-                    "response": [
                         {
-                            "name": "Search by Intent - Get scholarships with gender criteria",
-                            "originalRequest": {
+                            "name": "Search with description",
+                            "request": {
+                                "auth": {
+                                    "type": "noauth"
+                                },
                                 "method": "POST",
                                 "header": [],
                                 "body": {
                                     "mode": "raw",
-                                    "raw": "{\r\n    \"context\": {\r\n        \"domain\": \"dsep:scholarships\",\r\n        \"country\": \"IND\",\r\n        \"city\": \"std:080\",\r\n        \"action\": \"search\",\r\n        \"core_version\": \"0.9.3\",\r\n        \"bap_id\": \"http://localhost:9001/\",\r\n        \"bap_uri\": \"http://localhost:9001/dsep/v0/\",\r\n        \"message_id\": \"5ac3dd78-829e-4c7d-9139-a15adbb582cc\",\r\n        \"timestamp\": \"2021-03-23T10:00:40.065Z\"\r\n    },\r\n    \"message\": {\r\n        \"intent\": {\r\n            \"fulfillment\": {\r\n                \"customer\": {\r\n                    \"person\": {\r\n                        \"gender\": \"Female\"\r\n                    }\r\n                }\r\n            }\r\n        }\r\n    }\r\n}",
+                                    "raw": "{\r\n    \"context\": {\r\n        \"domain\": \"dsep:scholarships\",\r\n        \"location\": {\r\n            \"city\": {\r\n                \"name\": \"Bangalore\",\r\n                \"code\": \"std:080\"\r\n            },\r\n            \"country\": {\r\n                \"name\": \"India\",\r\n                \"code\": \"IND\"\r\n            }\r\n        },\r\n        \"action\": \"search\",\r\n        \"version\": \"{{core_version}}\",\r\n        \"bap_id\": \"{{bap_id}}\",\r\n        \"bap_uri\": \"{{bap_uri}}\",\r\n        \"transaction_id\": \"a9aaecca-10b7-4d19-b640-022723112309\",\r\n        \"message_id\": \"a9aaecca-10b7-4d19-b640-b047a7c60009\",\r\n        \"timestamp\": \"2023-02-06T09:55:41.161Z\",\r\n        \"ttl\": \"PT10M\"\r\n    },\r\n    \"message\": {\r\n        \"intent\": {\r\n            \"fulfillment\": {\r\n                \"customer\": {\r\n                    \"person\": {\r\n                        \"gender\": \"Female\"\r\n                    }\r\n                }\r\n            }\r\n        }\r\n    }\r\n}",
                                     "options": {
                                         "raw": {
                                             "language": "json"
@@ -1309,109 +1584,109 @@
                                     }
                                 },
                                 "url": {
-                                    "raw": "{{bpp-url}}/public/search",
-                                    "host": ["{{bpp-url}}"],
-                                    "path": ["public", "search"]
+                                    "raw": "{{base_url}}/search",
+                                    "host": ["{{base_url}}"],
+                                    "path": ["search"]
                                 }
                             },
-                            "status": "OK",
-                            "code": 200,
-                            "_postman_previewlanguage": "json",
-                            "header": [
+                            "response": [
                                 {
-                                    "key": "Vary",
-                                    "value": "Origin"
-                                },
-                                {
-                                    "key": "Vary",
-                                    "value": "Access-Control-Request-Method"
-                                },
-                                {
-                                    "key": "Vary",
-                                    "value": "Access-Control-Request-Headers"
-                                },
-                                {
-                                    "key": "X-Content-Type-Options",
-                                    "value": "nosniff"
-                                },
-                                {
-                                    "key": "X-XSS-Protection",
-                                    "value": "1; mode=block"
-                                },
-                                {
-                                    "key": "Cache-Control",
-                                    "value": "no-cache, no-store, max-age=0, must-revalidate"
-                                },
-                                {
-                                    "key": "Pragma",
-                                    "value": "no-cache"
-                                },
-                                {
-                                    "key": "Expires",
-                                    "value": "0"
-                                },
-                                {
-                                    "key": "X-Frame-Options",
-                                    "value": "DENY"
-                                },
-                                {
-                                    "key": "Content-Type",
-                                    "value": "application/json"
-                                },
-                                {
-                                    "key": "Content-Length",
-                                    "value": "388"
-                                },
-                                {
-                                    "key": "Date",
-                                    "value": "Wed, 02 Nov 2022 06:01:50 GMT"
-                                },
-                                {
-                                    "key": "Keep-Alive",
-                                    "value": "timeout=60"
-                                },
-                                {
-                                    "key": "Connection",
-                                    "value": "keep-alive"
+                                    "name": "Search by Intent - Get scholarships with gender criteria",
+                                    "originalRequest": {
+                                        "method": "POST",
+                                        "header": [],
+                                        "body": {
+                                            "mode": "raw",
+                                            "raw": "{\r\n    \"context\": {\r\n        \"domain\": \"dsep:scholarships\",\r\n        \"country\": \"IND\",\r\n        \"city\": \"std:080\",\r\n        \"action\": \"search\",\r\n        \"core_version\": \"0.9.3\",\r\n        \"bap_id\": \"http://localhost:9001/\",\r\n        \"bap_uri\": \"http://localhost:9001/dsep/v0/\",\r\n        \"message_id\": \"5ac3dd78-829e-4c7d-9139-a15adbb582cc\",\r\n        \"timestamp\": \"2021-03-23T10:00:40.065Z\"\r\n    },\r\n    \"message\": {\r\n        \"intent\": {\r\n            \"fulfillment\": {\r\n                \"customer\": {\r\n                    \"person\": {\r\n                        \"gender\": \"Female\"\r\n                    }\r\n                }\r\n            }\r\n        }\r\n    }\r\n}",
+                                            "options": {
+                                                "raw": {
+                                                    "language": "json"
+                                                }
+                                            }
+                                        },
+                                        "url": {
+                                            "raw": "{{bpp-url}}/public/search",
+                                            "host": ["{{bpp-url}}"],
+                                            "path": ["public", "search"]
+                                        }
+                                    },
+                                    "status": "OK",
+                                    "code": 200,
+                                    "_postman_previewlanguage": "json",
+                                    "header": [
+                                        {
+                                            "key": "Vary",
+                                            "value": "Origin"
+                                        },
+                                        {
+                                            "key": "Vary",
+                                            "value": "Access-Control-Request-Method"
+                                        },
+                                        {
+                                            "key": "Vary",
+                                            "value": "Access-Control-Request-Headers"
+                                        },
+                                        {
+                                            "key": "X-Content-Type-Options",
+                                            "value": "nosniff"
+                                        },
+                                        {
+                                            "key": "X-XSS-Protection",
+                                            "value": "1; mode=block"
+                                        },
+                                        {
+                                            "key": "Cache-Control",
+                                            "value": "no-cache, no-store, max-age=0, must-revalidate"
+                                        },
+                                        {
+                                            "key": "Pragma",
+                                            "value": "no-cache"
+                                        },
+                                        {
+                                            "key": "Expires",
+                                            "value": "0"
+                                        },
+                                        {
+                                            "key": "X-Frame-Options",
+                                            "value": "DENY"
+                                        },
+                                        {
+                                            "key": "Content-Type",
+                                            "value": "application/json"
+                                        },
+                                        {
+                                            "key": "Content-Length",
+                                            "value": "388"
+                                        },
+                                        {
+                                            "key": "Date",
+                                            "value": "Wed, 02 Nov 2022 06:01:50 GMT"
+                                        },
+                                        {
+                                            "key": "Keep-Alive",
+                                            "value": "timeout=60"
+                                        },
+                                        {
+                                            "key": "Connection",
+                                            "value": "keep-alive"
+                                        }
+                                    ],
+                                    "cookie": [],
+                                    "body": "{\n    \"context\": {\n        \"domain\": \"dsep:scholarships\",\n        \"country\": \"IND\",\n        \"city\": \"*\",\n        \"action\": \"on_search\",\n        \"core_version\": \"1.0.0-draft\",\n        \"bap_id\": \"http://localhost:9001/\",\n        \"bap_uri\": \"http://localhost:9001/dsep/v0/\",\n        \"bpp_id\": \"protean-dsep-bpp\",\n        \"bpp_uri\": \"http://localhost:8001/public\",\n        \"transaction_id\": \"7154b8e2-89bf-4401-9291-f366f8aa96e2\",\n        \"message_id\": \"b3090f5b-3dac-4ecd-83fa-10b44603f13e\",\n        \"timestamp\": \"2021-03-23T10:00:40.065Z\"\n    },\n    \"message\": {\n        \"ack\": {\n            \"status\": \"ACK\"\n        }\n    }\n}"
                                 }
-                            ],
-                            "cookie": [],
-                            "body": "{\n    \"context\": {\n        \"domain\": \"dsep:scholarships\",\n        \"country\": \"IND\",\n        \"city\": \"*\",\n        \"action\": \"on_search\",\n        \"core_version\": \"1.0.0-draft\",\n        \"bap_id\": \"http://localhost:9001/\",\n        \"bap_uri\": \"http://localhost:9001/dsep/v0/\",\n        \"bpp_id\": \"protean-dsep-bpp\",\n        \"bpp_uri\": \"http://localhost:8001/public\",\n        \"transaction_id\": \"7154b8e2-89bf-4401-9291-f366f8aa96e2\",\n        \"message_id\": \"b3090f5b-3dac-4ecd-83fa-10b44603f13e\",\n        \"timestamp\": \"2021-03-23T10:00:40.065Z\"\n    },\n    \"message\": {\n        \"ack\": {\n            \"status\": \"ACK\"\n        }\n    }\n}"
-                        }
-                    ]
-                },
-                {
-                    "name": "Search with gender and course category - No data",
-                    "request": {
-                        "auth": {
-                            "type": "noauth"
+                            ]
                         },
-                        "method": "POST",
-                        "header": [],
-                        "body": {
-                            "mode": "raw",
-                            "raw": "{\r\n    \"context\": {\r\n        \"domain\": \"dsep:scholarships\",\r\n        \"location\": {\r\n            \"city\": {\r\n                \"name\": \"Bangalore\",\r\n                \"code\": \"std:080\"\r\n            },\r\n            \"country\": {\r\n                \"name\": \"India\",\r\n                \"code\": \"IND\"\r\n            }\r\n        },\r\n        \"action\": \"search\",\r\n        \"version\": \"{{core_version}}\",\r\n        \"bap_id\": \"{{bap_id}}\",\r\n        \"bap_uri\": \"{{bap_uri}}\",\r\n        \"transaction_id\": \"a9aaecca-10b7-4d19-b640-b047a7c60008\",\r\n        \"message_id\": \"a9aaecca-10b7-4d19-b640-b047a7c60009\",\r\n        \"timestamp\": \"2023-02-06T09:55:41.161Z\",\r\n        \"ttl\": \"PT10M\"\r\n    },\r\n    \"message\": {\r\n        \"intent\": {\r\n            \"provider\": {\r\n                \"categories\": [\r\n                    {\r\n                        \"descriptor\": {\r\n                            \"code\": \"ug\"\r\n                        }\r\n                    }\r\n                ]\r\n            },\r\n            \"fulfillment\": {\r\n                \"customer\": {\r\n                    \"person\": {\r\n                        \"gender\": \"Female\"\r\n                    }\r\n                }\r\n            }\r\n        }\r\n    }\r\n}",
-                            "options": {
-                                "raw": {
-                                    "language": "json"
-                                }
-                            }
-                        },
-                        "url": {
-                            "raw": "{{base_url}}/search",
-                            "host": ["{{base_url}}"],
-                            "path": ["search"]
-                        }
-                    },
-                    "response": [
                         {
-                            "name": "Search by Intent",
-                            "originalRequest": {
+                            "name": "Search with combination",
+                            "request": {
+                                "auth": {
+                                    "type": "noauth"
+                                },
                                 "method": "POST",
                                 "header": [],
                                 "body": {
                                     "mode": "raw",
-                                    "raw": "{\r\n  \"context\": {\r\n    \"domain\": \"dsep:scholarships\",\r\n    \"country\": \"IND\",\r\n    \"city\": \"std:080\",\r\n    \"action\": \"search\",\r\n    \"core_version\": \"0.9.3\",\r\n    \"bap_id\": \"http://localhost:9001/\",\r\n    \"bap_uri\": \"http://localhost:9001/dsep/v0/\",\r\n    \"message_id\": \"5ac3dd78-829e-4c7d-9139-a15adbb582cc\",\r\n    \"timestamp\": \"2021-03-23T10:00:40.065Z\"\r\n  },\r\n  \"message\": {\r\n    \"intent\": {\r\n      \"item\": {\r\n        \"descriptor\": {\r\n          \"name\": \"XYZ Undergraduation scholarship for Economically Backward Female Students\"\r\n        }\r\n      }\r\n    }\r\n  }\r\n}",
+                                    "raw": "{\r\n    \"context\": {\r\n        \"domain\": \"dsep:scholarships\",\r\n        \"location\": {\r\n            \"city\": {\r\n                \"name\": \"Bangalore\",\r\n                \"code\": \"std:080\"\r\n            },\r\n            \"country\": {\r\n                \"name\": \"India\",\r\n                \"code\": \"IND\"\r\n            }\r\n        },\r\n        \"action\": \"search\",\r\n        \"version\": \"{{core_version}}\",\r\n        \"bap_id\": \"{{bap_id}}\",\r\n        \"bap_uri\": \"{{bap_uri}}\",\r\n        \"transaction_id\": \"a9aaecca-10b7-4d19-b640-b047a7c60008\",\r\n        \"message_id\": \"a9aaecca-10b7-4d19-b640-b047a7c60009\",\r\n        \"timestamp\": \"2023-02-06T09:55:41.161Z\",\r\n        \"ttl\": \"PT10M\"\r\n    },\r\n    \"message\": {\r\n        \"intent\": {\r\n            \"provider\": {\r\n                \"categories\": [\r\n                    {\r\n                        \"descriptor\": {\r\n                            \"code\": \"ug\"\r\n                        }\r\n                    }\r\n                ]\r\n            },\r\n            \"fulfillment\": {\r\n                \"customer\": {\r\n                    \"person\": {\r\n                        \"gender\": \"Female\"\r\n                    }\r\n                }\r\n            }\r\n        }\r\n    }\r\n}",
                                     "options": {
                                         "raw": {
                                             "language": "json"
@@ -1419,74 +1694,427 @@
                                     }
                                 },
                                 "url": {
-                                    "raw": "{{bpp-url}}/public/search",
-                                    "host": ["{{bpp-url}}"],
-                                    "path": ["public", "search"]
+                                    "raw": "{{base_url}}/search",
+                                    "host": ["{{base_url}}"],
+                                    "path": ["search"]
                                 }
                             },
-                            "status": "OK",
-                            "code": 200,
-                            "_postman_previewlanguage": "json",
-                            "header": [
+                            "response": [
                                 {
-                                    "key": "Vary",
-                                    "value": "Origin"
-                                },
-                                {
-                                    "key": "Vary",
-                                    "value": "Access-Control-Request-Method"
-                                },
-                                {
-                                    "key": "Vary",
-                                    "value": "Access-Control-Request-Headers"
-                                },
-                                {
-                                    "key": "X-Content-Type-Options",
-                                    "value": "nosniff"
-                                },
-                                {
-                                    "key": "X-XSS-Protection",
-                                    "value": "1; mode=block"
-                                },
-                                {
-                                    "key": "Cache-Control",
-                                    "value": "no-cache, no-store, max-age=0, must-revalidate"
-                                },
-                                {
-                                    "key": "Pragma",
-                                    "value": "no-cache"
-                                },
-                                {
-                                    "key": "Expires",
-                                    "value": "0"
-                                },
-                                {
-                                    "key": "X-Frame-Options",
-                                    "value": "DENY"
-                                },
-                                {
-                                    "key": "Content-Type",
-                                    "value": "application/json"
-                                },
-                                {
-                                    "key": "Content-Length",
-                                    "value": "406"
-                                },
-                                {
-                                    "key": "Date",
-                                    "value": "Fri, 14 Oct 2022 06:06:58 GMT"
-                                },
-                                {
-                                    "key": "Keep-Alive",
-                                    "value": "timeout=60"
-                                },
-                                {
-                                    "key": "Connection",
-                                    "value": "keep-alive"
+                                    "name": "Search by Intent",
+                                    "originalRequest": {
+                                        "method": "POST",
+                                        "header": [],
+                                        "body": {
+                                            "mode": "raw",
+                                            "raw": "{\r\n  \"context\": {\r\n    \"domain\": \"dsep:scholarships\",\r\n    \"country\": \"IND\",\r\n    \"city\": \"std:080\",\r\n    \"action\": \"search\",\r\n    \"core_version\": \"0.9.3\",\r\n    \"bap_id\": \"http://localhost:9001/\",\r\n    \"bap_uri\": \"http://localhost:9001/dsep/v0/\",\r\n    \"message_id\": \"5ac3dd78-829e-4c7d-9139-a15adbb582cc\",\r\n    \"timestamp\": \"2021-03-23T10:00:40.065Z\"\r\n  },\r\n  \"message\": {\r\n    \"intent\": {\r\n      \"item\": {\r\n        \"descriptor\": {\r\n          \"name\": \"XYZ Undergraduation scholarship for Economically Backward Female Students\"\r\n        }\r\n      }\r\n    }\r\n  }\r\n}",
+                                            "options": {
+                                                "raw": {
+                                                    "language": "json"
+                                                }
+                                            }
+                                        },
+                                        "url": {
+                                            "raw": "{{bpp-url}}/public/search",
+                                            "host": ["{{bpp-url}}"],
+                                            "path": ["public", "search"]
+                                        }
+                                    },
+                                    "status": "OK",
+                                    "code": 200,
+                                    "_postman_previewlanguage": "json",
+                                    "header": [
+                                        {
+                                            "key": "Vary",
+                                            "value": "Origin"
+                                        },
+                                        {
+                                            "key": "Vary",
+                                            "value": "Access-Control-Request-Method"
+                                        },
+                                        {
+                                            "key": "Vary",
+                                            "value": "Access-Control-Request-Headers"
+                                        },
+                                        {
+                                            "key": "X-Content-Type-Options",
+                                            "value": "nosniff"
+                                        },
+                                        {
+                                            "key": "X-XSS-Protection",
+                                            "value": "1; mode=block"
+                                        },
+                                        {
+                                            "key": "Cache-Control",
+                                            "value": "no-cache, no-store, max-age=0, must-revalidate"
+                                        },
+                                        {
+                                            "key": "Pragma",
+                                            "value": "no-cache"
+                                        },
+                                        {
+                                            "key": "Expires",
+                                            "value": "0"
+                                        },
+                                        {
+                                            "key": "X-Frame-Options",
+                                            "value": "DENY"
+                                        },
+                                        {
+                                            "key": "Content-Type",
+                                            "value": "application/json"
+                                        },
+                                        {
+                                            "key": "Content-Length",
+                                            "value": "406"
+                                        },
+                                        {
+                                            "key": "Date",
+                                            "value": "Fri, 14 Oct 2022 06:06:58 GMT"
+                                        },
+                                        {
+                                            "key": "Keep-Alive",
+                                            "value": "timeout=60"
+                                        },
+                                        {
+                                            "key": "Connection",
+                                            "value": "keep-alive"
+                                        }
+                                    ],
+                                    "cookie": [],
+                                    "body": "{\n    \"context\": {\n        \"domain\": \"dsep:scholarships\",\n        \"country\": \"IND\",\n        \"city\": \"std:080\",\n        \"action\": \"on_search\",\n        \"core_version\": \"0.9.3\",\n        \"bap_id\": \"http://localhost:9001/\",\n        \"bap_uri\": \"http://localhost:9001/dsep/v0/\",\n        \"bpp_id\": \" 'protean-dsep-bpp'\",\n        \"bpp_uri\": \"http://localhost:8088/dsep-seller/public\",\n        \"message_id\": \"5ac3dd78-829e-4c7d-9139-a15adbb582cc\",\n        \"timestamp\": \"2021-03-23T10:00:40.065Z\"\n    },\n    \"message\": {\n        \"ack\": {\n            \"status\": \"ACK\"\n        }\n    }\n}"
                                 }
-                            ],
-                            "cookie": [],
-                            "body": "{\n    \"context\": {\n        \"domain\": \"dsep:scholarships\",\n        \"country\": \"IND\",\n        \"city\": \"std:080\",\n        \"action\": \"on_search\",\n        \"core_version\": \"0.9.3\",\n        \"bap_id\": \"http://localhost:9001/\",\n        \"bap_uri\": \"http://localhost:9001/dsep/v0/\",\n        \"bpp_id\": \" 'protean-dsep-bpp'\",\n        \"bpp_uri\": \"http://localhost:8088/dsep-seller/public\",\n        \"message_id\": \"5ac3dd78-829e-4c7d-9139-a15adbb582cc\",\n        \"timestamp\": \"2021-03-23T10:00:40.065Z\"\n    },\n    \"message\": {\n        \"ack\": {\n            \"status\": \"ACK\"\n        }\n    }\n}"
+                            ]
+                        },
+                        {
+                            "name": "Search with category",
+                            "request": {
+                                "auth": {
+                                    "type": "noauth"
+                                },
+                                "method": "POST",
+                                "header": [],
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{\r\n    \"context\": {\r\n        \"domain\": \"dsep:scholarships\",\r\n        \"location\": {\r\n            \"city\": {\r\n                \"name\": \"Bangalore\",\r\n                \"code\": \"std:080\"\r\n            },\r\n            \"country\": {\r\n                \"name\": \"India\",\r\n                \"code\": \"IND\"\r\n            }\r\n        },\r\n        \"action\": \"search\",\r\n        \"version\": \"{{core_version}}\",\r\n        \"bap_id\": \"{{bap_id}}\",\r\n        \"bap_uri\": \"{{bap_uri}}\",\r\n        \"transaction_id\": \"a9aaecca-10b7-4d19-b640-b047a7c60008\",\r\n        \"message_id\": \"a9aaecca-10b7-4d19-b640-b047a7c60009\",\r\n        \"timestamp\": \"2023-02-06T09:55:41.161Z\",\r\n        \"ttl\": \"PT10M\"\r\n    },\r\n    \"message\": {\r\n        \"intent\": {\r\n            \"provider\": {\r\n                \"categories\": [\r\n                    {\r\n                        \"descriptor\": {\r\n                            \"code\": \"ug\"\r\n                        }\r\n                    }\r\n                ]\r\n            }\r\n        }\r\n    }\r\n}",
+                                    "options": {
+                                        "raw": {
+                                            "language": "json"
+                                        }
+                                    }
+                                },
+                                "url": {
+                                    "raw": "{{base_url}}/search",
+                                    "host": ["{{base_url}}"],
+                                    "path": ["search"]
+                                }
+                            },
+                            "response": [
+                                {
+                                    "name": "Search by Intent",
+                                    "originalRequest": {
+                                        "method": "POST",
+                                        "header": [],
+                                        "body": {
+                                            "mode": "raw",
+                                            "raw": "{\r\n  \"context\": {\r\n    \"domain\": \"dsep:scholarships\",\r\n    \"country\": \"IND\",\r\n    \"city\": \"std:080\",\r\n    \"action\": \"search\",\r\n    \"core_version\": \"0.9.3\",\r\n    \"bap_id\": \"http://localhost:9001/\",\r\n    \"bap_uri\": \"http://localhost:9001/dsep/v0/\",\r\n    \"message_id\": \"5ac3dd78-829e-4c7d-9139-a15adbb582cc\",\r\n    \"timestamp\": \"2021-03-23T10:00:40.065Z\"\r\n  },\r\n  \"message\": {\r\n    \"intent\": {\r\n      \"item\": {\r\n        \"descriptor\": {\r\n          \"name\": \"XYZ Undergraduation scholarship for Economically Backward Female Students\"\r\n        }\r\n      }\r\n    }\r\n  }\r\n}",
+                                            "options": {
+                                                "raw": {
+                                                    "language": "json"
+                                                }
+                                            }
+                                        },
+                                        "url": {
+                                            "raw": "{{bpp-url}}/public/search",
+                                            "host": ["{{bpp-url}}"],
+                                            "path": ["public", "search"]
+                                        }
+                                    },
+                                    "status": "OK",
+                                    "code": 200,
+                                    "_postman_previewlanguage": "json",
+                                    "header": [
+                                        {
+                                            "key": "Vary",
+                                            "value": "Origin"
+                                        },
+                                        {
+                                            "key": "Vary",
+                                            "value": "Access-Control-Request-Method"
+                                        },
+                                        {
+                                            "key": "Vary",
+                                            "value": "Access-Control-Request-Headers"
+                                        },
+                                        {
+                                            "key": "X-Content-Type-Options",
+                                            "value": "nosniff"
+                                        },
+                                        {
+                                            "key": "X-XSS-Protection",
+                                            "value": "1; mode=block"
+                                        },
+                                        {
+                                            "key": "Cache-Control",
+                                            "value": "no-cache, no-store, max-age=0, must-revalidate"
+                                        },
+                                        {
+                                            "key": "Pragma",
+                                            "value": "no-cache"
+                                        },
+                                        {
+                                            "key": "Expires",
+                                            "value": "0"
+                                        },
+                                        {
+                                            "key": "X-Frame-Options",
+                                            "value": "DENY"
+                                        },
+                                        {
+                                            "key": "Content-Type",
+                                            "value": "application/json"
+                                        },
+                                        {
+                                            "key": "Content-Length",
+                                            "value": "406"
+                                        },
+                                        {
+                                            "key": "Date",
+                                            "value": "Fri, 14 Oct 2022 06:06:58 GMT"
+                                        },
+                                        {
+                                            "key": "Keep-Alive",
+                                            "value": "timeout=60"
+                                        },
+                                        {
+                                            "key": "Connection",
+                                            "value": "keep-alive"
+                                        }
+                                    ],
+                                    "cookie": [],
+                                    "body": "{\n    \"context\": {\n        \"domain\": \"dsep:scholarships\",\n        \"country\": \"IND\",\n        \"city\": \"std:080\",\n        \"action\": \"on_search\",\n        \"core_version\": \"0.9.3\",\n        \"bap_id\": \"http://localhost:9001/\",\n        \"bap_uri\": \"http://localhost:9001/dsep/v0/\",\n        \"bpp_id\": \" 'protean-dsep-bpp'\",\n        \"bpp_uri\": \"http://localhost:8088/dsep-seller/public\",\n        \"message_id\": \"5ac3dd78-829e-4c7d-9139-a15adbb582cc\",\n        \"timestamp\": \"2021-03-23T10:00:40.065Z\"\n    },\n    \"message\": {\n        \"ack\": {\n            \"status\": \"ACK\"\n        }\n    }\n}"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Search with provider",
+                            "request": {
+                                "auth": {
+                                    "type": "noauth"
+                                },
+                                "method": "POST",
+                                "header": [],
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{\r\n    \"context\": {\r\n        \"domain\": \"dsep:scholarships\",\r\n        \"location\": {\r\n            \"city\": {\r\n                \"name\": \"Bangalore\",\r\n                \"code\": \"std:080\"\r\n            },\r\n            \"country\": {\r\n                \"name\": \"India\",\r\n                \"code\": \"IND\"\r\n            }\r\n        },\r\n        \"action\": \"search\",\r\n        \"version\": \"{{core_version}}\",\r\n        \"bap_id\": \"{{bap_id}}\",\r\n        \"bap_uri\": \"{{bap_uri}}\",\r\n        \"transaction_id\": \"a9aaecca-10b7-4d19-b640-b047a7c60008\",\r\n        \"message_id\": \"a9aaecca-10b7-4d19-b640-b047a7c60009\",\r\n        \"timestamp\": \"2023-02-06T09:55:41.161Z\",\r\n        \"ttl\": \"PT10M\"\r\n    },\r\n    \"message\": {\r\n        \"intent\": {\r\n            \"provider\": {\r\n                \"id\": \"pmcare\"\r\n            }\r\n        }\r\n    }\r\n}",
+                                    "options": {
+                                        "raw": {
+                                            "language": "json"
+                                        }
+                                    }
+                                },
+                                "url": {
+                                    "raw": "{{base_url}}/search",
+                                    "host": ["{{base_url}}"],
+                                    "path": ["search"]
+                                }
+                            },
+                            "response": [
+                                {
+                                    "name": "Search by Intent",
+                                    "originalRequest": {
+                                        "method": "POST",
+                                        "header": [],
+                                        "body": {
+                                            "mode": "raw",
+                                            "raw": "{\r\n  \"context\": {\r\n    \"domain\": \"dsep:scholarships\",\r\n    \"country\": \"IND\",\r\n    \"city\": \"std:080\",\r\n    \"action\": \"search\",\r\n    \"core_version\": \"0.9.3\",\r\n    \"bap_id\": \"http://localhost:9001/\",\r\n    \"bap_uri\": \"http://localhost:9001/dsep/v0/\",\r\n    \"message_id\": \"5ac3dd78-829e-4c7d-9139-a15adbb582cc\",\r\n    \"timestamp\": \"2021-03-23T10:00:40.065Z\"\r\n  },\r\n  \"message\": {\r\n    \"intent\": {\r\n      \"item\": {\r\n        \"descriptor\": {\r\n          \"name\": \"XYZ Undergraduation scholarship for Economically Backward Female Students\"\r\n        }\r\n      }\r\n    }\r\n  }\r\n}",
+                                            "options": {
+                                                "raw": {
+                                                    "language": "json"
+                                                }
+                                            }
+                                        },
+                                        "url": {
+                                            "raw": "{{bpp-url}}/public/search",
+                                            "host": ["{{bpp-url}}"],
+                                            "path": ["public", "search"]
+                                        }
+                                    },
+                                    "status": "OK",
+                                    "code": 200,
+                                    "_postman_previewlanguage": "json",
+                                    "header": [
+                                        {
+                                            "key": "Vary",
+                                            "value": "Origin"
+                                        },
+                                        {
+                                            "key": "Vary",
+                                            "value": "Access-Control-Request-Method"
+                                        },
+                                        {
+                                            "key": "Vary",
+                                            "value": "Access-Control-Request-Headers"
+                                        },
+                                        {
+                                            "key": "X-Content-Type-Options",
+                                            "value": "nosniff"
+                                        },
+                                        {
+                                            "key": "X-XSS-Protection",
+                                            "value": "1; mode=block"
+                                        },
+                                        {
+                                            "key": "Cache-Control",
+                                            "value": "no-cache, no-store, max-age=0, must-revalidate"
+                                        },
+                                        {
+                                            "key": "Pragma",
+                                            "value": "no-cache"
+                                        },
+                                        {
+                                            "key": "Expires",
+                                            "value": "0"
+                                        },
+                                        {
+                                            "key": "X-Frame-Options",
+                                            "value": "DENY"
+                                        },
+                                        {
+                                            "key": "Content-Type",
+                                            "value": "application/json"
+                                        },
+                                        {
+                                            "key": "Content-Length",
+                                            "value": "406"
+                                        },
+                                        {
+                                            "key": "Date",
+                                            "value": "Fri, 14 Oct 2022 06:06:58 GMT"
+                                        },
+                                        {
+                                            "key": "Keep-Alive",
+                                            "value": "timeout=60"
+                                        },
+                                        {
+                                            "key": "Connection",
+                                            "value": "keep-alive"
+                                        }
+                                    ],
+                                    "cookie": [],
+                                    "body": "{\n    \"context\": {\n        \"domain\": \"dsep:scholarships\",\n        \"country\": \"IND\",\n        \"city\": \"std:080\",\n        \"action\": \"on_search\",\n        \"core_version\": \"0.9.3\",\n        \"bap_id\": \"http://localhost:9001/\",\n        \"bap_uri\": \"http://localhost:9001/dsep/v0/\",\n        \"bpp_id\": \" 'protean-dsep-bpp'\",\n        \"bpp_uri\": \"http://localhost:8088/dsep-seller/public\",\n        \"message_id\": \"5ac3dd78-829e-4c7d-9139-a15adbb582cc\",\n        \"timestamp\": \"2021-03-23T10:00:40.065Z\"\n    },\n    \"message\": {\n        \"ack\": {\n            \"status\": \"ACK\"\n        }\n    }\n}"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Search with location",
+                            "request": {
+                                "auth": {
+                                    "type": "noauth"
+                                },
+                                "method": "POST",
+                                "header": [],
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{\r\n    \"context\": {\r\n        \"domain\": \"dsep:scholarships\",\r\n        \"location\": {\r\n            \"city\": {\r\n                \"name\": \"Bangalore\",\r\n                \"code\": \"std:080\"\r\n            },\r\n            \"country\": {\r\n                \"name\": \"India\",\r\n                \"code\": \"IND\"\r\n            }\r\n        },\r\n        \"action\": \"search\",\r\n        \"version\": \"{{core_version}}\",\r\n        \"bap_id\": \"{{bap_id}}\",\r\n        \"bap_uri\": \"{{bap_uri}}\",\r\n        \"transaction_id\": \"a9aaecca-10b7-4d19-b640-b047a7c60008\",\r\n        \"message_id\": \"a9aaecca-10b7-4d19-b640-b047a7c60009\",\r\n        \"timestamp\": \"2023-02-06T09:55:41.161Z\",\r\n        \"ttl\": \"PT10M\"\r\n    },\r\n    \"message\": {\r\n        \"intent\": {\r\n            \"location\": {\r\n                        \"id\": \"1\",\r\n                        \"city\": {\r\n                            \"name\": \"Delhi\"\r\n                        }\r\n                    }\r\n        }\r\n    }\r\n}",
+                                    "options": {
+                                        "raw": {
+                                            "language": "json"
+                                        }
+                                    }
+                                },
+                                "url": {
+                                    "raw": "{{base_url}}/search",
+                                    "host": ["{{base_url}}"],
+                                    "path": ["search"]
+                                }
+                            },
+                            "response": [
+                                {
+                                    "name": "Search by Intent",
+                                    "originalRequest": {
+                                        "method": "POST",
+                                        "header": [],
+                                        "body": {
+                                            "mode": "raw",
+                                            "raw": "{\r\n  \"context\": {\r\n    \"domain\": \"dsep:scholarships\",\r\n    \"country\": \"IND\",\r\n    \"city\": \"std:080\",\r\n    \"action\": \"search\",\r\n    \"core_version\": \"0.9.3\",\r\n    \"bap_id\": \"http://localhost:9001/\",\r\n    \"bap_uri\": \"http://localhost:9001/dsep/v0/\",\r\n    \"message_id\": \"5ac3dd78-829e-4c7d-9139-a15adbb582cc\",\r\n    \"timestamp\": \"2021-03-23T10:00:40.065Z\"\r\n  },\r\n  \"message\": {\r\n    \"intent\": {\r\n      \"item\": {\r\n        \"descriptor\": {\r\n          \"name\": \"XYZ Undergraduation scholarship for Economically Backward Female Students\"\r\n        }\r\n      }\r\n    }\r\n  }\r\n}",
+                                            "options": {
+                                                "raw": {
+                                                    "language": "json"
+                                                }
+                                            }
+                                        },
+                                        "url": {
+                                            "raw": "{{bpp-url}}/public/search",
+                                            "host": ["{{bpp-url}}"],
+                                            "path": ["public", "search"]
+                                        }
+                                    },
+                                    "status": "OK",
+                                    "code": 200,
+                                    "_postman_previewlanguage": "json",
+                                    "header": [
+                                        {
+                                            "key": "Vary",
+                                            "value": "Origin"
+                                        },
+                                        {
+                                            "key": "Vary",
+                                            "value": "Access-Control-Request-Method"
+                                        },
+                                        {
+                                            "key": "Vary",
+                                            "value": "Access-Control-Request-Headers"
+                                        },
+                                        {
+                                            "key": "X-Content-Type-Options",
+                                            "value": "nosniff"
+                                        },
+                                        {
+                                            "key": "X-XSS-Protection",
+                                            "value": "1; mode=block"
+                                        },
+                                        {
+                                            "key": "Cache-Control",
+                                            "value": "no-cache, no-store, max-age=0, must-revalidate"
+                                        },
+                                        {
+                                            "key": "Pragma",
+                                            "value": "no-cache"
+                                        },
+                                        {
+                                            "key": "Expires",
+                                            "value": "0"
+                                        },
+                                        {
+                                            "key": "X-Frame-Options",
+                                            "value": "DENY"
+                                        },
+                                        {
+                                            "key": "Content-Type",
+                                            "value": "application/json"
+                                        },
+                                        {
+                                            "key": "Content-Length",
+                                            "value": "406"
+                                        },
+                                        {
+                                            "key": "Date",
+                                            "value": "Fri, 14 Oct 2022 06:06:58 GMT"
+                                        },
+                                        {
+                                            "key": "Keep-Alive",
+                                            "value": "timeout=60"
+                                        },
+                                        {
+                                            "key": "Connection",
+                                            "value": "keep-alive"
+                                        }
+                                    ],
+                                    "cookie": [],
+                                    "body": "{\n    \"context\": {\n        \"domain\": \"dsep:scholarships\",\n        \"country\": \"IND\",\n        \"city\": \"std:080\",\n        \"action\": \"on_search\",\n        \"core_version\": \"0.9.3\",\n        \"bap_id\": \"http://localhost:9001/\",\n        \"bap_uri\": \"http://localhost:9001/dsep/v0/\",\n        \"bpp_id\": \" 'protean-dsep-bpp'\",\n        \"bpp_uri\": \"http://localhost:8088/dsep-seller/public\",\n        \"message_id\": \"5ac3dd78-829e-4c7d-9139-a15adbb582cc\",\n        \"timestamp\": \"2021-03-23T10:00:40.065Z\"\n    },\n    \"message\": {\n        \"ack\": {\n            \"status\": \"ACK\"\n        }\n    }\n}"
+                                }
+                            ]
                         }
                     ]
                 },
@@ -1721,7 +2349,53 @@
                     "name": "Search",
                     "item": [
                         {
-                            "name": "Category: School",
+                            "name": "Search with item",
+                            "request": {
+                                "method": "POST",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json",
+                                        "type": "text"
+                                    }
+                                ],
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{\n    \"context\": {\n        \"domain\": \"dsep:courses\",\n        \"action\": \"search\",\n       \"version\": \"{{core_version}}\",\n        \"bap_id\": \"{{bap_id}}\",\n        \"bap_uri\": \"{{bap_uri}}\",\n        \"location\": {\n            \"city\": {\n                \"name\": \"Bangalore\",\n                \"code\": \"std:080\"\n            },\n            \"country\": {\n                \"name\": \"India\",\n                \"code\": \"IND\"\n            }\n        },\n        \"transaction_id\": \"a9aaecca-10b7-4d19-b640-b047a7c62196\",\n        \"message_id\": \"0d30bfbf-87b8-43d2-8f95-36ebb9a24fd6\",\n        \"ttl\": \"PT10M\",\n        \"timestamp\": \"2023-02-15T15:14:30.560Z\"\n    },\n    \"message\": {\n        \"intent\": {\n            \"item\": {\n                \"descriptor\": {\n                    \"name\": \"javascript courses\"\n                }\n            }\n        }\n    }\n}"
+                                },
+                                "url": {
+                                    "raw": "{{base_url}}/search",
+                                    "host": ["{{base_url}}"],
+                                    "path": ["search"]
+                                }
+                            },
+                            "response": []
+                        },
+                        {
+                            "name": "Search with location",
+                            "request": {
+                                "method": "POST",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json",
+                                        "type": "text"
+                                    }
+                                ],
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{\n    \"context\": {\n        \"domain\": \"dsep:courses\",\n        \"action\": \"search\",\n        \"version\": \"{{core_version}}\",\n        \"bap_id\": \"{{bap_id}}\",\n        \"bap_uri\": \"{{bap_uri}}\",\n        \"location\": {\n            \"city\": {\n                \"name\": \"Bangalore\",\n                \"code\": \"std:080\"\n            },\n            \"country\": {\n                \"name\": \"India\",\n                \"code\": \"IND\"\n            }\n        },\n        \"transaction_id\": \"a9aaecca-10b7-4d19-b640-b047a7c62196\",\n        \"message_id\": \"0d30bfbf-87b8-43d2-8f95-36ebb9a24fd6\",\n        \"ttl\": \"PT10M\",\n        \"timestamp\": \"2023-02-15T15:14:30.560Z\"\n    },\n    \"message\": {\n        \"intent\": {\n            \"location\": {\n                \"id\": \"1\",\n                \"city\": {\n                    \"name\": \"Delhi\"\n                }\n            }\n        }\n    }\n}"
+                                },
+                                "url": {
+                                    "raw": "{{base_url}}/search",
+                                    "host": ["{{base_url}}"],
+                                    "path": ["search"]
+                                }
+                            },
+                            "response": []
+                        },
+                        {
+                            "name": "Search with Category",
                             "request": {
                                 "method": "POST",
                                 "header": [
@@ -1734,6 +2408,75 @@
                                 "body": {
                                     "mode": "raw",
                                     "raw": "{\n    \"context\": {\n        \"domain\": \"dsep:courses\",\n        \"action\": \"search\",\n       \"version\": \"{{core_version}}\",\n        \"bap_id\": \"{{bap_id}}\",\n        \"bap_uri\": \"{{bap_uri}}\",\n        \"location\": {\n            \"city\": {\n                \"name\": \"Bangalore\",\n                \"code\": \"std:080\"\n            },\n            \"country\": {\n                \"name\": \"India\",\n                \"code\": \"IND\"\n            }\n        },\n        \"transaction_id\": \"a9aaecca-10b7-4d19-b640-b047a7c62196\",\n        \"message_id\": \"0d30bfbf-87b8-43d2-8f95-36ebb9a24fd6\",\n        \"ttl\": \"PT10M\",\n        \"timestamp\": \"2023-02-15T15:14:30.560Z\"\n    },\n    \"message\": {\n        \"intent\": {\n            \"category\": {\n                \"descriptor\": {\n                    \"name\": \"SCHOOL\"\n                }\n            }\n        }\n    }\n}"
+                                },
+                                "url": {
+                                    "raw": "{{base_url}}/search",
+                                    "host": ["{{base_url}}"],
+                                    "path": ["search"]
+                                }
+                            },
+                            "response": []
+                        },
+                        {
+                            "name": "Search with description",
+                            "request": {
+                                "method": "POST",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json",
+                                        "type": "text"
+                                    }
+                                ],
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{\n    \"context\": {\n        \"domain\": \"dsep:courses\",\n        \"action\": \"search\",\n       \"version\": \"{{core_version}}\",\n        \"bap_id\": \"{{bap_id}}\",\n        \"bap_uri\": \"{{bap_uri}}\",\n        \"location\": {\n            \"city\": {\n                \"name\": \"Bangalore\",\n                \"code\": \"std:080\"\n            },\n            \"country\": {\n                \"name\": \"India\",\n                \"code\": \"IND\"\n            }\n        },\n        \"transaction_id\": \"a9aaecca-10b7-4d19-b640-b047a7c62196\",\n        \"message_id\": \"0d30bfbf-87b8-43d2-8f95-36ebb9a24fd6\",\n        \"ttl\": \"PT10M\",\n        \"timestamp\": \"2023-02-15T15:14:30.560Z\"\n    },\n    \"message\": {\n        \"intent\": {\n            \"descriptor\": {\n                \"name\":\"Courses for teacher\"\n            }\n        }\n    }\n}"
+                                },
+                                "url": {
+                                    "raw": "{{base_url}}/search",
+                                    "host": ["{{base_url}}"],
+                                    "path": ["search"]
+                                }
+                            },
+                            "response": []
+                        },
+                        {
+                            "name": "Search with provider",
+                            "request": {
+                                "method": "POST",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json",
+                                        "type": "text"
+                                    }
+                                ],
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{\n    \"context\": {\n        \"domain\": \"dsep:courses\",\n        \"action\": \"search\",\n       \"version\": \"{{core_version}}\",\n        \"bap_id\": \"{{bap_id}}\",\n        \"bap_uri\": \"{{bap_uri}}\",\n        \"location\": {\n            \"city\": {\n                \"name\": \"Bangalore\",\n                \"code\": \"std:080\"\n            },\n            \"country\": {\n                \"name\": \"India\",\n                \"code\": \"IND\"\n            }\n        },\n        \"transaction_id\": \"a9aaecca-10b7-4d19-b640-b047a7c62196\",\n        \"message_id\": \"0d30bfbf-87b8-43d2-8f95-36ebb9a24fd6\",\n        \"ttl\": \"PT10M\",\n        \"timestamp\": \"2023-02-15T15:14:30.560Z\"\n    },\n    \"message\": {\n        \"intent\": {\n            \"provider\": {\n                \"id\": \"unacademy\"\n            }\n        }\n    }\n}"
+                                },
+                                "url": {
+                                    "raw": "{{base_url}}/search",
+                                    "host": ["{{base_url}}"],
+                                    "path": ["search"]
+                                }
+                            },
+                            "response": []
+                        },
+                        {
+                            "name": "Search with combination",
+                            "request": {
+                                "method": "POST",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json",
+                                        "type": "text"
+                                    }
+                                ],
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{\n    \"context\": {\n        \"domain\": \"dsep:courses\",\n        \"action\": \"search\",\n        \"version\": \"{{core_version}}\",\n        \"bap_id\": \"{{bap_id}}\",\n        \"bap_uri\": \"{{bap_uri}}\",\n        \"location\": {\n            \"city\": {\n                \"name\": \"Bangalore\",\n                \"code\": \"std:080\"\n            },\n            \"country\": {\n                \"name\": \"India\",\n                \"code\": \"IND\"\n            }\n        },\n        \"transaction_id\": \"a9aaecca-10b7-4d19-b640-b047a7c62196\",\n        \"message_id\": \"0d30bfbf-87b8-43d2-8f95-36ebb9a24fd6\",\n        \"ttl\": \"PT10M\",\n        \"timestamp\": \"2023-02-15T15:14:30.560Z\"\n    },\n    \"message\": {\n        \"intent\": {\n            \"provider\": {\n                \"id\": \"unacademy\"\n            },\n            \"descriptor\": {\n                \"name\": \"Courses for teacher\"\n            },\n            \"location\": {\n                \"id\": \"1\",\n                \"city\": {\n                    \"name\": \"Delhi\"\n                }\n            }\n        }\n    }\n}"
                                 },
                                 "url": {
                                     "raw": "{{base_url}}/search",
