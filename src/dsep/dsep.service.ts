@@ -18,6 +18,12 @@ export class DsepService {
                 return new CoursesTrainingService();
             case DSEPModulesEnum.TUTORING_MENTORSHIPS:
                 return new TutoringMentorshipService();
+            case DSEPModulesEnum.ONEST_WORK_OPPORTUNITIES:
+                return new JobsInternshipsService();
+            case DSEPModulesEnum.ONEST_LEARNING_EXPERIENCES:
+                return new CoursesTrainingService();
+            case DSEPModulesEnum.ONEST_FINANCIAL_SUPPORT:
+                return new ScholarshipsGrantsService();
             default:
                 throw new DomainNotFoundException();
         }
