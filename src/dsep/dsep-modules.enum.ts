@@ -3,4 +3,7 @@ export enum DSEPModulesEnum {
     COURSES_TRAINING = "dsep:courses",
     JOBS_INTERNSHIPS = "dsep:jobs",
     TUTORING_MENTORSHIPS = "dsep:mentoring",
+    ONEST_WORK_OPPORTUNITIES = "onest:work-opportunities",
+    ONEST_FINANCIAL_SUPPORT = "onest:financial-support",
+    ONEST_LEARNING_EXPERIENCES = "onest:learning-experiences",
 }
