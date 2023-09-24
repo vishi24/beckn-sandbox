@@ -1,6 +1,6 @@
 {
   "context": {
-    "domain": "financial-services:mutual-funds:0.2.0",
+    "domain": "financial-services:credit-personal:0.2.0",
     "action": "on_rating",
     "location": {
       "country": {
@@ -11,7 +11,7 @@
     "city": "std:080",
     "version": "1.1.0",
     "bap_id": "ps-bap-network.becknprotocol.io",
-    "bap_uri": "https://ps-bap-network.becknprotocol.io/",
+    "bap_url": "https://ps-bap-client.becknprotocol.io//",
     "bpp_id": "beckn-sandbox-bpp.becknprotocol.io",
     "bpp_uri": "https://sandbox-bpp-network.becknprotocol.io/",
     "transaction_id": "6743e9e2-4fb5-487c-92b7-13ba8018f176",
@@ -22,7 +22,7 @@
     "feedback_form": {
       "xinput": {
         "form": {
-          "url": "https://sandbox-bpp-network.becknprotocol.io/pilot/bpp/feedback/portal"
+          "url": "https://api.example-bpp.com/pilot/bpp/feedback/portal"
         },
         "required": "false"
       }

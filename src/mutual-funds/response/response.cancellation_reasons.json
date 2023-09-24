@@ -1,6 +1,6 @@
 {
   "context": {
-    "domain": "financial-services:0.2.0",
+    "domain": "financial-services:mutual-funds:0.2.0",
     "location": {
       "country": {
         "code": "IND"

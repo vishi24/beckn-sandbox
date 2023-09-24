@@ -8,10 +8,10 @@
         },
         "action": "on_select",
         "version": "1.1.0",
-        "bap_id": "credit-protocol.becknprotocol.io",
-        "bap_uri": "https://credit-protocol-network.becknprotocol.io/",
-        "bpp_id": "bpp.credit.icicibank.io",
-        "bpp_uri": "https://bpp.credit.icicibank.io",
+        "bap_id": "ps-bap-network.becknprotocol.io",
+        "bap_uri": "https://ps-bap-network.becknprotocol.io/",
+        "bpp_id": "beckn-sandbox-bpp.becknprotocol.io",
+        "bpp_uri": "https://sandbox-bpp-network.becknprotocol.io/",
         "transaction_id": "a9aaecca-10b7-4d19-b640-b047a7c62195",
         "message_id": "c8e3968c-cd78-4e46-aa34-0d541e46bd73",
         "timestamp": "2023-05-25T05:23:03.443Z",
@@ -102,7 +102,11 @@
                                 "cur": 2,
                                 "max": 2
                             },
-                            "headings": ["Financial Information", "Individual KYC", "Entity KYC"]
+                            "headings": [
+                                "Financial Information",
+                                "Individual KYC",
+                                "Entity KYC"
+                            ]
                         },
                         "form": {
                             "mime_type": "text/html",

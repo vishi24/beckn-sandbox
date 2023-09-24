@@ -1,6 +1,6 @@
 {
   "context": {
-    "domain": "financial-services:0.2.0",
+    "domain": "financial-services:mutual-funds:0.2.0",
     "location": {
       "country": {
         "code": "IND"
@@ -121,7 +121,7 @@
       },
       "payments": [
         {
-          "type": "ON-ORDER",
+          "type": "PRE-ORDER",
           "url": "https://payment.abcmutalfunds.in",
           "params": {
             "amount": "5000",
@@ -130,8 +130,8 @@
           "status": "NOT-PAID",
           "time": {
             "range": {
-              "start": "01-07-2023 00:00:00",
-              "end": "30-07-2023 23:59:59"
+              "start": "2023-06-01T00:00:00.00Z",
+              "end": "2023-06-30T23:59:59.00Z"
             }
           }
         }

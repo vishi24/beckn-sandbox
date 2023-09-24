@@ -1,6 +1,6 @@
 {
   "context": {
-    "domain": "financial-services:0.2.0",
+    "domain": "financial-services:mutual-funds:0.2.0",
     "location": {
       "country": {
         "code": "IND"
@@ -120,7 +120,7 @@
         {
           "collected_by": "BPP",
           "method": "UPI",
-          "type": "ON-ORDER",
+          "type": "PRE-ORDER",
           "params": {
             "amount": "100000",
             "currency": "INR",
