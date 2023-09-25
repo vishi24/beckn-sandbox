@@ -11,11 +11,11 @@
         "action": "on_support",
         "timestamp": "2023-05-25T05:23:03.443Z",
         "version": "1.1.0",
-        "bap_uri": "https://credit-protocol-network.becknprotocol.io/",
-        "bap_id": "credit-protocol.becknprotocol.io",
         "ttl": "PT10M",
-        "bpp_id": "bpp.credit.icicibank.io",
-        "bpp_uri": "https://bpp.credit.icicibank.io"
+        "bap_id": "ps-bap-network.becknprotocol.io",
+        "bap_uri": "https://ps-bap-network.becknprotocol.io/",
+        "bpp_id": "beckn-sandbox-bpp.becknprotocol.io",
+        "bpp_uri": "https://sandbox-bpp-network.becknprotocol.io/"
     },
     "message": {
         "support": {

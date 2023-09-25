@@ -4,9 +4,10 @@ import { CreditInvoiceModule } from "src/invoice-based-credit/credit-invoice.mod
 import { FinancialServicesController } from "./financial-services.controller";
 import { FinancialServicesService } from "./financial-services.service";
 import { HealthInsuranceModule } from "src/health-insurance/health-insurance.module";
+import { MutualFundsModule } from "src/mutual-funds/mutual-funds.module";
 
 @Module({
-    imports: [CreditPersonalModule, CreditInvoiceModule, HealthInsuranceModule],
+    imports: [CreditPersonalModule, CreditInvoiceModule, HealthInsuranceModule, MutualFundsModule],
     controllers: [FinancialServicesController],
     providers: [FinancialServicesService],
 })
