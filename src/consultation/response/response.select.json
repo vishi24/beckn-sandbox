@@ -1,0 +1,323 @@
+{
+  "context": {
+    "domain": "dhp:consultation:0.1.0",
+    "action": "on_select",
+    "location": {
+      "country": {
+        "name": "India",
+        "code": "IND"
+      }
+    },
+    "city": "std:080",
+    "version": "1.1.0",
+    "bap_id": "ps-bap-network.becknprotocol.io",
+    "bap_url": "https://ps-bap-client.becknprotocol.io/",
+    "bpp_id": "beckn-sandbox-bpp.becknprotocol.io",
+    "bpp_uri": "https://sandbox-bpp-network.becknprotocol.io/",
+    "transaction_id": "6743e9e2-4fb5-487c-92b7-13ba8018f176",
+    "message_id": "6743e9e2-4fb5-487c-92b7-13ba8018f176",
+    "timestamp": "2023-07-16T04:41:16Z"
+  },
+  "message": {
+    "order": {
+      "provider": {
+        "id": "289edce4-d002-4962-b311-4c025e22b4f6",
+        "descriptor": {
+          "name": "Max Hospitals",
+          "short_desc": "Max Hospitals Pvt Ltd",
+          "images": [
+            {
+              "url": "https://maxhospitals.in/images/logo.png"
+            }
+          ]
+        }
+      },
+      "items": [
+        {
+          "id": "cons-01",
+          "descriptor": {
+            "code": "consultation",
+            "name": "Dr Asthana",
+            "short_desc": "Orthopaedic Surgeon",
+            "long_desc": "About the Doctor: With over 20 years of experience in Orthopaedics"
+          },
+          "price": {
+            "value": "300",
+            "currency": "INR"
+          },
+          "fulfillment_ids": [
+            "ful-01",
+            "ful-02",
+            "ful-03",
+            "ful-04"
+          ]
+        }
+      ],
+      "fulfillments": [
+        {
+          "id": "ful-01",
+          "type": "OPD",
+          "agent": {
+            "person": {
+              "id": "237402938409485039850935",
+              "name": "Dr Asthana",
+              "gender": "male",
+              "creds": [
+                {
+                  "id": "237402938409485039850935",
+                  "type": "VerifiableCredential",
+                  "url": "https://www.aiims.com/honours/237402938409485039850935"
+                }
+              ],
+              "languages": [
+                {
+                  "code": "hindi",
+                  "name": "Hindi"
+                },
+                {
+                  "code": "english",
+                  "name": "English"
+                },
+                {
+                  "code": "kannada",
+                  "name": "Kannada"
+                }
+              ],
+              "skills": [
+                {
+                  "code": "mbbs",
+                  "name": "MBBS"
+                },
+                {
+                  "code": "md",
+                  "name": "MD"
+                }
+              ]
+            }
+          },
+          "stops": [
+            {
+              "type": "start",
+              "time": {
+                "timestamp": "2023-08-10T11:00:00Z"
+              },
+              "location": {
+                "gps": "12.9164682,77.6089985"
+              }
+            },
+            {
+              "type": "end",
+              "time": {
+                "timestamp": "2023-08-10T11:59:00Z"
+              },
+              "location": {
+                "gps": "12.9164682,77.6089985"
+              }
+            }
+          ]
+        },
+        {
+          "id": "ful-02",
+          "type": "OPD",
+          "agent": {
+            "person": {
+              "id": "237402938409485039850935",
+              "name": "Dr Asthana",
+              "gender": "male",
+              "creds": [
+                {
+                  "id": "237402938409485039850935",
+                  "type": "VerifiableCredential",
+                  "url": "https://www.aiims.com/honours/237402938409485039850935"
+                }
+              ],
+              "languages": [
+                {
+                  "code": "hindi",
+                  "name": "Hindi"
+                },
+                {
+                  "code": "english",
+                  "name": "English"
+                },
+                {
+                  "code": "kannada",
+                  "name": "Kannada"
+                }
+              ],
+              "skills": [
+                {
+                  "code": "mbbs",
+                  "name": "MBBS"
+                },
+                {
+                  "code": "md",
+                  "name": "MD"
+                }
+              ]
+            }
+          },
+          "stops": [
+            {
+              "type": "start",
+              "time": {
+                "timestamp": "2023-08-10T12:00:00Z"
+              },
+              "location": {
+                "gps": "12.9164682,77.6089985"
+              }
+            },
+            {
+              "type": "end",
+              "time": {
+                "timestamp": "2023-08-10T12:59:00Z"
+              },
+              "location": {
+                "gps": "12.9164682,77.6089985"
+              }
+            }
+          ]
+        },
+        {
+          "id": "ful-03",
+          "type": "OPD",
+          "agent": {
+            "person": {
+              "id": "237402938409485039850935",
+              "name": "Dr Asthana",
+              "gender": "male",
+              "creds": [
+                {
+                  "id": "237402938409485039850935",
+                  "type": "VerifiableCredential",
+                  "url": "https://www.aiims.com/honours/237402938409485039850935"
+                }
+              ],
+              "languages": [
+                {
+                  "code": "hindi",
+                  "name": "Hindi"
+                },
+                {
+                  "code": "english",
+                  "name": "English"
+                },
+                {
+                  "code": "kannada",
+                  "name": "Kannada"
+                }
+              ],
+              "skills": [
+                {
+                  "code": "mbbs",
+                  "name": "MBBS"
+                },
+                {
+                  "code": "md",
+                  "name": "MD"
+                }
+              ]
+            }
+          },
+          "stops": [
+            {
+              "type": "start",
+              "time": {
+                "timestamp": "2023-08-10T13:00:00Z"
+              },
+              "location": {
+                "gps": "12.9164682,77.6089985"
+              }
+            },
+            {
+              "type": "end",
+              "time": {
+                "timestamp": "2023-08-10T13:59:00Z"
+              },
+              "location": {
+                "gps": "12.9164682,77.6089985"
+              }
+            }
+          ]
+        },
+        {
+          "id": "ful-04",
+          "type": "OPD",
+          "agent": {
+            "person": {
+              "id": "237402938409485039850935",
+              "name": "Dr Asthana",
+              "gender": "male",
+              "creds": [
+                {
+                  "id": "237402938409485039850935",
+                  "type": "VerifiableCredential",
+                  "url": "https://www.aiims.com/honours/237402938409485039850935"
+                }
+              ],
+              "languages": [
+                {
+                  "code": "hindi",
+                  "name": "Hindi"
+                },
+                {
+                  "code": "english",
+                  "name": "English"
+                },
+                {
+                  "code": "kannada",
+                  "name": "Kannada"
+                }
+              ],
+              "skills": [
+                {
+                  "code": "mbbs",
+                  "name": "MBBS"
+                },
+                {
+                  "code": "md",
+                  "name": "MD"
+                }
+              ]
+            }
+          },
+          "stops": [
+            {
+              "type": "start",
+              "time": {
+                "timestamp": "2023-08-10T14:00:00Z"
+              },
+              "location": {
+                "gps": "12.9164682,77.6089985"
+              }
+            },
+            {
+              "type": "end",
+              "time": {
+                "timestamp": "2023-08-10T14:59:00Z"
+              },
+              "location": {
+                "gps": "12.9164682,77.6089985"
+              }
+            }
+          ]
+        }
+      ],
+      "quote": {
+        "price": {
+          "value": "300",
+          "currency": "INR"
+        },
+        "breakup": [
+          {
+            "title": "General Physician Consultation",
+            "price": {
+              "currency": "INR",
+              "value": "300"
+            }
+          }
+        ]
+      }
+    }
+  }
+}
