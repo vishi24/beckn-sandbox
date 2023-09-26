@@ -25,17 +25,14 @@ You can easily import collections, API specifications, and data files directly i
 1. Open Postman and click on the "Import" option located in the upper left corner. This will open the Import modal.
 
 <img src="images/import-export-import-ui-v10-3.jpg" width="700"/>
+
 1. To import your Postman collection, select the option to import a file from your local storage.
 2. Download the desired collection using the following links:
-   - For DSEP:
-     [DSEP Collection](https://raw.githubusercontent.com/beckn/beckn-sandbox/main/artefacts/DSEP/dsep-services-sandbox.postman_collection.json)
-   - For Mobility:
-     [Mobility Collection](https://raw.githubusercontent.com/beckn/beckn-sandbox/main/artefacts/Mobility/mobility-services-sandbox.postman_collection.json)
-   - For Financial Services:
-     [Financial Services Collection](https://raw.githubusercontent.com/beckn/beckn-sandbox/addpostmancollection/artefacts/Finance-Services/financial-services-sandbox.postman_collection.json)
-   - For DENT Protocol:
-     [DENT Protocol Collection](https://raw.githubusercontent.com/beckn/beckn-sandbox/main/artefacts/DENT/DENT-protocol-sandbox.postman_collection.json)
-
+    - [DSEP Collection](https://raw.githubusercontent.com/beckn/beckn-sandbox/main/artefacts/DSEP/dsep-services-sandbox.postman_collection.json)
+    - [Mobility Collection](https://raw.githubusercontent.com/beckn/beckn-sandbox/main/artefacts/Mobility/mobility-services-sandbox.postman_collection.json)
+    - [Financial Services Collection](https://raw.githubusercontent.com/beckn/beckn-sandbox/main/artefacts/financial-services/financial-services.postman_collection.json)
+    - [DENT Protocol Collection](https://raw.githubusercontent.com/beckn/beckn-sandbox/main/artefacts/DENT/DENT-protocol-sandbox.postman_collection.json)
+    - [DHP Collection](https://raw.githubusercontent.com/beckn/beckn-sandbox/main/artefacts/DHP/DHP-sandbox.postman_collection.json)
 3. Once you have successfully imported a collection, you will find it listed in the left sidebar under the name `MOBILITY Sandbox`. Within this collection, you will discover two folders named `Ride Hailing` (ONDC) and `Public transit` (UMTC). (ONDC) and `Public transit` (UMTC).
 
 ## Making Requests to Sandbox API in Postman
