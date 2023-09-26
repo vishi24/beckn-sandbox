@@ -49,6 +49,21 @@ Within the collection's `Ride hailing` folder, you will find a list of API reque
 
 Feel free to make adjustments to the request method, URL, or request body as required for your specific use case. Once you hit the `Send` button, Postman will execute the request, and you will receive the corresponding response.
 
+## Debugging Sandbox Request / Response
+
+There is a robust logging activated on the BAP and BPP part of the sandbox, which will allow the user to debug all request and response genreated by the sandbox. the logs are externalised and can be accessed by following the below links.
+
+1. BAP Client: https://ps-bap-client.becknprotocol.io/logs
+2. BAP Network: https://ps-bap-network.becknprotocol.io/logs
+3. BPP Client: https://sandbox-bpp-client.becknprotocol.io/logs
+4. BPP Network: https://sandbox-bpp-network.becknprotocol.io/logs
+
+The logs will provided details about
+1. Complete end to end BAP / BPP transaction
+2. Error messages if any related to beckn schema validation
+3. Error messages if any related to req / res signature validation
+4. Any BAP / BPP internal errors
+   
 ## Collection Variables
 
 You may have noticed that the URL and request JSON body contain variables such as `{{BASE_URL}}, {{COUNTRY}}, {{BAP_ID}}, {{TRANSACTION_ID}}`. These variables are defined at the collection level. To access and manage these variables, follow these steps:
