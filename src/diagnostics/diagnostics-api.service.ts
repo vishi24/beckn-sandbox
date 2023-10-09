@@ -13,6 +13,7 @@ import * as ratingResponse from "./response/response.rating.json";
 import * as updateResponse from "./response/response.update.json";
 import * as cancellationResponse from "./response/response.cancellation_reasons.json";
 import * as ratingCategories from "./response/response.rating_categories.json";
+import * as trackResponse from "./response/response.track.json";
 
 @Injectable()
 export class DiagnosticsApiService implements DHPApiInterface {
@@ -32,7 +33,7 @@ export class DiagnosticsApiService implements DHPApiInterface {
         return statusResonse;
     };
     track = function () {
-        return "";
+        return trackResponse;
     };
     cancel = function () {
         return cancelResponse;

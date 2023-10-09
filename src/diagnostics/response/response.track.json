@@ -1,6 +1,6 @@
 {
     "context": {
-        "domain": "dhp:pharmacy:0.1.0",
+        "domain": "dhp:diagnostics:0.1.0",
         "action": "on_track",
         "location": {
             "country": {
@@ -21,7 +21,7 @@
     "message": {
         "tracking": {
             "id": "853c7593-f4bf-4557-8832-118a591787ba",
-            "url": "https://quickpharma-provider.com/track/3210fedcba98",
+            "url": "https://quickdiagnostic-provider.com/track/3210fedcba98",
             "status": "active",
             "location": {
                 "descriptor": {
