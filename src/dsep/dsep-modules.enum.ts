@@ -6,4 +6,5 @@ export enum DSEPModulesEnum {
     ONEST_WORK_OPPORTUNITIES = "onest:work-opportunities",
     ONEST_FINANCIAL_SUPPORT = "onest:financial-support",
     ONEST_LEARNING_EXPERIENCES = "onest:learning-experiences",
+    ONEST_EXPERT_CONNECT = "onest:expert-connect",
 }
