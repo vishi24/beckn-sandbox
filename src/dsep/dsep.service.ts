@@ -24,6 +24,8 @@ export class DsepService {
                 return new CoursesTrainingService();
             case DSEPModulesEnum.ONEST_FINANCIAL_SUPPORT:
                 return new ScholarshipsGrantsService();
+            case DSEPModulesEnum.ONEST_EXPERT_CONNECT:
+                return new TutoringMentorshipService();
             default:
                 throw new DomainNotFoundException();
         }
