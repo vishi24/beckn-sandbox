@@ -1,5 +1,6 @@
-import { ClientContextDto } from "src/common/client-context.dto";
+import { DSEPClientContextDto } from "src/dsep/dto/dsep-client-context.dto";
 
 export class DHPRequestDto {
-    context: ClientContextDto;
+    context: DSEPClientContextDto;
+    message: any;
 }
