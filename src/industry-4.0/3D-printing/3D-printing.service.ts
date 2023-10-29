@@ -1,17 +1,19 @@
 import { Injectable } from "@nestjs/common";
 import { Industry4_0ApiInterface } from "../industry-4.0-api.interface";
 import { Industry_4_0_Request_DTO } from "../dto/request.dto";
+import * as SearchResponse from "./response/response.search.json";
+import * as InitResponse from "./response/response.init.json";
 
 @Injectable()
 export class Three_D_PritingService implements Industry4_0ApiInterface {
     search = (industry_4_0_Request_DTO: Industry_4_0_Request_DTO) => {
-        return {};
+        return SearchResponse;
     };
     select = (industry_4_0_Request_DTO: Industry_4_0_Request_DTO) => {
         return {};
     };
     init = (industry_4_0_Request_DTO: Industry_4_0_Request_DTO) => {
-        return {};
+        return InitResponse;
     };
     confirm = (industry_4_0_Request_DTO: Industry_4_0_Request_DTO) => {
         return {};
