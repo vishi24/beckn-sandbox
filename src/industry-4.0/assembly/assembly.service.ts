@@ -6,7 +6,7 @@ import * as SearchResponse from "./response/response.search.json";
 import * as InitResponse from "./response/response.init.json";
 import * as ConfirmResponse from "./response/response.confirm.json";
 //select
-import * as StatusResponse from "./response/response.status-dispatched.json";
+import * as StatusResponse from "./response/response.status.json";
 import * as UpdateResponse from "./response/response.update.json";
 import * as SupportResponse from "./response/response.support.json";
 import * as CancelResponse from "./response/response.cancel.json";
@@ -15,33 +15,33 @@ import * as TrackResponse from "./response/response.track.json";
 @Injectable()
 export class AssemblyService implements Industry4_0ApiInterface {
     search = (industry_4_0_Request_DTO: Industry_4_0_Request_DTO) => {
-        return {SearchResponse};
+        return { SearchResponse };
     };
     select = (industry_4_0_Request_DTO: Industry_4_0_Request_DTO) => {
         return {};
     };
     init = (industry_4_0_Request_DTO: Industry_4_0_Request_DTO) => {
-        return {InitResponse};
+        return { InitResponse };
     };
     confirm = (industry_4_0_Request_DTO: Industry_4_0_Request_DTO) => {
-        return {ConfirmResponse};
+        return { ConfirmResponse };
     };
     status = (industry_4_0_Request_DTO: Industry_4_0_Request_DTO) => {
-        return {StatusResponse};
+        return { StatusResponse };
     };
     cancel = (industry_4_0_Request_DTO: Industry_4_0_Request_DTO) => {
-        return {CancelResponse};
+        return { CancelResponse };
     };
     update = (industry_4_0_Request_DTO: Industry_4_0_Request_DTO) => {
-        return {UpdateResponse};
+        return { UpdateResponse };
     };
     support = (industry_4_0_Request_DTO: Industry_4_0_Request_DTO) => {
-        return {SupportResponse};
+        return { SupportResponse };
     };
     rating = (industry_4_0_Request_DTO: Industry_4_0_Request_DTO) => {
         return {};
     };
     track = (industry_4_0_Request_DTO: Industry_4_0_Request_DTO) => {
-        return {TrackResponse};
+        return { TrackResponse };
     };
 }

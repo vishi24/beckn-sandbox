@@ -6,7 +6,7 @@
                 "code": "DE"
             }
         },
-        "action": "support",
+        "action": "on_support",
         "version": "1.1.0",
         "bap_uri": "https://supply-chain-protocol-network.becknprotocol.io/",
         "bap_id": "supply-chain-protocol.becknprotocol.io",
@@ -19,10 +19,10 @@
     },
     "message": {
         "support": {
-            "ref_id": "04389d8c-6a50-4664-9c08-4ee45fef44e8",
-            "callback_phone": "+91-81347776660",
+            "ref_id": "d4975df5-b18c-4772-80ad-368669856d52",
+            "callback_phone": "+91 9988776543",
             "phone": "+91 9988776543",
-            "email": "manjunath@gmail.com"
+            "email": "abcd.makerspace@support.com"
         }
     }
 }

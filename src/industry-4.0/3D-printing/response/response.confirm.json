@@ -6,7 +6,7 @@
                 "code": "DE"
             }
         },
-        "action": "confirm",
+        "action": "on_confirm",
         "version": "1.1.0",
         "bap_uri": "https://supply-chain-protocol-network.becknprotocol.io/",
         "bap_id": "supply-chain-protocol.becknprotocol.io",
@@ -19,12 +19,34 @@
     },
     "message": {
         "order": {
+            "id": "b989c9a9-f603-4d44-b38d-26fd72286b38",
             "provider": {
+                "descriptor": {
+                    "name": "Makerspace",
+                    "short_desc": "Makerspace",
+                    "long_desc": "Makerspace, Hof",
+                    "images": [
+                        {
+                            "url": "makerspace_logo.png",
+                            "size_type": "sm"
+                        }
+                    ]
+                },
                 "id": "1"
             },
             "items": [
                 {
                     "id": "66b7b9bad166-4a3f-ada6-ca063dc9d321",
+                    "descriptor": {
+                        "images": [
+                            {
+                                "url": "https://makerspace/3d/SLAtype.img",
+                                "size_type": "sm"
+                            }
+                        ],
+                        "name": "SLA 3D Printing"
+                    },
+                    "category_ids": ["p1c1"],
                     "tags": [
                         {
                             "descriptor": {
@@ -116,12 +138,22 @@
                                 }
                             ]
                         }
-                    ]
+                    ],
+                    "price": {
+                        "currency": "EUR",
+                        "value": "starting from 200 EUR"
+                    }
                 }
             ],
             "fulfillments": [
                 {
                     "id": "f1",
+                    "state": {
+                        "descriptor": {
+                            "code": "ORDER_ACCEPTED",
+                            "short_desc": "Order has been confirmed..."
+                        }
+                    },
                     "customer": {
                         "contact": {
                             "email": "fox.judie@abc.org",
@@ -180,6 +212,38 @@
                     "status": "PAID",
                     "type": "PRE-ORDER",
                     "transaction_id": "a35b56cf-e5cf-41f1-9b5d-fa99d8d5ac8c"
+                }
+            ],
+            "quote": {
+                "breakup": [
+                    {
+                        "price": {
+                            "currency": "EUR",
+                            "value": "500"
+                        },
+                        "title": "Base Price"
+                    },
+                    {
+                        "price": {
+                            "currency": "EUR",
+                            "value": "50"
+                        },
+                        "title": "Tax"
+                    }
+                ],
+                "price": {
+                    "currency": "EUR",
+                    "value": "550"
+                }
+            },
+            "cancellation_terms": [
+                {
+                    "cancellation_fee": {
+                        "amount": {
+                            "currency": "EUR",
+                            "value": "100"
+                        }
+                    }
                 }
             ]
         }
