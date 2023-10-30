@@ -11,37 +11,38 @@ import * as UpdateResponse from "./response/response.update.json";
 import * as SupportResponse from "./response/response.support.json";
 import * as CancelResponse from "./response/response.cancel.json";
 import * as TrackResponse from "./response/response.track.json";
+import * as RatingResponse from "./response/response.rating.json";
 
 @Injectable()
 export class AssemblyService implements Industry4_0ApiInterface {
     search = (industry_4_0_Request_DTO: Industry_4_0_Request_DTO) => {
-        return { SearchResponse };
+        return SearchResponse;
     };
     select = (industry_4_0_Request_DTO: Industry_4_0_Request_DTO) => {
         return {};
     };
     init = (industry_4_0_Request_DTO: Industry_4_0_Request_DTO) => {
-        return { InitResponse };
+        return InitResponse;
     };
     confirm = (industry_4_0_Request_DTO: Industry_4_0_Request_DTO) => {
-        return { ConfirmResponse };
+        return ConfirmResponse;
     };
     status = (industry_4_0_Request_DTO: Industry_4_0_Request_DTO) => {
-        return { StatusResponse };
+        return StatusResponse;
     };
     cancel = (industry_4_0_Request_DTO: Industry_4_0_Request_DTO) => {
-        return { CancelResponse };
+        return CancelResponse;
     };
     update = (industry_4_0_Request_DTO: Industry_4_0_Request_DTO) => {
-        return { UpdateResponse };
+        return UpdateResponse;
     };
     support = (industry_4_0_Request_DTO: Industry_4_0_Request_DTO) => {
-        return { SupportResponse };
+        return SupportResponse;
     };
     rating = (industry_4_0_Request_DTO: Industry_4_0_Request_DTO) => {
-        return {};
+        return RatingResponse;
     };
     track = (industry_4_0_Request_DTO: Industry_4_0_Request_DTO) => {
-        return { TrackResponse };
+        return TrackResponse;
     };
 }
