@@ -8,9 +8,10 @@ import { FinancialServicesModule } from "./financial-services/financial-services
 import { DentModule } from "./dent/dent.module";
 import { DHPModule } from "./dhp/dhp.module";
 import { DsepModule } from "./dsep/dsep.module";
+import { Industry40Module } from "./industry-4.0/industry-4.0.module";
 
 @Module({
-    imports: [MobilityModule, CommonModule, FinancialServicesModule, DsepModule, DentModule, DHPModule],
+    imports: [MobilityModule, CommonModule, FinancialServicesModule, DsepModule, DentModule, DHPModule, Industry40Module],
     controllers: [AppController],
     providers: [AppService],
 })

@@ -1,10 +1,10 @@
-import { DomainNotFoundException } from "src/common/exception/domain-notfound.exception";
-import { PharmacyApiService } from "src/pharmacy/pharmacy-api.service";
-import { ConsultationApiService } from "src/consultation/consultation-api.service";
+import { DomainNotFoundException } from "../common/exception/domain-notfound.exception";
+import { PharmacyApiService } from "../pharmacy/pharmacy-api.service";
+import { ConsultationApiService } from "../consultation/consultation-api.service";
 import { Injectable } from "@nestjs/common";
 import { DHPApiInterface } from "./dhp-api.interface";
 import { DHPTypeEnum } from "./dhp-type.enum";
-import { DiagnosticsApiService } from "src/diagnostics/diagnostics-api.service";
+import { DiagnosticsApiService } from "../diagnostics/diagnostics-api.service";
 
 @Injectable()
 export class DHPService {
