@@ -112,7 +112,7 @@
                     "stops": [
                         {
                             "location": {
-                                "gps": "12.9716° N, 77.5946° E",
+                                "gps": "12.9164682,77.6089985",
                                 "address": "Akashya nagar B17/14",
                                 "state": {
                                     "name": "Madhya Pradesh"
@@ -126,12 +126,12 @@
                                 "label": "Consultancy Slots",
                                 "duration": "PT30M",
                                 "range": {
-                                    "start": "10:00",
-                                    "end": "18:00"
+                                    "start": "0000-00-00T10:00:00.00Z",
+                                    "end": "0000-00-00T18:00:00.00Z"
                                 },
                                 "days": "1,2,3,4,5,6",
                                 "schedule": {
-                                    "holidays": ["2023-11-11", "2023-11-12", "2023-11-13"]
+                                    "holidays": ["2023-11-11T00:00:00.00Z", "2023-11-12T00:00:00.00Z", "2023-11-13T00:00:00.00Z"]
                                 }
                             }
                         }

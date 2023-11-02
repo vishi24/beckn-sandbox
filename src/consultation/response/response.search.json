@@ -118,7 +118,7 @@
                             "stops": [
                                 {
                                     "location": {
-                                        "gps": "12.9716° N, 77.5946° E",
+                                        "gps": "12.9164682,77.6089985",
                                         "address": "Akashya nagar B17/14",
                                         "state": {
                                             "name": "Madhya Pradesh"
@@ -190,7 +190,7 @@
                             "stops": [
                                 {
                                     "location": {
-                                        "gps": "12.9716° N, 77.5946° E",
+                                        "gps": "12.9164682,77.6089985",
                                         "address": "Akashya nagar B17/14",
                                         "state": {
                                             "name": "Madhya Pradesh"
