@@ -21,4 +21,5 @@ export class Industry_4_O_CLIENT_CONTEXT_DTO {
     timestamp: string;
     bpp_uri?: string;
     bpp_id?: string;
+    key?: string;
 }

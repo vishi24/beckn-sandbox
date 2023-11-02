@@ -28,7 +28,7 @@
                     "descriptor": {
                         "images": [
                             {
-                                "url": "makerspace_logo.png",
+                                "url": "https://makerspace/3d/SLAtype.img",
                                 "size_type": "sm"
                             }
                         ],

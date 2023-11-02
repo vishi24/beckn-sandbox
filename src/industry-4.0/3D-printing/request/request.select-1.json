@@ -32,9 +32,9 @@
                     "id": "f1"
                 }
             ],
-            "tags" : [
+            "tags": [
                 {
-                    "descriptor" : {
+                    "descriptor": {
                         "name": "select-1"
                     }
                 }

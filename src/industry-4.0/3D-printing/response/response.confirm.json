@@ -27,7 +27,7 @@
                     "long_desc": "Makerspace, Hof",
                     "images": [
                         {
-                            "url": "makerspace_logo.png",
+                            "url": "https://makerspace/3d/makerspace_logo.png",
                             "size_type": "sm"
                         }
                     ]
