@@ -19,11 +19,10 @@
         "timestamp": "2023-07-16T04:41:16Z"
     },
     "message": {
-        "ratings": [
-            {
-                "id": "a9aaecca-10b7-4d19-b640-b047a7c621961676906777032",
-                "rating_category": "Item"
-            }
-        ]
+        "rating": {
+            "rating_category": "Agent",
+            "id": "FULAGE123",
+            "value": "5"
+        }
     }
 }
