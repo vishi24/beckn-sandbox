@@ -4,7 +4,7 @@ import { Injectable } from "@nestjs/common";
 
 import * as cancelResponse from "./response/response.cancel.json";
 import * as confirmResponse from "./response/response.confirm.json";
-import * as initResponse from "./response/response.init.json";
+import * as initResponse1 from "./response/response.init1.json";
 import * as searchResponse from "./response/response.search.json";
 import * as selectResponse from "./response/response.select.json";
 import * as statusResonse from "./response/response.status.json";
@@ -23,7 +23,7 @@ export class ConsultationApiService implements DHPApiInterface {
         return selectResponse;
     };
     init = function () {
-        return initResponse;
+        return initResponse1;
     };
     confirm = function () {
         return confirmResponse;

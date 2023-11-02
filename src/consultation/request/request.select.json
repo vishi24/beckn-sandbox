@@ -23,6 +23,11 @@
             "provider": {
                 "id": "289edce4-d002-4962-b311-4c025e22b4f6"
             },
+            "fulfillments": [
+                {
+                    "id": "ful-01"
+                }
+            ],
             "items": [
                 {
                     "id": "cons-01"

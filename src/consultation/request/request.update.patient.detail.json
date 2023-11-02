@@ -1,7 +1,7 @@
 {
     "context": {
         "domain": "dhp:consultation:0.1.0",
-        "action": "init",
+        "action": "update",
         "location": {
             "country": {
                 "name": "India",
@@ -20,12 +20,9 @@
     },
     "message": {
         "order": {
-            "provider": {
-                "id": "289edce4-d002-4962-b311-4c025e22b4f6"
-            },
+            "id": "759b905c-5a30-4d18-a6af-0decbac9282f",
             "fulfillments": [
                 {
-                    "id": "ful-01",
                     "customer": {
                         "person": {
                             "name": "Jane Doe",
@@ -37,37 +34,10 @@
                             "phone": "+91-9663088848",
                             "email": "jane.doe@example.com"
                         }
-                    },
-                    "stops": [
-                        {
-                            "time": {
-                                "label": "Booking Slots",
-                                "range": {
-                                    "start": "2023-11-04 10:00",
-                                    "end": "2023-11-04 10:30"
-                                }
-                            }
-                        }
-                    ]
+                    }
                 }
-            ],
-            "items": [
-                {
-                    "id": "cons-01"
-                }
-            ],
-            "billing": {
-                "name": "Rajesh Kumar",
-                "address": "Villa 5, Green Valley, Malleshwaram, 560012",
-                "state": {
-                    "name": "Madhya Pradesh"
-                },
-                "city": {
-                    "name": "Bhopal"
-                },
-                "email": "rajesh.kumar@example.com",
-                "phone": "+91-9999999999"
-            }
-        }
+            ]
+        },
+        "update_target": "order.fulfillments[0].customer"
     }
 }
