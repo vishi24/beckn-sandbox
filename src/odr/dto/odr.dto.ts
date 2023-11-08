@@ -1,6 +1,28 @@
-import { DSEPClientContextDto } from "../../dsep/dto/dsep-client-context.dto";
-
+export class ODRClientContextDto {
+    domain: string;
+    version: string;
+    action: string;
+    bap_id: string;
+    bap_uri: string;
+    location?: {
+        city: {
+            name: string;
+            code: string;
+        };
+        country: {
+            name: string;
+            code: string;
+        };
+    };
+    transaction_id?: string;
+    message_id: string;
+    ttl: string;
+    timestamp: string;
+    bpp_uri?: string;
+    bpp_id?: string;
+    key?: string;
+}
 export class ODRClientDTO {
-    context: DSEPClientContextDto;
+    context: ODRClientContextDto;
     message: any;
 }
