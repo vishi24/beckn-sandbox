@@ -9,9 +9,10 @@ import { DentModule } from "./dent/dent.module";
 import { DHPModule } from "./dhp/dhp.module";
 import { DsepModule } from "./dsep/dsep.module";
 import { Industry40Module } from "./industry-4.0/industry-4.0.module";
+import { ODRModule } from "./odr/odr.module";
 
 @Module({
-    imports: [MobilityModule, CommonModule, FinancialServicesModule, DsepModule, DentModule, DHPModule, Industry40Module],
+    imports: [MobilityModule, CommonModule, FinancialServicesModule, DsepModule, DentModule, DHPModule, Industry40Module, ODRModule],
     controllers: [AppController],
     providers: [AppService],
 })

@@ -6,4 +6,4 @@ import { ODRController } from "./odr.controller";
     controllers: [ODRController],
     providers: [ODRService],
 })
-export class DsepModule {}
+export class ODRModule {}
