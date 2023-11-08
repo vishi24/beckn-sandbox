@@ -21,4 +21,5 @@ export class DSEPClientContextDto {
     timestamp: string;
     bpp_uri?: string;
     bpp_id?: string;
+    key?: string;
 }
