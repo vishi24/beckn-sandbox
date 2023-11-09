@@ -37,7 +37,8 @@ export class ODRService implements ODRApiInterface {
     };
     init = (odrRequest: ODRClientDTO) => {
         const { message } = odrRequest;
-        const initConsent = message?.order?.tags?.find(tag => tag?.decriptor?.name === "consent-form");
+
+        const initConsent = message?.order?.tags?.find(tag => tag?.descriptor?.name === "consent-form");
         const initDispute = message?.order?.tags?.find(tag => tag?.descriptor?.name === "dispute-details");
         const initRespondent = message?.order?.tags?.find(tag => tag?.descriptor?.name === "respondent");
 
@@ -121,8 +122,8 @@ export class ODRService implements ODRApiInterface {
     };
     update = (odrRequest: ODRClientDTO) => {
         const { message } = odrRequest;
-        const updateAgent = message?.order?.tags?.find(tag => tag?.decriptor?.name === "agent");
-        const updateHearingDate = message?.order?.tags?.find(tag => tag?.decriptor?.name === "hearing-date");
+        const updateAgent = message?.order?.tags?.find(tag => tag?.descriptor?.name === "agent");
+        const updateHearingDate = message?.order?.tags?.find(tag => tag?.descriptor?.name === "hearing-date");
         if (updateAgent) {
             UpdateAgentResponse.context.bpp_id = BPP_ID;
             UpdateAgentResponse.context.bpp_uri = BPP_URI;
