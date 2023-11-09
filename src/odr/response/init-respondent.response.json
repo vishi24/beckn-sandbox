@@ -89,7 +89,7 @@
                 "name": "John Doe",
                 "email": "john.doe@example.com",
                 "address": "21A, ABC Appartments, HSR Layout, Bengaluru",
-                "city": "Bengaluru"
+                "city": { "name": "Bengaluru" }
             },
             "fulfillments": [
                 {

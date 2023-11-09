@@ -97,7 +97,7 @@
                 "name": "John Doe",
                 "email": "john.doe@example.com",
                 "address": "21A, ABC Appartments, HSR Layout, Bengaluru",
-                "city": "Bengaluru"
+                "city": { "name": "Bengaluru" }
             },
             "fulfillments": [
                 {
@@ -126,7 +126,7 @@
             ],
             "payments": [
                 {
-                    "type": "ON-ORDER",
+                    "type": "PRE-ORDER",
                     "url": "https://payment.alphaodr.in",
                     "params": {
                         "amount": "12000",
@@ -135,8 +135,8 @@
                     "status": "NOT-PAID",
                     "time": {
                         "range": {
-                            "start": "01-06-2023 00:00:00",
-                            "end": "30-06-2023 23:59:59"
+                            "start": "2023-06-01T00:00:00.000Z",
+                            "end": "2023-06-30T23:59:59.000Z"
                         }
                     }
                 }
