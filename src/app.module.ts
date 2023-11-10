@@ -10,9 +10,10 @@ import { DHPModule } from "./dhp/dhp.module";
 import { DsepModule } from "./dsep/dsep.module";
 import { Industry40Module } from "./industry-4.0/industry-4.0.module";
 import { ODRModule } from "./odr/odr.module";
+import { LocalRetailModule } from './local-retail/local-retail.module';
 
 @Module({
-    imports: [MobilityModule, CommonModule, FinancialServicesModule, DsepModule, DentModule, DHPModule, Industry40Module, ODRModule],
+    imports: [MobilityModule, CommonModule, FinancialServicesModule, DsepModule, DentModule, DHPModule, Industry40Module, ODRModule, LocalRetailModule],
     controllers: [AppController],
     providers: [AppService],
 })
