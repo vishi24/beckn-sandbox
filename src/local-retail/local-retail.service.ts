@@ -1,4 +1,4 @@
-import { Injectable } from '@nestjs/common';
+import { Injectable } from "@nestjs/common";
 import { LocalRetailENUM } from "./local-retail-modules.enum";
 import { RetailService } from "./retail/retail.service";
 import { LocalRetailApiInterface } from "./local-retail-api.interface";

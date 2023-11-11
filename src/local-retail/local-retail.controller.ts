@@ -1,8 +1,8 @@
-import { Body, Controller, Post } from '@nestjs/common';
+import { Body, Controller, Post } from "@nestjs/common";
 import { LocalRetailService } from "./local-retail.service";
 import { Local_Retail_Request_DTO } from "./dto/local-retail-request.dto";
 
-@Controller('local-retail')
+@Controller("local-retail")
 export class LocalRetailController {
     constructor(private readonly localRetailService: LocalRetailService) {}
 
