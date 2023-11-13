@@ -1,9 +1,10 @@
 import { Module } from '@nestjs/common';
-import { LocalRetailController } from './local-retail.controller';
+import { LocalRetailController094 } from './local-retail.controller-0-9-4';
+import { LocalRetailController110 } from './local-retail.controller-1-1-0';
 import { LocalRetailService } from './local-retail.service';
 
 @Module({
-  controllers: [LocalRetailController],
+  controllers: [LocalRetailController094, LocalRetailController110],
   providers: [LocalRetailService]
 })
 export class LocalRetailModule {}

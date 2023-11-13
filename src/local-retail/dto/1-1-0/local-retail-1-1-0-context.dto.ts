@@ -1,5 +1,5 @@
-import { LocalRetailENUM } from "../local-retail-modules.enum";
-export class Local_Retail_CLIENT_CONTEXT_DTO {
+import { LocalRetailENUM } from "../../local-retail-modules.enum";
+export class Local_Retail110_CLIENT_CONTEXT_DTO {
     domain: LocalRetailENUM;
     version: string;
     action: string;

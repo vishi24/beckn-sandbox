@@ -1,15 +1,26 @@
 import { Injectable } from "@nestjs/common";
-import { LocalRetailENUM } from "./local-retail-modules.enum";
-import { RetailService } from "./retail/retail.service";
-import { LocalRetailApiInterface } from "./local-retail-api.interface";
+import { LocalRetailENUM, VersionENUM } from "./local-retail-modules.enum";
+import { RetailService094 } from "./retail-0.9.4/retail.service-0-9-4";
+import { RetailService110 } from "./retail-1.1.0/retail.service-1-1-0";
+import { LocalRetail094ApiInterface } from "./local-retail-api.interface";
+import { LocalRetail110ApiInterface } from "./local-retail-api.interface";
 import { DomainNotFoundException } from "src/common/exception/domain-notfound.exception";
 
 @Injectable()
 export class LocalRetailService {
-    get(domain: LocalRetailENUM): LocalRetailApiInterface {
+    get094(domain: LocalRetailENUM): LocalRetail094ApiInterface {
         switch (domain) {
             case LocalRetailENUM.RETAIL:
-                return new RetailService();
+                return new RetailService094();
+            default:
+                throw new DomainNotFoundException();
+        }
+    }
+
+    get110(domain: LocalRetailENUM): LocalRetail110ApiInterface {
+        switch (domain) {
+            case LocalRetailENUM.RETAIL:
+                return new RetailService110();
             default:
                 throw new DomainNotFoundException();
         }
