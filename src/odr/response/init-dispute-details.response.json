@@ -37,6 +37,15 @@
                     }
                 }
             },
+            "categories": [
+                {
+                    "id": "ODRCAT001",
+                    "descriptor": {
+                        "code": "civil-dispute",
+                        "name": "Civil Dispute"
+                    }
+                }
+            ],
             "items": [
                 {
                     "id": "ALPHA-ARB-01",
@@ -44,6 +53,7 @@
                         "code": "arbitration-service",
                         "name": "Arbitration Services"
                     },
+                    "category_ids": ["ODRCAT001"],
                     "xinput": {
                         "head": {
                             "descriptor": {
