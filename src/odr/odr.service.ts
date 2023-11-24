@@ -29,6 +29,7 @@ export class ODRService implements ODRApiInterface {
         return SearchResponse;
     };
     select = (odrRequest: ODRClientDTO) => {
+        console.log("In Select Request");
         SelectResponse.context.bpp_id = BPP_ID;
         SelectResponse.context.bpp_uri = BPP_URI;
         SelectResponse.context.bap_id = odrRequest.context.bap_id;
@@ -37,7 +38,7 @@ export class ODRService implements ODRApiInterface {
     };
     init = (odrRequest: ODRClientDTO) => {
         const { message } = odrRequest;
-
+        console.log("In Init Request");
         const initConsent = message?.order?.tags?.find(tag => tag?.descriptor?.name === "consent-form");
         const initDispute = message?.order?.tags?.find(tag => tag?.descriptor?.name === "dispute-details");
         const initRespondent = message?.order?.tags?.find(tag => tag?.descriptor?.name === "respondent");
@@ -65,6 +66,7 @@ export class ODRService implements ODRApiInterface {
         }
     };
     confirm = (odrRequest: ODRClientDTO) => {
+        console.log("In Confirm Request");
         ConfirmResponse.context.bpp_id = BPP_ID;
         ConfirmResponse.context.bpp_uri = BPP_URI;
         ConfirmResponse.context.bap_id = odrRequest.context.bap_id;
@@ -72,6 +74,7 @@ export class ODRService implements ODRApiInterface {
         return ConfirmResponse;
     };
     status = (odrRequest: ODRClientDTO) => {
+        console.log("In Status Request");
         const { context } = odrRequest;
         const statusCompleted = context?.key === "completed";
         const statusInProgressPayment = context?.key === "in-progress-payment-after-hearing";
