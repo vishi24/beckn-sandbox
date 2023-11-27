@@ -23,7 +23,7 @@
                 "name": "Online Dispute Resolution Services"
             }
         },
-        "provider": [
+        "providers": [
             {
                 "id": "ODR001",
                 "descriptor": {
