@@ -170,8 +170,26 @@
                 {
                     "descriptor": {
                         "code": "case-document",
-                        "name": "Case Documentation",
-                        "short_desc": "Download all the case documents from here"
+                        "name": "Respondent Detail",
+                        "short_desc": "Respondent Details"
+                    },
+                    "mime_type": "application/pdf",
+                    "url": "https://xyz.com/case-doc/04389d8c-6a50-4664-9c08-4ee45fef44e8.pdf"
+                },
+                {
+                    "descriptor": {
+                        "code": "case-document",
+                        "name": "Consent Detail",
+                        "short_desc": "Respondent Details"
+                    },
+                    "mime_type": "application/pdf",
+                    "url": "https://xyz.com/case-doc/04389d8c-6a50-4664-9c08-4ee45fef44e8.pdf"
+                },
+                {
+                    "descriptor": {
+                        "code": "case-document",
+                        "name": "Dispute Detail",
+                        "short_desc": "Respondent Details"
                     },
                     "mime_type": "application/pdf",
                     "url": "https://xyz.com/case-doc/04389d8c-6a50-4664-9c08-4ee45fef44e8.pdf"
