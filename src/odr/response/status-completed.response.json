@@ -114,8 +114,8 @@
                     },
                     "state": {
                         "descriptor": {
-                            "code": "arbitration-in-progress",
-                            "name": "Arbitration In Progress"
+                            "code": "arbitration-completed",
+                            "name": "Arbitration Completed"
                         },
                         "updated_at": "2023-11-29T03:30:03.443Z"
                     },
