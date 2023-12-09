@@ -6,7 +6,7 @@ import { LocalRetail094ApiInterface } from "./local-retail-api.interface";
 import { LocalRetail110ApiInterface } from "./local-retail-api.interface";
 import { DomainNotFoundException } from "src/common/exception/domain-notfound.exception";
 
-@Injectable()
+@Injectable()//
 export class LocalRetailService {
     get094(domain: LocalRetailENUM): LocalRetail094ApiInterface {
         switch (domain) {
