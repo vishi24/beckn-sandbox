@@ -1,6 +1,6 @@
 {
     "context": {
-      "domain": "local-retail",
+      "domain": "retail:0.9.4",
       "country": "IND",
       "city": "std:080",
       "action": "rating",

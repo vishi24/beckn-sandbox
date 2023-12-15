@@ -1,5 +1,6 @@
 export enum LocalRetailENUM {
-    RETAIL = "local-retail"
+    RETAIL110 = "retail:1.1.0",
+    RETAIL094 = "retail:0.9.4"
 }
 
 export enum VersionENUM {
