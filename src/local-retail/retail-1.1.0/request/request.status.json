@@ -1,6 +1,6 @@
 {
   "context": {
-    "domain": "local-retail",
+    "domain": "retail:1.1.0",
     "location": {
       "country": {
         "code": "IND"
