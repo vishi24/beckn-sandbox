@@ -24,18 +24,24 @@
             "id": "853c7593-f4bf-4557-8832-118a591787ba",
             "fulfillments": [
                 {
-                    "id": "ful-02",
                     "stops": [
                         {
-                            "type": "START",
                             "location": {
-                                "gps": "12.423423,77.325647"
-                            }
-                        },
-                        {
-                            "type": "END",
-                            "location": {
-                                "gps": "12.423483,77.325797"
+                                "gps": "1.3806217468119772, 103.74636438437074",
+                                "address": "My House #, My building",
+                                "city": {
+                                    "name": "Jurong East"
+                                },
+                                "country": {
+                                    "code": "SGP"
+                                },
+                                "area_code": "680230",
+                                "state": {
+                                    "name": "bayern"
+                                }
+                            },
+                            "contact": {
+                                "phone": "9886098860"
                             }
                         }
                     ]

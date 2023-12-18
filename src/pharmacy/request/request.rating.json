@@ -21,8 +21,9 @@
     "message": {
         "ratings": [
             {
-                "id": "a9aaecca-10b7-4d19-b640-b047a7c621961676906777032",
-                "rating_category": "Item"
+                "id": "853c7593-f4bf-4557-8832-118a591787ba",
+                "rating_category": "Item",
+                "value": "5"
             }
         ]
     }

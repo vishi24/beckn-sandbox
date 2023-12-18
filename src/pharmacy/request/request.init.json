@@ -50,17 +50,33 @@
             "fulfillments": [
                 {
                     "id": "ful-02",
+                    "customer": {
+                        "contact": {
+                            "email": "fox.judie@abc.org",
+                            "phone": "+91-9999999999"
+                        },
+                        "person": {
+                            "name": "Judie Fox"
+                        }
+                    },
                     "stops": [
                         {
-                            "type": "START",
                             "location": {
-                                "gps": "12.423423,77.325647"
-                            }
-                        },
-                        {
-                            "type": "END",
-                            "location": {
-                                "gps": "12.423483,77.325697"
+                                "gps": "1.3806217468119772, 103.74636438437074",
+                                "address": "My House #, My building",
+                                "city": {
+                                    "name": "Jurong East"
+                                },
+                                "country": {
+                                    "code": "SGP"
+                                },
+                                "area_code": "680230",
+                                "state": {
+                                    "name": "bayern"
+                                }
+                            },
+                            "contact": {
+                                "phone": "9886098860"
                             }
                         }
                     ]
@@ -69,8 +85,14 @@
             "billing": {
                 "name": "Alice Smith",
                 "address": "Apt 303, Maple Towers, Richmond Road, 560001",
+                "state": {
+                    "name": "Jurong East"
+                },
+                "city": {
+                    "name": "Jurong East"
+                },
                 "email": "alice.smith@example.com",
-                "phone": "+91-7777777777"
+                "phone": "9886098860"
             },
             "docs": [
                 {
@@ -79,8 +101,8 @@
                         "name": "Medicine prescription",
                         "short_desc": "Prescription uploaded here"
                     },
-                    "mime_type": "application/json",
-                    "url": "https://quickpharma.in/prescription/04389d8c-6a50-4664-9c08-4ee45fef44e8.json"
+                    "mime_type": "application/pdf",
+                    "url": "https://quickpharma.in/prescription/04389d8c-6a50-4664-9c08-4ee45fef44e8.pdf"
                 }
             ]
         }
