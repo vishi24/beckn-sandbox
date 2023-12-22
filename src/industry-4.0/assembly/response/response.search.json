@@ -81,7 +81,7 @@
                     {
                         "id": "location/hof",
                         "city": {
-                            "code": 95028,
+                            "code": "95028",
                             "name": "HOF"
                         },
                         "gps": "50.311674, 11.903358"
@@ -104,16 +104,18 @@
                           "descriptor": {
                               "images": [
                                   {
-                                      "url": "https://makerspace/assembly/intermittent.png",
+                                      "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJQbANiJKOddLqjBqk3Y-bws-pUxisbxvhrw&usqp=CAU",
                                       "size_type": "sm"
                                   }
                               ],
-                              "name": "Intermittent assembly type"
+                              "name": "Intermittent assembly type",
+                              "short_desc": "This is an intermittent assembly type.",
+                              "long_desc": "This is an intermittent assembly type. It has ..."
                           },
-                          "category_ids": ["c3"],
                           "location_ids": [
                             "location/hof"
                           ],
+                          "category_ids": ["c3"],
                           "fulfillment_ids": ["f1"],
                           "tags": [
                               {

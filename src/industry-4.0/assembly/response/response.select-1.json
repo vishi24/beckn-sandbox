@@ -39,12 +39,17 @@
                     "descriptor": {
                         "images": [
                             {
-                                "url": "https://makerspace/assembly/intermittent.img",
+                                "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJQbANiJKOddLqjBqk3Y-bws-pUxisbxvhrw&usqp=CAU",
                                 "size_type": "sm"
                             }
                         ],
-                        "name": "Intermittent assembly type"
+                        "name": "Intermittent assembly type",
+                        "short_desc": "This is an intermittent assembly type.",
+                        "long_desc": "This is an intermittent assembly type. It has ..."
                     },
+                    "location_ids": [
+                      "location/hof"
+                    ],
                     "category_ids": ["p2c3"],
                     "tags": [
                         {
