@@ -197,14 +197,14 @@
                             "currency": "EUR",
                             "value": "50"
                         },
-                        "title": "Tax"
+                        "title": "Shipping Cost"
                     },
                     {
                         "price": {
                             "currency": "EUR",
                             "value": "50"
                         },
-                        "title": "Shipping Cost"
+                        "title": "Tax"
                     }
                 ],
                 "price": {
