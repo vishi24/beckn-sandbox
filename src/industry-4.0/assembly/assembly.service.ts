@@ -80,6 +80,7 @@ export class AssemblyService implements Industry4_0ApiInterface {
                 StatusResponse.message.order.id = industry_4_0_Request_DTO?.message?.order_id;
                 StatusResponse.message.order.fulfillments[0].state.descriptor.code = requiredOrder?.status?.statusCode;
                 StatusResponse.message.order.fulfillments[0].state.descriptor.short_desc = requiredOrder?.status?.longDesc;
+                StatusResponse.message.order.fulfillments[0].state.updated_at = new Date().toISOString();
             } else {
                 let oldOrderStatusIndex = 0;
                 orderStatus.find((elem: any, i: number) => {
@@ -98,6 +99,7 @@ export class AssemblyService implements Industry4_0ApiInterface {
                 StatusResponse.message.order.id = industry_4_0_Request_DTO?.message?.order_id;
                 StatusResponse.message.order.fulfillments[0].state.descriptor.code = requiredOrder?.status?.statusCode;
                 StatusResponse.message.order.fulfillments[0].state.descriptor.short_desc = requiredOrder?.status?.longDesc;
+                StatusResponse.message.order.fulfillments[0].state.updated_at = new Date().toISOString();
                 const newStatusRecord = StatusRecord?.orders?.map((elem: any) => {
                     if (elem?.orderId === requiredOrder?.orderId) {
                         return requiredOrder;
