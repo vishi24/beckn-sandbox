@@ -8,6 +8,11 @@
                 "include": "**/*.json",
                 "outDir": "dist",
                 "watchAssets": true
+            },
+            {
+                "include": "**/*.html",
+                "outDir": "dist",
+                "watchAssets": true
             }
         ],
         "watchAssets": true,

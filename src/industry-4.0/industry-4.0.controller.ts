@@ -1,4 +1,4 @@
-import { Body, Controller, Post } from "@nestjs/common";
+import { Body, Controller, Post, Get, Query } from "@nestjs/common";
 import { Industry40Service } from "./industry-4.0.service";
 import { Industry_4_0_Request_DTO } from "./dto/request.dto";
 
@@ -54,5 +54,9 @@ export class Industry40Controller {
     @Post("/update")
     update(@Body() industry40Request: Industry_4_0_Request_DTO) {
         return this.industry40Service.get(industry40Request.context.domain).update(industry40Request);
+    }
+    @Get("/form")
+    getForm(@Query() industry40FormQuery: any) {
+        return this.industry40Service.get(industry40FormQuery.domain).getForm();
     }
 }
