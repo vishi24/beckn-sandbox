@@ -1,6 +1,7 @@
 import { Body, Controller, Post, Get, Query } from "@nestjs/common";
 import { Industry40Service } from "./industry-4.0.service";
 import { Industry_4_0_Request_DTO } from "./dto/request.dto";
+import { Industry4_0ENUM } from "./industry-4.0-modules.enum";
 
 @Controller("industry-4.0")
 export class Industry40Controller {
@@ -58,5 +59,9 @@ export class Industry40Controller {
     @Get("/form")
     getForm(@Query() industry40FormQuery: any) {
         return this.industry40Service.get(industry40FormQuery.domain).getForm();
+    }
+    @Post("/formsubmit")
+    submitForm(@Body() xinputFormBody: any) {
+        return this.industry40Service.get(Industry4_0ENUM.ASSEMBLY).submitForm(xinputFormBody);
     }
 }

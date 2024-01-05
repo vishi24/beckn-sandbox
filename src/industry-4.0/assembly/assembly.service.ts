@@ -2,7 +2,6 @@ import { Injectable } from "@nestjs/common";
 import { v4 as uuidv4 } from "uuid";
 import * as fs from "fs";
 import { join } from "path";
-import { JSDOM } from "jsdom";
 import * as cheerio from "cheerio";
 import { Industry4_0ApiInterface } from "../industry-4.0-api.interface";
 import { Industry_4_0_Request_DTO } from "../dto/request.dto";
@@ -18,7 +17,8 @@ import * as SupportResponse from "./response/response.support.json";
 import * as CancelResponse from "./response/response.cancel.json";
 import * as TrackResponse from "./response/response.track.json";
 import * as RatingResponse from "./response/response.rating.json";
-
+import * as dotenv from "dotenv";
+dotenv.config();
 const orderStatus = [
     { statusCode: "ORDER_ACCEPTED", longDesc: "The order is accepted" },
     { statusCode: "IN_ASSEMBLY_LINE", longDesc: "The item is in assembly line" },
@@ -40,6 +40,7 @@ export class AssemblyService implements Industry4_0ApiInterface {
         if (Select1) {
             SelectResponse1.context.bpp_id = BPP_ID;
             SelectResponse1.context.bpp_uri = BPP_URI;
+            SelectResponse1.message.order.items[0].xinput.form.url = `${process.env.BASE_URL}/industry-4.0/form?domain=supply-chain-services:assembly`;
             return SelectResponse1;
         }
         if (Select2) {
@@ -140,10 +141,14 @@ export class AssemblyService implements Industry4_0ApiInterface {
     getForm = () => {
         const textHTML = fs.readFileSync(join(__dirname, "xinputForm.html"), { encoding: "utf-8" });
         const $ = cheerio.load(textHTML);
-        return { data: $.html() };
+
+        $("form").attr("action", `${process.env.BASE_URL}/industry-4.0/formsubmit`);
+
+        return { textHtml: $.html() };
     };
 
     submitForm = (request: any) => {
-        return {};
+        console.log(request);
+        return { message: "All Good" };
     };
 }
