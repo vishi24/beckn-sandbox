@@ -149,6 +149,6 @@ export class AssemblyService implements Industry4_0ApiInterface {
 
     submitForm = (request: any) => {
         console.log(request);
-        return { message: "All Good" };
+        return { success: true };
     };
 }
