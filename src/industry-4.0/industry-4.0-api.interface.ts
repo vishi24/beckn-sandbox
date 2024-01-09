@@ -11,4 +11,6 @@ export interface Industry4_0ApiInterface {
     rating: (dsepRequest: Industry_4_0_Request_DTO) => any;
     update: (dsepRequest: Industry_4_0_Request_DTO) => any;
     track: (dsepRequest: Industry_4_0_Request_DTO) => any;
+    getForm: () => any;
+    submitForm: (request: any) => any;
 }
