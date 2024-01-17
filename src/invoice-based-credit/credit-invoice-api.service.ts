@@ -13,6 +13,7 @@ import * as updateResponse from "./response/response.update.json";
 import * as cancellationResponse from "./response/response.cancellation_reasons.json";
 import * as ratingCategories from "./response/response.rating_categories.json";
 
+import * as ratingResponse from "./response/response.rating.json";
 @Injectable()
 export class CreditInvoiceApiService implements FinancialServicesApiInterface {
     search = function () {
@@ -40,7 +41,7 @@ export class CreditInvoiceApiService implements FinancialServicesApiInterface {
         return updateResponse;
     };
     rating = function () {
-        return "";
+        return ratingResponse;
     };
     support = function () {
         return supportResponse;
