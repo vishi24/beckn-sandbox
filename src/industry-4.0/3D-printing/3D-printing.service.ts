@@ -62,4 +62,10 @@ export class Three_D_PrintingService implements Industry4_0ApiInterface {
     track = (industry_4_0_Request_DTO: Industry_4_0_Request_DTO) => {
         return TrackResponse;
     };
+    getForm = () => {
+        return {};
+    };
+    submitForm = (request: any) => {
+        return {};
+    };
 }
