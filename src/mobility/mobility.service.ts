@@ -15,6 +15,8 @@ export class MobilityService {
                 return new OndcApiService();
             case MobilityTypeEnum.UMTC:
                 return new UmtcApiService();
+            case MobilityTypeEnum.BECKN_MOBILITY:
+                return new UmtcApiService();
             default:
                 throw new DomainNotFoundException();
         }
