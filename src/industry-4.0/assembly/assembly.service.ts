@@ -1,7 +1,9 @@
 import { Injectable } from "@nestjs/common";
+import axios from "axios";
 import { v4 as uuidv4 } from "uuid";
 import * as fs from "fs";
 import { join } from "path";
+import * as dotenv from "dotenv";
 import * as cheerio from "cheerio";
 import { Industry4_0ApiInterface } from "../industry-4.0-api.interface";
 import { Industry_4_0_Request_DTO } from "../dto/request.dto";
@@ -17,8 +19,9 @@ import * as SupportResponse from "./response/response.support.json";
 import * as CancelResponse from "./response/response.cancel.json";
 import * as TrackResponse from "./response/response.track.json";
 import * as RatingResponse from "./response/response.rating.json";
-import * as dotenv from "dotenv";
+import { INDUSTRY_4_MACHINE_SIMULATOR_URL } from "../constants";
 dotenv.config();
+
 const orderStatus = [
     { statusCode: "ORDER_ACCEPTED", longDesc: "The order is accepted" },
     { statusCode: "IN_ASSEMBLY_LINE", longDesc: "The item is in assembly line" },
@@ -54,61 +57,86 @@ export class AssemblyService implements Industry4_0ApiInterface {
         InitResponse.context.bpp_uri = BPP_URI;
         return InitResponse;
     };
-    confirm = (industry_4_0_Request_DTO: Industry_4_0_Request_DTO) => {
+    confirm = async (industry_4_0_Request_DTO: Industry_4_0_Request_DTO) => {
         ConfirmResponse.context.bpp_id = BPP_ID;
         ConfirmResponse.context.bpp_uri = BPP_URI;
         const orderId = uuidv4();
 
-        const StatusRecord = JSON.parse(fs.readFileSync(join(__dirname, "statusRecord.json"), { encoding: "utf-8" }));
-        if (StatusRecord?.orders?.length > 20) {
-            StatusRecord.orders = [];
+        try {
+            const data = await axios.post(`${INDUSTRY_4_MACHINE_SIMULATOR_URL}/confirm`, {
+                order_id: orderId,
+                order_specification: {
+                    width: "200",
+                    height: "230",
+                },
+            });
+            if (data.data?.message === "Order Created" && data.data?.success) {
+                ConfirmResponse.message.order.id = data.data?.order_details?.order_id;
+                ConfirmResponse.message.order.fulfillments[0].state.descriptor.code = data.data?.order_details?.status;
+                ConfirmResponse.message.order.fulfillments[0].state.descriptor.short_desc = data.data?.order_details?.status;
+                return ConfirmResponse;
+            } else {
+                throw new Error("Order Not Created");
+            }
+            // const StatusRecord = JSON.parse(fs.readFileSync(join(__dirname, "statusRecord.json"), { encoding: "utf-8" }));
+            // if (StatusRecord?.orders?.length > 20) {
+            //     StatusRecord.orders = [];
+            // }
+            // StatusRecord.orders.push({ orderId, status: orderStatus[0] });
+            // fs.writeFileSync(join(__dirname, "statusRecord.json"), JSON.stringify(StatusRecord));
+            // ConfirmResponse.message.order.id = orderId;
+            // ConfirmResponse.message.order.fulfillments[0].state.descriptor.code = orderStatus[0].statusCode;
+            // ConfirmResponse.message.order.fulfillments[0].state.descriptor.short_desc = orderStatus[0].longDesc;
+        } catch (error: any) {
+            console.log(error);
+            throw new Error(error.message);
         }
-        StatusRecord.orders.push({ orderId, status: orderStatus[0] });
-        fs.writeFileSync(join(__dirname, "statusRecord.json"), JSON.stringify(StatusRecord));
-        ConfirmResponse.message.order.id = orderId;
-        ConfirmResponse.message.order.fulfillments[0].state.descriptor.code = orderStatus[0].statusCode;
-        ConfirmResponse.message.order.fulfillments[0].state.descriptor.short_desc = orderStatus[0].longDesc;
-
-        return ConfirmResponse;
     };
-    status = (industry_4_0_Request_DTO: Industry_4_0_Request_DTO) => {
+    status = async (industry_4_0_Request_DTO: Industry_4_0_Request_DTO) => {
         StatusResponse.context.bpp_id = BPP_ID;
         StatusResponse.context.bpp_uri = BPP_URI;
-
-        const StatusRecord = JSON.parse(fs.readFileSync(join(__dirname, "statusRecord.json"), { encoding: "utf-8" }));
-        let requiredOrder = StatusRecord?.orders?.find((elem: any) => elem?.orderId === industry_4_0_Request_DTO?.message?.order_id);
-        if (requiredOrder) {
-            if (requiredOrder.status.statusCode === "DELIVERED") {
-                StatusResponse.message.order.id = industry_4_0_Request_DTO?.message?.order_id;
-                StatusResponse.message.order.fulfillments[0].state.descriptor.code = requiredOrder?.status?.statusCode;
-                StatusResponse.message.order.fulfillments[0].state.descriptor.short_desc = requiredOrder?.status?.longDesc;
-                StatusResponse.message.order.fulfillments[0].state.updated_at = new Date().toISOString();
-            } else {
-                let oldOrderStatusIndex = 0;
-                orderStatus.find((elem: any, i: number) => {
-                    if (elem?.statusCode === requiredOrder?.status?.statusCode) {
-                        oldOrderStatusIndex = i;
-                        return;
-                    }
-                });
-                requiredOrder = {
-                    ...requiredOrder,
-                    status: {
-                        statusCode: orderStatus[oldOrderStatusIndex + 1]?.statusCode,
-                        longDesc: orderStatus[oldOrderStatusIndex + 1]?.longDesc,
-                    },
-                };
-                StatusResponse.message.order.id = industry_4_0_Request_DTO?.message?.order_id;
-                StatusResponse.message.order.fulfillments[0].state.descriptor.code = requiredOrder?.status?.statusCode;
-                StatusResponse.message.order.fulfillments[0].state.descriptor.short_desc = requiredOrder?.status?.longDesc;
-                StatusResponse.message.order.fulfillments[0].state.updated_at = new Date().toISOString();
-                const newStatusRecord = StatusRecord?.orders?.map((elem: any) => {
-                    if (elem?.orderId === requiredOrder?.orderId) {
-                        return requiredOrder;
-                    }
-                    return elem;
-                });
-                fs.writeFileSync(join(__dirname, "statusRecord.json"), JSON.stringify({ orders: newStatusRecord }));
+        if (INDUSTRY_4_MACHINE_SIMULATOR_URL) {
+            const data = await axios.post(`${INDUSTRY_4_MACHINE_SIMULATOR_URL}/status`, { order_id: industry_4_0_Request_DTO.message?.order_id });
+            StatusResponse.message.order.id = data?.data?.data?.order_id;
+            StatusResponse.message.order.fulfillments[0].state.descriptor.code = data?.data?.data?.status;
+            StatusResponse.message.order.fulfillments[0].state.descriptor.short_desc = data?.data?.data?.status;
+            StatusResponse.message.order.fulfillments[0].state.updated_at = new Date(data?.data?.data?.current_update).toISOString();
+        } else {
+            const StatusRecord = JSON.parse(fs.readFileSync(join(__dirname, "statusRecord.json"), { encoding: "utf-8" }));
+            let requiredOrder = StatusRecord?.orders?.find((elem: any) => elem?.orderId === industry_4_0_Request_DTO?.message?.order_id);
+            if (requiredOrder) {
+                if (requiredOrder.status.statusCode === "DELIVERED") {
+                    StatusResponse.message.order.id = industry_4_0_Request_DTO?.message?.order_id;
+                    StatusResponse.message.order.fulfillments[0].state.descriptor.code = requiredOrder?.status?.statusCode;
+                    StatusResponse.message.order.fulfillments[0].state.descriptor.short_desc = requiredOrder?.status?.longDesc;
+                    StatusResponse.message.order.fulfillments[0].state.updated_at = new Date().toISOString();
+                } else {
+                    let oldOrderStatusIndex = 0;
+                    orderStatus.find((elem: any, i: number) => {
+                        if (elem?.statusCode === requiredOrder?.status?.statusCode) {
+                            oldOrderStatusIndex = i;
+                            return;
+                        }
+                    });
+                    requiredOrder = {
+                        ...requiredOrder,
+                        status: {
+                            statusCode: orderStatus[oldOrderStatusIndex + 1]?.statusCode,
+                            longDesc: orderStatus[oldOrderStatusIndex + 1]?.longDesc,
+                        },
+                    };
+                    StatusResponse.message.order.id = industry_4_0_Request_DTO?.message?.order_id;
+                    StatusResponse.message.order.fulfillments[0].state.descriptor.code = requiredOrder?.status?.statusCode;
+                    StatusResponse.message.order.fulfillments[0].state.descriptor.short_desc = requiredOrder?.status?.longDesc;
+                    StatusResponse.message.order.fulfillments[0].state.updated_at = new Date().toISOString();
+                    const newStatusRecord = StatusRecord?.orders?.map((elem: any) => {
+                        if (elem?.orderId === requiredOrder?.orderId) {
+                            return requiredOrder;
+                        }
+                        return elem;
+                    });
+                    fs.writeFileSync(join(__dirname, "statusRecord.json"), JSON.stringify({ orders: newStatusRecord }));
+                }
             }
         }
         return StatusResponse;
