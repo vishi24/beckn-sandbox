@@ -28,8 +28,8 @@
             "provider": {
                 "id": "BX213573733",
                 "descriptor": {
-                    "name": "XYZ Education Foundation",
-                    "short_desc": "XYZ Education Foundation"
+                    "name": "Navjyoti Education Trust",
+                    "short_desc": "Navjyoti Education Trust"
                 },
                 "rateable": false
             },
@@ -37,8 +37,8 @@
                 {
                     "id": "SCM_63587501",
                     "descriptor": {
-                        "name": "XYZ Undergraduation scholarship for Economically Backward Female Students",
-                        "short_desc": "XYZ Undergraduation scholarship for Economically Backward Female Students"
+                        "name": "Agile Excellence Scholarship",
+                        "long_desc": "Empowering aspiring leaders with financial support for Agile Scrum Master certification, fostering organizational agility and effective team leadership."
                     },
                     "price": {
                         "currency": "INR",
