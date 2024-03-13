@@ -13,6 +13,7 @@ import * as SupportResponse from "./response/response.support.json";
 import * as RatingResponse from "./response/response.rating.json";
 import * as CancelResponse from "./response/response.cancel.json";
 import * as TrackResponse from "./response/response.track.json";
+import { v4 as uuid_v4 } from "uuid";
 @Injectable()
 export class JobsInternshipsService implements DSEPApiInterface {
     search = (dsepRequestDto: DSEPRequestDto) => {
@@ -35,9 +36,11 @@ export class JobsInternshipsService implements DSEPApiInterface {
         return InitResponse;
     };
     confirm = (dsepRequestDto: DSEPRequestDto) => {
+        ConfirmResponse.message.order.id = uuid_v4();
         return ConfirmResponse;
     };
     status = (dsepRequestDto: DSEPRequestDto) => {
+        StatusResponse.message.order.id = dsepRequestDto?.message?.order_id;
         return StatusResponse;
     };
     cancel = (dsepRequestDto: DSEPRequestDto) => {
