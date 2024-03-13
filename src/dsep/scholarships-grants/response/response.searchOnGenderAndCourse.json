@@ -31,7 +31,7 @@
                 {
                     "id": "ZQU31169990",
                     "descriptor": {
-                        "name": "XYZ Education Foundation"
+                        "name": "Navjyoti Education Trust"
                     },
                     "categories": [
                         {
@@ -71,8 +71,8 @@
                         {
                             "id": "SCM_58741444",
                             "descriptor": {
-                                "name": "XYZ Undergraduation scholarship for Economically Backward Female Students",
-                                "long_desc": "XYZ Undergraduation scholarship for Economically Backward Female Students"
+                                "name": "Agile Excellence Scholarship",
+                                "long_desc": "Empowering aspiring leaders with financial support for Agile Scrum Master certification, fostering organizational agility and effective team leadership."
                             },
                             "price": {
                                 "currency": "INR",
