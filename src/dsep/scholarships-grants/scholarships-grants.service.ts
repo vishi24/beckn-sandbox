@@ -24,10 +24,12 @@ export class ScholarshipsGrantsService implements DSEPApiInterface {
     };
     confirm = (dsepRequestDto: DSEPRequestDto) => {
         ConfirmResponse.message.order.id = uuid_v4();
+        console.log("ConfirmResponse======>", ConfirmResponse);
         return ConfirmResponse;
     };
     status = (dsepRequestDto: DSEPRequestDto) => {
         StatusResponse.message.order.id = dsepRequestDto?.message?.order_id;
+        console.log("StatusResponse======>", StatusResponse);
         return StatusResponse;
     };
     search = (dsepRequestDto: DSEPRequestDto) => {
