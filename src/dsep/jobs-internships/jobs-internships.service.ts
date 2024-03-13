@@ -37,10 +37,12 @@ export class JobsInternshipsService implements DSEPApiInterface {
     };
     confirm = (dsepRequestDto: DSEPRequestDto) => {
         ConfirmResponse.message.order.id = uuid_v4();
+        console.log("confirmResponse=====>", ConfirmResponse);
         return ConfirmResponse;
     };
     status = (dsepRequestDto: DSEPRequestDto) => {
         StatusResponse.message.order.id = dsepRequestDto?.message?.order_id;
+        console.log("confirmResponse=====>", StatusResponse);
         return StatusResponse;
     };
     cancel = (dsepRequestDto: DSEPRequestDto) => {
