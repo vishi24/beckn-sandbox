@@ -18,6 +18,7 @@ import * as StatusInProgressPaymentResponse from "./response/status-in-progress-
 import * as StatusInProgressResponse from "./response/status-in-progress.response.json";
 import * as UpdateAgentResponse from "./response/update-agent.response.json";
 import * as UpdateHearingDateResponse from "./response/update-hearing-date.response.json";
+import { v4 as uuid_v4 } from "uuid";
 
 @Injectable()
 export class ODRService implements ODRApiInterface {
@@ -71,6 +72,7 @@ export class ODRService implements ODRApiInterface {
         ConfirmResponse.context.bpp_uri = BPP_URI;
         ConfirmResponse.context.bap_id = odrRequest.context.bap_id;
         ConfirmResponse.context.bap_uri = odrRequest.context.bap_uri;
+        ConfirmResponse.message.order.id = uuid_v4();
         return ConfirmResponse;
     };
     status = (odrRequest: ODRClientDTO) => {
@@ -85,6 +87,7 @@ export class ODRService implements ODRApiInterface {
             StatusCompletedResponse.context.bpp_uri = BPP_URI;
             StatusCompletedResponse.context.bap_id = odrRequest.context.bap_id;
             StatusCompletedResponse.context.bap_uri = odrRequest.context.bap_uri;
+            StatusCompletedResponse.message.order.id = odrRequest?.message?.order_id;
             return StatusCompletedResponse;
         }
         if (statusInProgressPayment) {
@@ -92,6 +95,8 @@ export class ODRService implements ODRApiInterface {
             StatusInProgressPaymentResponse.context.bpp_uri = BPP_URI;
             StatusInProgressPaymentResponse.context.bap_id = odrRequest.context.bap_id;
             StatusInProgressPaymentResponse.context.bap_uri = odrRequest.context.bap_uri;
+            StatusInProgressPaymentResponse.message.order.id = odrRequest?.message?.order_id;
+
             return StatusInProgressPaymentResponse;
         }
         if (statusInProgress) {
@@ -99,6 +104,8 @@ export class ODRService implements ODRApiInterface {
             StatusInProgressResponse.context.bpp_uri = BPP_URI;
             StatusInProgressResponse.context.bap_id = odrRequest.context.bap_id;
             StatusInProgressResponse.context.bap_uri = odrRequest.context.bap_uri;
+            StatusInProgressResponse.message.order.id = odrRequest?.message?.order_id;
+
             return StatusInProgressResponse;
         }
     };
