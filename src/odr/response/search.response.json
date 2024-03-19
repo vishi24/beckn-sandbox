@@ -90,7 +90,13 @@
                                     }
                                 ]
                             },
-                            "category_ids": ["ODRCAT001", "ODRCAT002", "ODRCAT003", "ODRCAT004", "ODRCAT005"],
+                            "category_ids": [
+                                "ODRCAT001",
+                                "ODRCAT002",
+                                "ODRCAT003",
+                                "ODRCAT004",
+                                "ODRCAT005"
+                            ],
                             "add_ons": [
                                 {
                                     "id": "ALPHA-ARB-01-COU",
@@ -121,7 +127,13 @@
                                     }
                                 ]
                             },
-                            "category_ids": ["ODRCAT001", "ODRCAT002", "ODRCAT003", "ODRCAT004", "ODRCAT005"],
+                            "category_ids": [
+                                "ODRCAT001",
+                                "ODRCAT002",
+                                "ODRCAT003",
+                                "ODRCAT004",
+                                "ODRCAT005"
+                            ],
                             "add_ons": [
                                 {
                                     "id": "ALPHA-CONC-01-COU",
@@ -152,7 +164,11 @@
                                     }
                                 ]
                             },
-                            "category_ids": ["ODRCAT002", "ODRCAT004", "ODRCAT005"],
+                            "category_ids": [
+                                "ODRCAT002",
+                                "ODRCAT004",
+                                "ODRCAT005"
+                            ],
                             "add_ons": [
                                 {
                                     "id": "ALPHA-MED-01-COU",
@@ -176,8 +192,14 @@
                             "descriptor": {
                                 "name": "Offers on services"
                             },
-                            "category_ids": ["ODRCAT004", "ODRCAT005"],
-                            "item_ids": ["ALPHA-MED-01", "ALPHA-ARB-01"]
+                            "category_ids": [
+                                "ODRCAT004",
+                                "ODRCAT005"
+                            ],
+                            "item_ids": [
+                                "ALPHA-MED-01",
+                                "ALPHA-ARB-01"
+                            ]
                         }
                     ],
                     "tags": [
