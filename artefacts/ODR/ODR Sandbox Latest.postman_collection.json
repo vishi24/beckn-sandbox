@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "261b7854-0a8e-4ee9-9f46-c91cc331c156",
+		"_postman_id": "8b3bb7c7-073d-4e6c-a803-2613c6a2d886",
 		"name": "ODR Sandbox",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "30848972"
@@ -272,7 +272,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"context\": {\r\n      \"domain\": \"{{domain}}\",\r\n      \"location\": {\r\n        \"country\": {\r\n          \"code\": \"IND\"\r\n        }\r\n      },\r\n      \"transaction_id\":  \"{{TRANS_ID}}\",\r\n      \"message_id\": \"{{$randomUUID}}\",\r\n      \"action\": \"status\",\r\n      \"timestamp\": \"{{$timestamp}}\",\r\n      \"version\": \"1.1.0\",\r\n      \"bap_uri\": \"{{bap_uri}}\",\r\n      \"bap_id\": \"{{bap_id}}\",\r\n      \"ttl\": \"PT10M\",\r\n      \"bpp_id\": \"{{bpp_id}}\",\r\n      \"bpp_uri\": \"{{bpp_uri}}\",\r\n      \"key\": \"completed\"\r\n    },\r\n    \"message\": {\r\n      \"order_id\": \"{{ORDER_ID}}\"\r\n    }\r\n  }",
+							"raw": "{\r\n    \"context\": {\r\n      \"domain\": \"{{domain}}\",\r\n      \"location\": {\r\n        \"country\": {\r\n          \"code\": \"IND\"\r\n        }\r\n      },\r\n      \"transaction_id\":  \"{{TRANS_ID}}\",\r\n      \"message_id\": \"{{$randomUUID}}\",\r\n      \"action\": \"status\",\r\n      \"timestamp\": \"{{$timestamp}}\",\r\n      \"version\": \"1.1.0\",\r\n      \"bap_uri\": \"{{bap_uri}}\",\r\n      \"bap_id\": \"{{bap_id}}\",\r\n      \"ttl\": \"PT10M\",\r\n      \"bpp_id\": \"{{bpp_id}}\",\r\n      \"bpp_uri\": \"{{bpp_uri}}\",\r\n      \"key\": \"in-progress\"\r\n    },\r\n    \"message\": {\r\n      \"order_id\": \"{{ORDER_ID}}\"\r\n    }\r\n  }",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -324,7 +324,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"context\": {\r\n      \"domain\": \"{{domain}}\",\r\n      \"location\": {\r\n        \"country\": {\r\n          \"code\": \"IND\"\r\n        }\r\n      },\r\n      \"transaction_id\":  \"{{TRANS_ID}}\",\r\n      \"message_id\": \"{{$randomUUID}}\",\r\n      \"action\": \"status\",\r\n      \"timestamp\": \"{{$timestamp}}\",\r\n      \"version\": \"1.1.0\",\r\n      \"bap_uri\": \"{{bap_uri}}\",\r\n      \"bap_id\": \"{{bap_id}}\",\r\n      \"ttl\": \"PT10M\",\r\n      \"bpp_id\": \"{{bpp_id}}\",\r\n      \"bpp_uri\": \"{{bpp_uri}}\",\r\n      \"key\": \"in-progress\"\r\n    },\r\n    \"message\": {\r\n      \"order_id\": \"{{ORDER_ID}}\"\r\n    }\r\n  }",
+							"raw": "{\r\n    \"context\": {\r\n      \"domain\": \"{{domain}}\",\r\n      \"location\": {\r\n        \"country\": {\r\n          \"code\": \"IND\"\r\n        }\r\n      },\r\n      \"transaction_id\":  \"{{TRANS_ID}}\",\r\n      \"message_id\": \"{{$randomUUID}}\",\r\n      \"action\": \"status\",\r\n      \"timestamp\": \"{{$timestamp}}\",\r\n      \"version\": \"1.1.0\",\r\n      \"bap_uri\": \"{{bap_uri}}\",\r\n      \"bap_id\": \"{{bap_id}}\",\r\n      \"ttl\": \"PT10M\",\r\n      \"bpp_id\": \"{{bpp_id}}\",\r\n      \"bpp_uri\": \"{{bpp_uri}}\",\r\n      \"key\": \"completed\"\r\n    },\r\n    \"message\": {\r\n      \"order_id\": \"{{ORDER_ID}}\"\r\n    }\r\n  }",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -350,7 +350,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"context\": {\r\n      \"domain\": \"{{domain}}\",\r\n      \"location\": {\r\n        \"country\": {\r\n          \"code\": \"IND\"\r\n        }\r\n      },\r\n      \"transaction_id\":  \"{{TRANS_ID}}\",\r\n      \"message_id\": \"{{$randomUUID}}\",\r\n      \"action\": \"rating\",\r\n      \"timestamp\": \"{{$timestamp}}\",\r\n      \"version\": \"1.1.0\",\r\n      \"bap_uri\": \"{{bap_uri}}\",\r\n      \"bap_id\": \"{{bap_id}}\",\r\n      \"bpp_id\": \"{{bpp_id}}\",\r\n      \"bpp_uri\": \"{{bpp_uri}}\",\r\n      \"ttl\": \"PT10M\"\r\n    },\r\n    \"message\": {\r\n      \"ratings\": [\r\n        {\r\n          \"id\": \"{{ORDER_ID}}\",\r\n          \"rating_category\": \"Order\",\r\n          \"value\": \"5\"\r\n        }\r\n      ]\r\n    }\r\n  }",
+							"raw": "{\r\n    \"context\": {\r\n      \"domain\": \"{{domain}}\",\r\n      \"location\": {\r\n        \"country\": {\r\n          \"code\": \"IND\"\r\n        }\r\n      },\r\n      \"transaction_id\": \"{{TRANS_ID}}\",\r\n      \"message_id\": \"{{$randomUUID}}\",\r\n      \"action\": \"rating\",\r\n      \"timestamp\": \"{{$timestamp}}\",\r\n      \"version\": \"1.1.0\",\r\n      \"bap_uri\": \"{{bap_uri}}\",\r\n      \"bap_id\": \"{{bap_id}}\",\r\n      \"bpp_id\": \"{{bpp_id}}\",\r\n      \"bpp_uri\": \"{{bpp_uri}}\",\r\n      \"ttl\": \"PT10M\"\r\n    },\r\n    \"message\": {\r\n      \"ratings\": [\r\n        {\r\n          \"id\": \"{{ORDER_ID}}\",\r\n          \"rating_category\": \"Order\",\r\n          \"value\": \"5\"\r\n        }\r\n      ]\r\n    }\r\n  }",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -402,7 +402,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"context\": {\r\n    \"domain\": \"{{domain}}\",\r\n    \"location\": {\r\n      \"country\": {\r\n        \"code\": \"IND\"\r\n      }\r\n    },\r\n    \"version\": \"1.1.0\",\r\n    \"action\": \"update\",\r\n    \"bap_uri\": \"{{bap_uri}}\",\r\n    \"bap_id\": \"{{bap_id}}\",\r\n    \"bpp_id\": \"{{bpp_id}}\",\r\n    \"bpp_uri\": \"{{bpp_uri}}\",\r\n    \"transaction_id\":  \"{{TRANS_ID}}\",\r\n    \"message_id\": \"{{$randomUUID}}\",\r\n    \"ttl\": \"PT10M\",\r\n    \"timestamp\": \"{{$timestamp}}\",\r\n  },\r\n  \"message\": {\r\n    \"update_target\": \"order.fulfillments[0].agent\",\r\n    \"order\": {\r\n      \"id\": \"{{ORDER_ID}}\",\r\n      \"fulfillments\": [\r\n        {\r\n          \"agent\": {\r\n            \"person\": {\r\n              \"id\": \"ca063dc9d321\",\r\n              \"name\": \"Mr Adam Smith\"\r\n            }\r\n          }\r\n        }\r\n      ],\r\n      \"tags\": [\r\n        {\r\n          \"descriptor\": {\r\n            \"name\": \"agent\"\r\n          }\r\n        }\r\n      ]\r\n    }\r\n  }\r\n}",
+							"raw": "{\r\n  \"context\": {\r\n    \"domain\": \"{{domain}}\",\r\n    \"location\": {\r\n      \"country\": {\r\n        \"code\": \"IND\"\r\n      }\r\n    },\r\n    \"version\": \"1.1.0\",\r\n    \"action\": \"update\",\r\n    \"bap_uri\": \"{{bap_uri}}\",\r\n    \"bap_id\": \"{{bap_id}}\",\r\n    \"bpp_id\": \"{{bpp_id}}\",\r\n    \"bpp_uri\": \"{{bpp_uri}}\",\r\n    \"transaction_id\":  \"{{TRANS_ID}}\",\r\n    \"message_id\": \"{{$randomUUID}}\",\r\n    \"ttl\": \"PT10M\",\r\n    \"timestamp\": \"{{$timestamp}}\"\r\n  },\r\n  \"message\": {\r\n    \"update_target\": \"order.fulfillments[0].agent\",\r\n    \"order\": {\r\n      \"id\": \"{{ORDER_ID}}\",\r\n      \"fulfillments\": [\r\n        {\r\n          \"agent\": {\r\n            \"person\": {\r\n              \"id\": \"ca063dc9d321\",\r\n              \"name\": \"Mr Adam Smith\"\r\n            }\r\n          }\r\n        }\r\n      ],\r\n      \"tags\": [\r\n        {\r\n          \"descriptor\": {\r\n            \"name\": \"agent\"\r\n          }\r\n        }\r\n      ]\r\n    }\r\n  }\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -428,7 +428,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"context\": {\r\n    \"domain\": \"{{domain}}\",\r\n    \"location\": {\r\n      \"country\": {\r\n        \"code\": \"IND\"\r\n      }\r\n    },\r\n    \"version\": \"1.1.0\",\r\n    \"action\": \"update\",\r\n    \"bap_uri\": \"{{bap_uri}}\",\r\n    \"bap_id\": \"{{bap_id}}\",\r\n    \"bpp_id\": \"{{bpp_id}}\",\r\n    \"bpp_uri\": \"{{bpp_uri}}\",\r\n    \"transaction_id\":  \"{{TRANS_ID}}\",\r\n    \"message_id\": \"{{$randomUUID}}\",\r\n    \"ttl\": \"PT10M\",\r\n    \"timestamp\": \"{{$timestamp}}\",\r\n  },\r\n  \"message\": {\r\n    \"update_target\": \"order.fulfillments[0].stops[0].time\",\r\n    \"order\": {\r\n      \"id\": \"{{ORDER_ID}}\",\r\n      \"fulfillments\": [\r\n        {\r\n          \"stops\": [\r\n            {\r\n              \"time\": {\r\n                \"label\": \"Hearing Date\",\r\n                \"Range\": {\r\n                  \"start\": \"2023-06-27T00:00:00.00Z\",\r\n                  \"end\": \"2023-08-02T00:00:00.00Z\"\r\n                }\r\n              }\r\n            }\r\n          ]\r\n        }\r\n      ],\r\n      \"tags\": [\r\n        {\r\n          \"descriptor\": {\r\n            \"name\": \"hearing-date\"\r\n          }\r\n        }\r\n      ]\r\n    }\r\n  }\r\n}",
+							"raw": "{\r\n  \"context\": {\r\n    \"domain\": \"{{domain}}\",\r\n    \"location\": {\r\n      \"country\": {\r\n        \"code\": \"IND\"\r\n      }\r\n    },\r\n    \"version\": \"1.1.0\",\r\n    \"action\": \"update\",\r\n    \"bap_uri\": \"{{bap_uri}}\",\r\n    \"bap_id\": \"{{bap_id}}\",\r\n    \"bpp_id\": \"{{bpp_id}}\",\r\n    \"bpp_uri\": \"{{bpp_uri}}\",\r\n    \"transaction_id\":  \"{{TRANS_ID}}\",\r\n    \"message_id\": \"{{$randomUUID}}\",\r\n    \"ttl\": \"PT10M\",\r\n    \"timestamp\": \"{{$timestamp}}\"\r\n  },\r\n  \"message\": {\r\n    \"update_target\": \"order.fulfillments[0].stops[0].time\",\r\n    \"order\": {\r\n      \"id\": \"{{ORDER_ID}}\",\r\n      \"fulfillments\": [\r\n        {\r\n          \"stops\": [\r\n            {\r\n              \"time\": {\r\n                \"label\": \"Hearing Date\",\r\n                \"Range\": {\r\n                  \"start\": \"2023-06-27T00:00:00.00Z\",\r\n                  \"end\": \"2023-08-02T00:00:00.00Z\"\r\n                }\r\n              }\r\n            }\r\n          ]\r\n        }\r\n      ],\r\n      \"tags\": [\r\n        {\r\n          \"descriptor\": {\r\n            \"name\": \"hearing-date\"\r\n          }\r\n        }\r\n      ]\r\n    }\r\n  }\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -499,6 +499,8 @@
 					"    const randomUUID = require('uuid').v4();",
 					"    // Set the unique identifier as a collection variable",
 					"    pm.collectionVariables.set(\"TRANS_ID\", randomUUID);",
+					"} else {",
+					"    console.log(\"TRANS_ID is already set\")",
 					"}"
 				]
 			}
@@ -545,11 +547,11 @@
 			"type": "string"
 		},
 		{
-			"key": "TRANS_ID",
+			"key": "ORDER_ID",
 			"value": ""
 		},
 		{
-			"key": "ORDER_ID",
+			"key": "TRANS_ID",
 			"value": ""
 		}
 	]
